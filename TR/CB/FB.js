@@ -61,6 +61,38 @@ $("#cb6-quiz-completed").hide();
 
 
 
+      
+  const signout = () => {
+      auth.signOut();
+  }
+  
+  signOutButton.addEventListener('click', signout);
+  
+  
+  auth.onAuthStateChanged(async (user) => {
+    let currentPath = window.location.pathname;
+    if (user) {
+      maincontent.style.display='flex';
+          loader.style.display='none';
+      let myFS = firebase.firestore()
+      let docSnap = await myFS.doc("users/"+firebase.auth().currentUser.uid).get();
+      let data = docSnap.data()
+      let curUser = firebase.auth().currentUser;
+      let prereq = data['prereq'];
+      let name = data['Name'];
+      let emaild = data['Email']; 
+      let firstletter = name.substring(0, 1)
+      $('.firstletter').html(firstletter);
+  
+      let restaurant = data['Restaurant']; 
+      let quiz1 = data['cb2p4']; 
+      let quiz3 = data['cb3p6']; 
+      let quiz4 = data['cb4p3']; 
+      let quiz6 = data['cb6p6']; 
+      let profileuid = curUser.uid    
+
+
+
   let admin = data["admin"];
   let course1 = data["ftbcourse"];
   let course2 = data["seccourse"];
@@ -349,37 +381,7 @@ $("#trackermob").show();
 $("#n5").hide();
 $("#trackermob").hide();
 }
-
       
-  const signout = () => {
-      auth.signOut();
-  }
-  
-  signOutButton.addEventListener('click', signout);
-  
-  
-  auth.onAuthStateChanged(async (user) => {
-    let currentPath = window.location.pathname;
-    if (user) {
-      maincontent.style.display='flex';
-          loader.style.display='none';
-      let myFS = firebase.firestore()
-      let docSnap = await myFS.doc("users/"+firebase.auth().currentUser.uid).get();
-      let data = docSnap.data()
-      let curUser = firebase.auth().currentUser;
-      let prereq = data['prereq'];
-      let name = data['Name'];
-      let emaild = data['Email']; 
-      let firstletter = name.substring(0, 1)
-      $('.firstletter').html(firstletter);
-  
-      let restaurant = data['Restaurant']; 
-      let quiz1 = data['cb2p4']; 
-      let quiz3 = data['cb3p6']; 
-      let quiz4 = data['cb4p3']; 
-      let quiz6 = data['cb6p6']; 
-      let profileuid = curUser.uid    
-
       let cb1p1 = data['cb1p1'];    
       let cb1p2 = data['cb1p2'];    
       let cb1p3 = data['cb1p3'];    
