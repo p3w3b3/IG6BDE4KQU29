@@ -115,20 +115,33 @@ let course17 = data['tscourse']
 
 
 let sstid = data['stid'].toLowerCase()
+
 let ops = data['operations']
+let enterprise = data['enterprise']
+if(ops === true ) {
 document.querySelector("#mydas").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
+location.href = '/operations/'+sstid
 })
 document.querySelector("#mbmenu1").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
+location.href = '/operations/'+sstid
 })
-if(ops == true){
+}else if(enterprise===true){
+document.querySelector("#mydas").addEventListener("click", () => {
+window.location.href = '/enterprise/'+sstid
+document.querySelector("#mbmenu1").addEventListener("click", () => {
+window.location.href = '/enterprise/'+sstid
+})
+})
+}
+ 
+if(!!ops || !!enterprise ) {
 $("#operations").css("display", "flex");
 $('#normal').hide()
 } else {
 $('#operations').hide()
 $("#normal").css("display", "flex");
 }
+ 
 {
 window.intercomSettings = {
 api_base: "https://api-iam.intercom.io",
