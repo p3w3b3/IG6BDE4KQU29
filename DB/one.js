@@ -623,14 +623,14 @@ location.href = '/login'
                 newItem.find("#course15-" + i)[0].checked = true;
               }
               if (course166 == undefined) {
-                newItem.find("#course14-" + i)[0].checked = false;
+                newItem.find("#course16-" + i)[0].checked = false;
               } else if (course166 == true) {
-                newItem.find("#course14-" + i)[0].checked = true;
+                newItem.find("#course16-" + i)[0].checked = true;
               }
               if (course177 == undefined) {
-                newItem.find("#course177-" + i)[0].checked = false;
+                newItem.find("#course17-" + i)[0].checked = false;
               } else if (course144 == true) {
-                newItem.find("#course177-" + i)[0].checked = true;
+                newItem.find("#course17-" + i)[0].checked = true;
               }
 
               if (accessps == undefined && accessps == undefined) {
