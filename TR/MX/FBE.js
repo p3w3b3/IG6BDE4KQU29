@@ -28,6 +28,7 @@
   
   
   firebase.initializeApp(firebaseConfig);
+  mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true});   
   const auth = firebase.auth();
   const authChanged = firebase.auth().onAuthStateChanged(user =>{
   let mprognum = 0
@@ -35,9 +36,9 @@
   let mprognum3 = 0
   let mprognum4 = 0
   let mprognum5 = 0
-  let restaurant = data['Restaurant']; 
-  let profileuid = curUser.uid      
   let curUser = firebase.auth().currentUser;
+  let profileuid = curUser.uid      
+
        
   const signout = () => {
       auth.signOut();
@@ -56,10 +57,24 @@
       let data = docSnap.data()
       let prereq = data['prereq'];
       let name = data['Name'];
+      let restaurant = data['Restaurant']; 
       let emaild = data['Email']; 
       let firstletter = name.substring(0, 1)
       $('.firstletter').html(firstletter);
   
+      {
+        window.intercomSettings = {
+            api_base: "https://api-iam.intercom.io",
+            app_id: "e84ncf6y",
+            hide_default_launcher: true,
+            name: "'"+name+"'", // Full name
+            email: "'"+emaild+"'", // Email address
+            user_id: "'"+profileuid+"'" // UID FIREBASE
+          };
+        }
+        {
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/e84ncf6y';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+        }
   
   const auth = firebase.auth();
   const signout2 = () => {
@@ -93,20 +108,6 @@
   $("#normal").css("display", "flex");
   }
         
-  {
-  window.intercomSettings = {
-      api_base: "https://api-iam.intercom.io",
-      app_id: "e84ncf6y",
-      hide_default_launcher: true,
-      name: "'"+name+"'", // Full name
-      email: "'"+emaild+"'", // Email address
-      user_id: "'"+profileuid+"'" // UID FIREBASE
-    };
-  }
-  {
-  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/e84ncf6y';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-  }
-  mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true});   
        
   
       let m1p1 = data['m1p1'];    
