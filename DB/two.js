@@ -481,7 +481,6 @@ location.href = '/login'
               newItem.find("#dlvtrue")[0].id = "dlvtrue-" + i;
 
 
-              newItem.find("#country")[0].id = "country-" + i;
 
               newItem.find("#popfieldsecond")[0].id = "popfieldsecond-" + i;
               newItem.find("#popfieldthird")[0].id = "popfieldthird-" + i;
@@ -495,8 +494,7 @@ location.href = '/login'
               var pfield5 = myResults[i].data.pdate5;
 
               var datastid = myResults[i].data.stid;
-              
-              var countryus = myResults[i].data.uscontent;
+             
               
               var accessps = myResults[i].data.prereq;
               var accessps2 = myResults[i].data.admin;
@@ -520,12 +518,7 @@ location.href = '/login'
               var course166 = myResults[i].data.mlcourse;
               var course177 = myResults[i].data.tscourse;
 
-              if (countryus == true) {
-                newItem.find("#country-" + i)[0].value = "us";
-              } else {
-                newItem.find("#country-" + i)[0].value = "uk";
-              }
-              
+
               
               if (course11 == undefined) {
                 newItem.find("#course1-" + i)[0].checked = false;
@@ -702,7 +695,7 @@ location.href = '/login'
                 let paccess = newItem.find("#accesslevel-" + i)[0].value;
                 let stid = newItem.find("#stid-" + i)[0].value;
                 
-                let uscont = newItem.find("#country-" + i)[0].value;
+
                 
                 let pdate1 = newItem.find("#popfieldfirst-" + i)[0].value;
                 let pdate2 = newItem.find("#popfieldsecond-" + i)[0].value;
@@ -714,19 +707,6 @@ location.href = '/login'
                   .find("#uButton-" + i)[0]
                   .addEventListener("click", function () {
 
-                    if (uscont === "us") {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ uscontent: true }, { merge: true });
-                    }
-
-                    if (uscont === "uk") {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ uscontent: false }, { merge: true });
-                    }
 
                     if (course1) {
                       firebase
