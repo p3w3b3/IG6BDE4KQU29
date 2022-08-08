@@ -110,12 +110,7 @@ $("#cb6-quiz-completed").hide();
   let course14 = data['chicboxcourse']
   let course15 = data['sbcourse']
   let course16 = data['mlcourse']
-  let course17 = data['tscourse']
-
-    let quiz1 = data['cb2p4']; 
-    let quiz3 = data['cb3p6']; 
-    let quiz4 = data['cb4p3']; 
-    let quiz6 = data['cb6p6']; 
+  let course17 = data['tscourse'] 
   
 
 if(!!quiz1) {
