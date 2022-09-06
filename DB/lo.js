@@ -1,14 +1,4 @@
-function docReady(fn) {
-  // see if DOM is already available
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-      // call on next available tick
-      setTimeout(fn, 1);
-  } else {
-      document.addEventListener("DOMContentLoaded", fn);
-  }
-}   
-
-docReady(function() {
+setTimeout(() => { 
 
 let language = document.querySelector('#languageselector').textContent
 
@@ -175,4 +165,4 @@ document.getElementById('ob1mob').textContent = czecharr[14]
 
 }
 
-})
+}, 7500)
