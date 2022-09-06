@@ -1,4 +1,4 @@
-window.addEventListener('load', (event) => {
+$( document ).ready(function() {
 
       let curUser = firebase.auth().currentUser;
       let myFS = firebase.firestore();
