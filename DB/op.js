@@ -523,11 +523,30 @@ location.href = '/login'
               var course166 = myResults[i].data.mlcourse;
               var course177 = myResults[i].data.tscourse;
 
+	      var language = myResults[i].data.language;
+
               if (countryus == true) {
                 newItem.find("#country-" + i)[0].value = "us";
               } else {
                 newItem.find("#country-" + i)[0].value = "uk";
               }
+		    
+              if (language === 'finnish') {
+                newItem.find("#country-" + i)[0].value = "finnish";
+              }
+
+              if (language === 'swedish') {
+                newItem.find("#country-" + i)[0].value = "swedish";
+              }
+              
+              if (language === 'hungarian') {
+                newItem.find("#country-" + i)[0].value = "hungarian";
+              }
+
+              if (language === 'czech') {
+                newItem.find("#country-" + i)[0].value = "czech";
+              }
+
               
               
               if (course11 == undefined) {
