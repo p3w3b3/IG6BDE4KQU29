@@ -8,6 +8,8 @@ function docReady(fn) {
   }
 }   
 
+docReady(function() {
+
 let language = document.querySelector('#languageselector').textContent
 
 let hungarr = ['Üdvözlünk a képzési Peckwater Brands portálon!','Szia, Aleksei! Kim vagyok, én leszek a beléptetési menedzsered. Nagyon örülünk, hogy franchise partnereink között köszönthetünk. A beléptetéssel kapcsolatos közelgő eseményekről az alábbiakban tájékozódhatsz. Ha valamelyik időpont nem került megerősítésre, kérjük, ellenőrizd az e-mail fiókodat.','A beléptetéssel kapcsolatos közelgő események','Tervezett kezdési időpont','Helyszíni látogatás','Készlet megérkezése','Élő rendelési teszt','Kezdés napja','Kezdőlap','Beléptetés','Képzés','Követő','Kapcsolat','Konyha beállítása','Konyha elrendezése','Képzési portál Követő','Név','Regisztrált','Étterem','Legutóbb aktív','Felhasználó hozzáadása','Profil','Étterem','Név','E-mail cím','Saját adatok','Hozzáférési szint','Ország','Hozzáférés a képzésekhez','Tervezett kezdési időpont','Helyszíni látogatás','Készlet megérkezése','Élő rendelési teszt','Kezdés napja','Franchise menedzser','Napi kérdések megválaszolása','Márkamenedzser','A márkával és a képzéssel kapcsolatos kérdések megválaszolása','Műveleti vezető','Meg nem oldott problémák és kiemelt üzleti kérdések kezelése','Szállítási csatorna támogatása','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával']
@@ -172,4 +174,5 @@ document.getElementById('signoutmobile').textContent = czecharr2[4]
 document.getElementById('ob1mob').textContent = czecharr[14] 
 
 }
+
 })
