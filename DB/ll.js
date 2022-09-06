@@ -1,11 +1,21 @@
-$( document ).ready(function() {
+function docReady(fn) {
+  // see if DOM is already available
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+      // call on next available tick
+      setTimeout(fn, 1);
+  } else {
+      document.addEventListener("DOMContentLoaded", fn);
+  }
+}   
 
-      let curUser = firebase.auth().currentUser;
-      let myFS = firebase.firestore();
-      let docRef = myFS.doc("users/" + curUser.uid);
-      docRef.get().then((docSnap) => {
-        let datad = docSnap.data();
-        let language = datad['language']
+
+docReady(function() {
+  let curUser = firebase.auth().currentUser;
+  let myFS = firebase.firestore();
+  let docRef = myFS.doc("users/" + curUser.uid);
+  docRef.get().then((docSnap) => {
+    let datad = docSnap.data();
+let language = datad['language']
 
 let hungarr = ['Üdvözlünk a képzési Peckwater Brands portálon!','Szia, Aleksei! Kim vagyok, én leszek a beléptetési menedzsered. Nagyon örülünk, hogy franchise partnereink között köszönthetünk. A beléptetéssel kapcsolatos közelgő eseményekről az alábbiakban tájékozódhatsz. Ha valamelyik időpont nem került megerősítésre, kérjük, ellenőrizd az e-mail fiókodat.','A beléptetéssel kapcsolatos közelgő események','Tervezett kezdési időpont','Helyszíni látogatás','Készlet megérkezése','Élő rendelési teszt','Kezdés napja','Kezdőlap','Beléptetés','Képzés','Követő','Kapcsolat','Konyha beállítása','Konyha elrendezése','Képzési portál Követő','Név','Regisztrált','Étterem','Legutóbb aktív','Felhasználó hozzáadása','Profil','Étterem','Név','E-mail cím','Saját adatok','Hozzáférési szint','Ország','Hozzáférés a képzésekhez','Tervezett kezdési időpont','Helyszíni látogatás','Készlet megérkezése','Élő rendelési teszt','Kezdés napja','Franchise menedzser','Napi kérdések megválaszolása','Márkamenedzser','A márkával és a képzéssel kapcsolatos kérdések megválaszolása','Műveleti vezető','Meg nem oldott problémák és kiemelt üzleti kérdések kezelése','Szállítási csatorna támogatása','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával']
 
@@ -13,40 +23,40 @@ let hungarr2 = ['Név','E-mail cím','Jelszó','Hozzáférési szint','Kijelentk
 
 
 if(language === 'hungarian'){
-    for (i = 0 ; i < hungarr.length; i++) {
-    document.getElementById('itemt-'+i).textContent = hungarr[i]
-    }
-    
-    document.getElementById('signupname').placeholder = hungarr2[0]
-    document.getElementById('signupemail').placeholder = hungarr2[1] 
-    document.getElementById('signuppassword').placeholder = hungarr2[2] 
-    document.getElementById('Access-level').placeholder = hungarr2[3] 
-    document.getElementById('signOutButton').textContent = hungarr2[4] 
-    document.getElementById('trainingsearch').placeholder = hungarr2[5] 
-    
-    
-    document.getElementById('homemob').textContent = hungarr[8] 
-    document.getElementById('obmob').textContent = hungarr[9] 
-    
-    document.getElementById('trainingmob').textContent = hungarr[10] 
-    
-    document.getElementById('cheatsheetsmob').textContent = hungarr2[7] 
-    
-    document.getElementById('trackermob').textContent = hungarr[11] 
-    
-    document.getElementById('contactmob').textContent = hungarr[12] 
-    
-    document.getElementById('profilemobile').textContent = hungarr[21] 
-    
-    document.getElementById('profiledesk').textContent = hungarr[21] 
-        
-    document.getElementById('signoutmobile').textContent = hungarr2[4] 
-    
-    
-    document.getElementById('ob1mob').textContent = hungarr2[14] 
-    
-    }
-    
+  for (i = 0 ; i < hungarr.length; i++) {
+  document.getElementById('itemt-'+i).textContent = hungarr[i]
+  }
+  
+  document.getElementById('signupname').placeholder = hungarr2[0]
+  document.getElementById('signupemail').placeholder = hungarr2[1] 
+  document.getElementById('signuppassword').placeholder = hungarr2[2] 
+  document.getElementById('Access-level').placeholder = hungarr2[3] 
+  document.getElementById('signOutButton').textContent = hungarr2[4] 
+  document.getElementById('trainingsearch').placeholder = hungarr2[5] 
+  
+  
+  document.getElementById('homemob').textContent = hungarr[8] 
+  document.getElementById('obmob').textContent = hungarr[9] 
+  
+  document.getElementById('trainingmob').textContent = hungarr[10] 
+  
+  document.getElementById('cheatsheetsmob').textContent = hungarr2[7] 
+  
+  document.getElementById('trackermob').textContent = hungarr[11] 
+  
+  document.getElementById('contactmob').textContent = hungarr[12] 
+  
+  document.getElementById('profilemobile').textContent = hungarr[21] 
+  
+  document.getElementById('profiledesk').textContent = hungarr[21] 
+      
+  document.getElementById('signoutmobile').textContent = hungarr2[4] 
+  
+  
+  document.getElementById('ob1mob').textContent = hungarr2[14] 
+  
+  }
+  
 
 
 
@@ -82,7 +92,7 @@ document.getElementById('contactmob').textContent = swedarr[12]
 document.getElementById('profilemobile').textContent = swedarr[21] 
 
 document.getElementById('profiledesk').textContent = swedarr[21] 
-    
+  
 document.getElementById('signoutmobile').textContent = swedarr2[4] 
 
 
@@ -96,8 +106,8 @@ let finarr = ['Tervetuloa Peckwater Brands Portalliin','Hei Aleksei, Olen Kim si
 let finarr2 = ['Nimi','Sähköposti','Salasana','Käyttöoikeustaso','Kirjaudu ulos','Hae...','Käyttöoikeustaso','Lunttilaput']
 
 if(language === 'finnish'){
-  for (i = 0 ; i < finarr.length; i++) {
-  document.getElementById('itemt-'+i).textContent = finarr[i]
+for (i = 0 ; i < finarr.length; i++) {
+document.getElementById('itemt-'+i).textContent = finarr[i]
 } 
 
 document.getElementById('signupname').placeholder = finarr2[0]
@@ -122,7 +132,7 @@ document.getElementById('contactmob').textContent = finarr[12]
 document.getElementById('profilemobile').textContent = finarr[21] 
 
 document.getElementById('profiledesk').textContent = finarr[21] 
-    
+  
 document.getElementById('signoutmobile').textContent = finarr2[4] 
 
 document.getElementById('ob1mob').textContent = finarr[14] 
@@ -137,8 +147,8 @@ let czecharr2 = ['Jméno','E-mail','Heslo','Úroveň přístupů','Odhlášení'
 
 
 if(language === 'czech'){
-  for (i = 0 ; i < czecharr.length; i++) {
-  document.getElementById('itemt-'+i).textContent = czecharr[i]
+for (i = 0 ; i < czecharr.length; i++) {
+document.getElementById('itemt-'+i).textContent = czecharr[i]
 } 
 
 document.getElementById('signupname').placeholder = czecharr2[0]
@@ -163,7 +173,7 @@ document.getElementById('contactmob').textContent = czecharr[12]
 document.getElementById('profilemobile').textContent = czecharr[21] 
 
 document.getElementById('profiledesk').textContent = czecharr[21] 
-    
+  
 document.getElementById('signoutmobile').textContent = czecharr2[4] 
 
 document.getElementById('ob1mob').textContent = czecharr[14] 
@@ -172,4 +182,4 @@ document.getElementById('ob1mob').textContent = czecharr[14]
 
 
 })
-});
+})
