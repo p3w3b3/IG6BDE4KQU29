@@ -261,6 +261,10 @@
   let name = data['Name'];
   let emaild = data['Email']; 
   let prereq = data['prereq']; 
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
+
+
   let sstid = data['stid'].toLowerCase()
   
    let profileuids = curUser.uid      
