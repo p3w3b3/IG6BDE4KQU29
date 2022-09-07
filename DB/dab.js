@@ -731,6 +731,7 @@ location.href = '/login'
                 let pdate3 = newItem.find("#popfieldthird-" + i)[0].value;
                 let pdate4 = newItem.find("#popfieldfourth-" + i)[0].value;
                 let pdate5 = newItem.find("#popfieldfifth-" + i)[0].value;
+
                 let tid = myUid[i].id;
                 newItem
                   .find("#uButton-" + i)[0]
@@ -750,25 +751,25 @@ location.href = '/login'
                         .set({ uscontent: false }, { merge: true });
                     }
 
-                    if (language === "hungarian") {
+                    if (uscont === "hungarian") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
                         .set({ language: 'hungarian' }, { merge: true });
                     }
-                  if (language === "finnish") {
+                  if (uscont === "finnish") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
                         .set({ language: 'finnish' }, { merge: true });
                     }
-                  if (language === "swedish") {
+                  if (uscont === "swedish") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
                         .set({ language: 'swedish' }, { merge: true });
                     }
-                  if (language === "czech") {
+                  if (uscont === "czech") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
