@@ -750,6 +750,31 @@ location.href = '/login'
                         .set({ uscontent: false }, { merge: true });
                     }
 
+                    if (language === "hungarian") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'hungarian' }, { merge: true });
+                    }
+                  if (language === "finnish") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'finnish' }, { merge: true });
+                    }
+                  if (language === "swedish") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'swedish' }, { merge: true });
+                    }
+                  if (language === "czech") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'czech' }, { merge: true });
+                    }
+
                     if (course1) {
                       firebase
                         .firestore()
