@@ -216,7 +216,8 @@ let course14 = data['chicboxcourse']
 let course15 = data['sbcourse']
 let course16 = data['mlcourse']
 let course17 = data['tscourse']
-
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
 
 
 if(course1 == true){
