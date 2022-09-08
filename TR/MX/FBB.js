@@ -157,7 +157,10 @@ let course14 = data['chicboxcourse']
 let course15 = data['sbcourse']
 let course16 = data['mlcourse']
 let course17 = data['tscourse']
-
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
+      
+      
       if( m1p1 == true) {
   $('#m1p1').hide()
   $('#m1p1x').show()
