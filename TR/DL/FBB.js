@@ -71,6 +71,8 @@ auth.onAuthStateChanged(async (user) => {
     let course15 = data['sbcourse']
     let course16 = data['mlcourse']
     let course17 = data['tscourse']
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
 
 mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true}); 
 
