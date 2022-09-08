@@ -129,7 +129,8 @@ let admin = data["admin"];
   let course15 = data['sbcourse']
   let course16 = data['mlcourse']
   let course17 = data['tscourse']
-
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
 
      let restaurant = data['Restaurant']; 
       let quiz1 = data['k2p4']; 
