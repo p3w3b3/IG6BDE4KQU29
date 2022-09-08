@@ -111,7 +111,8 @@ $("#cb6-quiz-completed").hide();
   let course15 = data['sbcourse']
   let course16 = data['mlcourse']
   let course17 = data['tscourse'] 
-  
+let lang = data["language"];
+document.querySelector('#languageselector').textContent = lang
 
 if(!!quiz1) {
 $('#cb1-quiz').hide()
