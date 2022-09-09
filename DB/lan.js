@@ -40,6 +40,10 @@ if(language === 'hungarian'){
   
   document.getElementById('ob1mob').textContent = hungarr2[14] 
   
+  document.querySelector('#itemt-21').value = 'Add hozzá'
+$('.savebuttonprofile').text('Megment')
+ 
+
   }
   
 
@@ -82,7 +86,8 @@ document.getElementById('signoutmobile').textContent = swedarr2[4]
 
 
 document.getElementById('ob1mob').textContent = swedarr[14] 
-
+document.querySelector('#itemt-21').value = 'Lägg till'
+$('.savebuttonprofile').text('Spara')
 }
 
 
@@ -121,7 +126,8 @@ document.getElementById('profiledesk').textContent = finarr[21]
 document.getElementById('signoutmobile').textContent = finarr2[4] 
 
 document.getElementById('ob1mob').textContent = finarr[14] 
-
+document.querySelector('#itemt-21').value = 'Luo'
+$('.savebuttonprofile').text('Tallenna')
 
 }
 
@@ -163,6 +169,8 @@ document.getElementById('signoutmobile').textContent = czecharr2[4]
 
 document.getElementById('ob1mob').textContent = czecharr[14] 
 
+document.querySelector('#itemt-21').value = 'Přidat'
+$('.savebuttonprofile').text('Uložit')
 }
 
 }, 7500)
