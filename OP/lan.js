@@ -34,7 +34,8 @@ if(language === 'hungarian'){
     document.getElementById('act4').textContent = 'Hozzáadása'
     document.getElementById('act5').textContent = 'Hozzáadása'
     document.getElementById('act6').textContent = 'Hozzáadása'
-
+    
+document.getElementById('promotionsnone').textContent = 'Nincsenek elérhető promóciók, kérjük, ellenőrizze később.'
     
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
@@ -73,7 +74,9 @@ if(language === 'czech'){
     document.getElementById('act4').textContent = 'Komentovat'
     document.getElementById('act5').textContent = 'Komentovat'
     document.getElementById('act6').textContent = 'Komentovat'
-
+    
+document.getElementById('promotionsnone').textContent = 'Nejsou k dispozici žádné promo akce, zkuste to znovu později.'
+    
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Dokončeno';
@@ -110,7 +113,9 @@ if(language === 'finnish'){
     document.getElementById('act4').textContent = 'Kommentoi'
     document.getElementById('act5').textContent = 'Kommentoi'
     document.getElementById('act6').textContent = 'Kommentoi'
-
+    
+document.getElementById('promotionsnone').textContent = 'Kampanjoita ei ole saatavilla, tarkista myöhemmin uudelleen.'
+    
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Valmis';
@@ -148,6 +153,8 @@ if(language === 'swedish'){
     document.getElementById('act5').textContent = 'Kommentera'
     document.getElementById('act6').textContent = 'Kommentera'
 
+    document.getElementById('promotionsnone').textContent = 'Det finns inga tillgängliga kampanjer, kolla igen senare.'
+    
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Komplett';
