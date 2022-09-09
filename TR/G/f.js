@@ -71,8 +71,6 @@ signOutButton.style.display = "none";
 if ("/" != currentPath) {
 location.href = "/login";
 }
-maincontent.style.display = "none";
-loader.style.display = "flex";
 }
 signOutButton.addEventListener("click", signout);
 });
