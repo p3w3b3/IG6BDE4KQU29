@@ -36,7 +36,11 @@ if(language === 'hungarian'){
     document.getElementById('act6').textContent = 'Hozzáadása'
     
 document.getElementById('promotionsnone').textContent = 'Nincsenek elérhető promóciók, kérjük, ellenőrizze később.'
-    
+    $('.submit-ops').text('Beküldés')
+    $('#submitbutt').text('Beküldés')
+    $('#sub-butt').text('Beküldés')
+
+
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Elkészült';
@@ -76,7 +80,9 @@ if(language === 'czech'){
     document.getElementById('act6').textContent = 'Komentovat'
     
 document.getElementById('promotionsnone').textContent = 'Nejsou k dispozici žádné promo akce, zkuste to znovu později.'
-    
+    $('.submit-ops').text('Předložit')
+    $('#submitbutt').text('Předložit')
+    $('#sub-butt').text('Předložit')
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Dokončeno';
@@ -113,9 +119,12 @@ if(language === 'finnish'){
     document.getElementById('act4').textContent = 'Kommentoi'
     document.getElementById('act5').textContent = 'Kommentoi'
     document.getElementById('act6').textContent = 'Kommentoi'
-    
-document.getElementById('promotionsnone').textContent = 'Kampanjoita ei ole saatavilla, tarkista myöhemmin uudelleen.'
-    
+
+    document.getElementById('promotionsnone').textContent = 'Kampanjoita ei ole saatavilla, tarkista myöhemmin uudelleen.'
+    $('.submit-ops').text('Lähetä')
+    $('#submitbutt').text('Lähetä')
+    $('#sub-butt').text('Lähetä')
+
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Valmis';
@@ -154,7 +163,11 @@ if(language === 'swedish'){
     document.getElementById('act6').textContent = 'Kommentera'
 
     document.getElementById('promotionsnone').textContent = 'Det finns inga tillgängliga kampanjer, kolla igen senare.'
+    $('.submit-ops').text('Skicka')
+    $('#submitbutt').text('Skicka')
+    $('#sub-butt').text('Skicka')
     
+   
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Komplett';
