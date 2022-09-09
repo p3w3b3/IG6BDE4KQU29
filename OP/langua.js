@@ -37,8 +37,8 @@ if(language === 'hungarian'){
     
 document.getElementById('promotionsnone').textContent = 'Nincsenek elérhető promóciók, kérjük, ellenőrizze később.'
     $('.submit-ops').text('Beküldés')
-    $('#submitbutt').text('Beküldés')
-    $('#sub-butt').text('Beküldés')
+    document.getElementById('submitbutt').value = 'Beküldés'
+    document.getElementById('sub-butt').value = 'Beküldés'
 
 
     const compl = document.querySelectorAll('.complete');
@@ -81,8 +81,8 @@ if(language === 'czech'){
     
 document.getElementById('promotionsnone').textContent = 'Nejsou k dispozici žádné promo akce, zkuste to znovu později.'
     $('.submit-ops').text('Předložit')
-    $('#submitbutt').text('Předložit')
-    $('#sub-butt').text('Předložit')
+    document.getElementById('submitbutt').value = 'Předložit'
+    document.getElementById('sub-butt').value = 'Předložit'
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Dokončeno';
@@ -122,8 +122,8 @@ if(language === 'finnish'){
 
     document.getElementById('promotionsnone').textContent = 'Kampanjoita ei ole saatavilla, tarkista myöhemmin uudelleen.'
     $('.submit-ops').text('Lähetä')
-    $('#submitbutt').text('Lähetä')
-    $('#sub-butt').text('Lähetä')
+    document.getElementById('submitbutt').value = 'Lähetä'
+    document.getElementById('sub-butt').value = 'Lähetä'
 
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
@@ -164,8 +164,9 @@ if(language === 'swedish'){
 
     document.getElementById('promotionsnone').textContent = 'Det finns inga tillgängliga kampanjer, kolla igen senare.'
     $('.submit-ops').text('Skicka')
-    $('#submitbutt').text('Skicka')
-    $('#sub-butt').text('Skicka')
+    document.getElementById('submitbutt').value = 'Skicka'
+    document.getElementById('sub-butt').value = 'Skicka'
+
     
    
     const compl = document.querySelectorAll('.complete');
