@@ -41,8 +41,6 @@ mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true});
     auth.onAuthStateChanged(async (user) => {
       let currentPath = window.location.pathname;
       if (user) {
-        maincontent.style.display = "flex";
-        loader.style.display = "none";
         let myFS = firebase.firestore();
         let docSnap = await myFS
           .doc("users/" + firebase.auth().currentUser.uid)
