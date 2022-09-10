@@ -35,6 +35,36 @@ if(language === 'hungarian'){
     document.getElementById('act5').textContent = 'Hozzáadása'
     document.getElementById('act6').textContent = 'Hozzáadása'
     
+
+
+document.getElementById('Type').options[1].text = 'Mindkét';
+document.getElementById('Type').options[3].text = 'Natív márka'
+
+document.getElementById('Timeframe').options[1].text = 'Ideiglenes';
+document.getElementById('Timeframe').options[2].text = 'Állandó';
+
+document.getElementById('cf3').options[1].text = 'Vevő';
+document.getElementById('cf3').options[2].text = 'Sofőr';
+    
+document.getElementById('cf4').options[1].text = 'Késett a megrendelés beszerzése (több mint 15 percet)';
+document.getElementById('cf4').options[2].text = 'Lemondott megrendelés';
+document.getElementById('cf4').options[3].text = 'Nem érkezett meg';
+document.getElementById('cf4').options[4].text = 'Egyéb';
+
+document.getElementById('Type').options[1].text = 'Oba';
+document.getElementById('Type').options[3].text = 'Nativní značka'
+
+document.getElementById('Timeframe').options[1].text = 'Dočasný';
+document.getElementById('Timeframe').options[2].text = 'Trvalý';
+
+document.getElementById('cf3').options[1].text = 'Zákazník';
+document.getElementById('cf3').options[2].text = 'Šofér';
+    
+document.getElementById('cf4').options[1].text = 'Byl pozdě na vyzvednutí objednávky (přes 15 min)'
+document.getElementById('cf4').options[2].text = 'Zrušená objednávka';
+document.getElementById('cf4').options[3].text = 'Neobjevil se'
+document.getElementById('cf4').options[4].text = 'Jiné';
+    
 document.getElementById('promotionsnone').textContent = 'Nincsenek elérhető promóciók, kérjük, ellenőrizze később.'
     $('.submit-ops').text('Beküldés')
     document.getElementById('submitbutt').value = 'Beküldés'
@@ -79,6 +109,9 @@ if(language === 'czech'){
     document.getElementById('act5').textContent = 'Komentovat'
     document.getElementById('act6').textContent = 'Komentovat'
     
+
+
+
 document.getElementById('promotionsnone').textContent = 'Nejsou k dispozici žádné promo akce, zkuste to znovu později.'
     $('.submit-ops').text('Předložit')
     document.getElementById('submitbutt').value = 'Předložit'
@@ -125,6 +158,31 @@ if(language === 'finnish'){
     document.getElementById('submitbutt').value = 'Lähetä'
     document.getElementById('sub-butt').value = 'Lähetä'
 
+document.getElementById('Type').options[1].text = 'Molemmat';
+document.getElementById('Type').options[3].text = 'Alkuperäinen';
+
+
+document.getElementById('Timeframe').options[1].text = 'Väliaikaisesti';
+document.getElementById('Timeframe').options[2].text = 'Pysyvästi';
+
+document.getElementById('cf3').options[1].text = 'Asiakas';
+document.getElementById('cf3').options[2].text = 'Kuljettaja';
+
+
+document.getElementById('cf4').options[1].text = 'Tilauksen nouto myöhästyi (yli 15 minuuttia)';
+
+document.getElementById('cf4').options[2].text = 'Tilaus peruttu';
+
+document.getElementById('cf4').options[3].text = 'Ei tullut paikalle';
+
+
+document.getElementById('cf4').options[4].text = 'Muu syy';
+
+
+
+
+
+
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Valmis';
@@ -168,7 +226,22 @@ if(language === 'swedish'){
     document.getElementById('sub-butt').value = 'Skicka'
 
     
-   
+document.getElementById('Type').options[1].text = 'Båda';
+document.getElementById('Type').options[3].text = 'inhemskt brännmärka';
+
+document.getElementById('Timeframe').options[1].text = 'Temporär';
+document.getElementById('Timeframe').options[2].text = 'Ständig';
+
+document.getElementById('cf3').options[1].text = 'Förare';
+document.getElementById('cf3').options[2].text = 'Kund';
+    
+document.getElementById('cf4').options[1].text = 'Var sen att hämta beställningen (över 15 minuter)';
+document.getElementById('cf4').options[2].text = 'Avbeställd beställning';
+document.getElementById('cf4').options[3].text = 'Kom inte till platsen';
+document.getElementById('cf4').options[4].text = 'Annat';
+
+
+
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Komplett';
