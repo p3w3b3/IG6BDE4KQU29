@@ -267,6 +267,12 @@ document.querySelector('#languageselector').textContent = lang
 
   let sstid = data['stid'].toLowerCase()
   
+document.querySelector('#comment-name').value = name
+document.querySelector('#comment-fbid').value = curUser.uid
+document.querySelector('#comment-stid').value = sstid
+
+
+
    let profileuids = curUser.uid      
         
   {
