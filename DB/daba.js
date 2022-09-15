@@ -69,6 +69,56 @@ const authChanged = firebase.auth().onAuthStateChanged((user) => {
         let datastid = data["stid"]
         let lang = data["language"];
 
+
+
+
+{
+window.addEventListener("load", function(){
+let unm = name
+let umail = emaild
+let ustid = datastid
+let ufid = curUser.uid
+let fomdata = document.querySelector('#hiddenfomdata').textContent
+let foms = fomdata.split(/[|]+/)[0]
+if(unm !== 'Loading..') {
+
+mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true}); 
+distinct_id = mixpanel.get_distinct_id();
+document.querySelector('#mydistinct').textContent = distinct_id 
+mixpanel.identify(ufid);
+mixpanel.people.set_once({ "$name": unm, "$email": umail,"stid": ustid,"Fom Manager": foms});
+}
+  $(document).ready(function() {
+    $(document).on('click', '[data-tracker]', function(e) {
+
+      var trackData = $(this).data('tracker');
+      if (!trackData) { return; }
+
+      var tagData = ParseTagData.tagData(trackData);
+      if (!tagData.action || !tagData.label ) { return; }
+
+      Track.trackEvent('click', { action: tagData.action , label:  tagData.label });
+      });
+
+    var ParseTagData = { tagData : function ( data ) {
+      var tmpData = data.split("|");
+      if (tmpData.length !=2 ) { return ""; }
+      return { "action": tmpData[0] ,"label": tmpData[1] };
+      }
+    };
+
+    var Track= { trackEvent: function (eventType, data) {
+      mixpanel.track( data.action );
+      }
+    };
+  })
+})
+}
+
+
+
+
+
 document.querySelector('#languageselector').textContent = lang
 
 let course1 = data["ftbcourse"];
