@@ -1189,7 +1189,7 @@ location.href = '/login'
               } else {
                 newItem.children("#uTotal")[0].textContent = " ";
               }
-              newItem.append(".training-headings");
+              newItem.append();
             }
           });
       }
