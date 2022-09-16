@@ -1189,7 +1189,7 @@ location.href = '/login'
               } else {
                 newItem.children("#uTotal")[0].textContent = " ";
               }
-              newItem.insertAfter(".training-headings");
+              newItem.append(".training-headings");
             }
           });
       }
