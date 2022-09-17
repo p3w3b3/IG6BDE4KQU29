@@ -78,15 +78,13 @@ let unm = name
 let umail = emaild
 let ustid = datastid
 let ufid = curUser.uid
-let fomdata = document.querySelector('#hiddenfomdata').textContent
-let foms = fomdata.split(/[|]+/)[0]
 if(unm !== 'Loading..') {
 
 mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true}); 
 distinct_id = mixpanel.get_distinct_id();
 document.querySelector('#mydistinct').textContent = distinct_id 
 mixpanel.identify(ufid);
-mixpanel.people.set_once({ "$name": unm, "$email": umail,"stid": ustid,"Fom Manager": foms});
+mixpanel.people.set_once({ "$name": unm, "$email": umail,"stid": ustid});
 }
   $(document).ready(function() {
     $(document).on('click', '[data-tracker]', function(e) {
