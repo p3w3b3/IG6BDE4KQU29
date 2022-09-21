@@ -65,7 +65,7 @@ document.getElementById('cf4').options[2].text = 'Zrušená objednávka';
 document.getElementById('cf4').options[3].text = 'Neobjevil se'
 document.getElementById('cf4').options[4].text = 'Jiné';
     
-document.getElementById('promotionsnone').textContent = 'Nincsenek elérhető promóciók, kérjük, ellenőrizze később.'
+
     $('.submit-ops').text('Beküldés')
     document.getElementById('submitbutt').value = 'Beküldés'
     document.getElementById('sub-butt').value = 'Beküldés'
@@ -112,7 +112,7 @@ if(language === 'czech'){
 
 
 
-document.getElementById('promotionsnone').textContent = 'Nejsou k dispozici žádné promo akce, zkuste to znovu později.'
+
     $('.submit-ops').text('Předložit')
     document.getElementById('submitbutt').value = 'Předložit'
     document.getElementById('sub-butt').value = 'Předložit'
@@ -153,7 +153,7 @@ if(language === 'finnish'){
     document.getElementById('act5').textContent = 'Kommentoi'
     document.getElementById('act6').textContent = 'Kommentoi'
 
-    document.getElementById('promotionsnone').textContent = 'Kampanjoita ei ole saatavilla, tarkista myöhemmin uudelleen.'
+
     $('.submit-ops').text('Lähetä')
     document.getElementById('submitbutt').value = 'Lähetä'
     document.getElementById('sub-butt').value = 'Lähetä'
@@ -220,7 +220,7 @@ if(language === 'swedish'){
     document.getElementById('act5').textContent = 'Kommentera'
     document.getElementById('act6').textContent = 'Kommentera'
 
-    document.getElementById('promotionsnone').textContent = 'Det finns inga tillgängliga kampanjer, kolla igen senare.'
+
     $('.submit-ops').text('Skicka')
     document.getElementById('submitbutt').value = 'Skicka'
     document.getElementById('sub-butt').value = 'Skicka'
