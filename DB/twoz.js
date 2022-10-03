@@ -515,6 +515,8 @@ location.href = '/login'
               var accessps = myResults[i].data.prereq;
               var accessps2 = myResults[i].data.admin;
               var accessps3 = myResults[i].data.operations;
+              var accessps4 = myResults[i].data.enterprise;
+
 
               var course11 = myResults[i].data.ftbcourse;
               var course22 = myResults[i].data.seccourse;
@@ -636,6 +638,11 @@ location.href = '/login'
               if (!!accessps3) {
                 newItem.find("#accesslevel-" + i)[0].value = "operations";
               }
+
+              if (!!accessps4) {
+                newItem.find("#accesslevel-" + i)[0].value = "enterprise";
+              }
+
 
 
               if (!!accessps && !!accessps2) {
@@ -889,10 +896,10 @@ location.href = '/login'
                         .firestore()
                         .doc("users/" + tid)
                         .set({ prereq: true }, { merge: true });
-                        .firestore()
+                        firestore()
                         .doc("users/" + tid)
                         .set({ admin: false }, { merge: true });
-                        .firestore()
+                        firestore()
                         .doc("users/" + tid)
                         .set({ enterprise: false }, { merge: true });
                     }
@@ -907,10 +914,10 @@ location.href = '/login'
                         .firestore()
                         .doc("users/" + tid)
                         .set({ prereq: true }, { merge: true });
-                        .firestore()
+                        firestore()
                         .doc("users/" + tid)
                         .set({ admin: false }, { merge: true });
-                        .firestore()
+                        firestore()
                         .doc("users/" + tid)
                         .set({ enterprise: true }, { merge: true });
                     }
@@ -931,7 +938,7 @@ location.href = '/login'
                         .firestore()
                         .doc("users/" + tid)
                         .set({ operations: false }, { merge: true });
-                        .firestore()
+                        firestore()
                         .doc("users/" + tid)
                         .set({ enterprise: false }, { merge: true });
                     }
