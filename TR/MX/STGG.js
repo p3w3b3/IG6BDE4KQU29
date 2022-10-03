@@ -103,9 +103,9 @@ location.href = '/operations/'+sstid
 })
 }else if(enterprise===true){
 document.querySelector("#mydas").addEventListener("click", () => {
-window.location.href = '/enterprise/'+sstid
+window.location.href = '/enterprise/all'
 document.querySelector("#mbmenu1").addEventListener("click", () => {
-window.location.href = '/enterprise/'+sstid
+window.location.href = '/enterprise/all'
 })
 })
 }
@@ -162,9 +162,7 @@ let course11 = data['cluckcourse']
 let course12 = data['rebelritocourse']
 let course13 = data['ktowncourse']
 let course14 = data['chicboxcourse']
-let course15 = data['sbcourse']
-let course16 = data['mlcourse']
-let course17 = data['tscourse']
+
 
       if( m1p1 == true) {
   $('#m1p1').hide()
@@ -506,45 +504,6 @@ $('#cb22').hide()
 $('#cb222').hide()
 $('#train144').hide()
 $('#mbcbox').hide()
-}
-if(course15 == true){
-$('#sb2').css('display', 'flex');
-$('#sb22').css('display', 'flex');
-$('#sb022').css('display', 'flex');
-$('#train022').css('display', 'flex');
-$('#mstacked').css('display', 'flex');
-}else{
-$('#sb2').hide()
-$('#sb22').hide()
-$('#sb022').hide()
-$('#train022').hide()
-$('#mstacked').hide()
-}
-if(course16 == true){
-$('#ml2').css('display', 'flex');
-$('#ml22').css('display', 'flex');
-$('#ml022').css('display', 'flex');
-$('#train033').css('display', 'flex');
-$('#mobilemarius').css('display', 'flex');
-}else{
-$('#ml2').hide()
-$('#ml22').hide()
-$('#ml022').hide()
-$('#train033').hide()
-$('#mobilemarius').hide()
-}
-if(course17 == true){
-$('#sm2').css('display', 'flex');
-$('#sm22').css('display', 'flex');
-$('#sm022').css('display', 'flex');
-$('#train044').css('display', 'flex');
-$('#mwingery').css('display', 'flex');
-}else{
-$('#sm2').hide()
-$('#sm22').hide()
-$('#sm022').hide()
-$('#train044').hide()
-$('#mwingery').hide()
 }
 
 if (admin == true) {
