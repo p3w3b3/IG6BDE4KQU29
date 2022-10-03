@@ -126,10 +126,6 @@ let course11 = data['cluckcourse']
 let course12 = data['rebelritocourse']
 let course13 = data['ktowncourse']
 let course14 = data['chicboxcourse']
-let course15 = data['sbcourse']
-let course16 = data['mlcourse']
-let course17 = data['tscourse']
-
 
 	
 let rtrue = data['rated']; 
@@ -291,28 +287,7 @@ $('#cb22').hide()
 $('#cb222').hide()
 }
 
-if(course15 == true){
-$('#sb2').css('display', 'flex');
-$('#sb22').css('display', 'flex');
-}else{
-$('#sb2').hide()
-$('#sb22').hide()
-}
-if(course16 == true){
-$('#ml2').css('display', 'flex');
-$('#ml22').css('display', 'flex');
-}else{
-$('#ml2').hide()
-$('#ml22').hide()
-}
-if(course17 == true){
-$('#sm2').css('display', 'flex');
-$('#sm22').css('display', 'flex');
-}else{
-$('#sm2').hide()
-$('#sm22').hide()
-}
-  
+
  if (!!admin) {
 $("#n5").show();
 $("#trackermob").show();
@@ -507,9 +482,6 @@ location.href = '/login'
 	            newItem.find("#course12")[0].id = "course12-" + i;
               newItem.find("#course13")[0].id = "course13-" + i;
 	            newItem.find("#course14")[0].id = "course14-" + i;
-              newItem.find("#course15")[0].id = "course15-" + i;
-	            newItem.find("#course16")[0].id = "course16-" + i;
-              newItem.find("#course17")[0].id = "course17-" + i;
               newItem.find("#popfieldfirst")[0].id = "popfieldfirst-" + i;
               newItem.find("#stid")[0].id = "stid-" + i;
 
@@ -558,9 +530,6 @@ location.href = '/login'
               var course122 = myResults[i].data.rebelritocourse;
               var course133 = myResults[i].data.ktowncourse;
               var course144 = myResults[i].data.chicboxcourse;
-              var course155 = myResults[i].data.sbcourse;
-              var course166 = myResults[i].data.mlcourse;
-              var course177 = myResults[i].data.tscourse;
 
 
               
@@ -654,21 +623,6 @@ location.href = '/login'
               } else if (course144 == true) {
                 newItem.find("#course14-" + i)[0].checked = true;
               }
-              if (course155 == undefined) {
-                newItem.find("#course15-" + i)[0].checked = false;
-              } else if (course155 == true) {
-                newItem.find("#course15-" + i)[0].checked = true;
-              }
-              if (course166 == undefined) {
-                newItem.find("#course16-" + i)[0].checked = false;
-              } else if (course166 == true) {
-                newItem.find("#course16-" + i)[0].checked = true;
-              }
-              if (course177 == undefined) {
-                newItem.find("#course17-" + i)[0].checked = false;
-              } else if (course144 == true) {
-                newItem.find("#course17-" + i)[0].checked = true;
-              }
 
               if (accessps == undefined && accessps == undefined) {
                 newItem.find("#accesslevel-" + i)[0].value = "";
@@ -733,10 +687,7 @@ location.href = '/login'
                 let course11 = newItem.find("#course11-" + i)[0].checked == true;
                 let course12 = newItem.find("#course12-" + i)[0].checked == true; 
                 let course13 = newItem.find("#course13-" + i)[0].checked == true;
-                let course14 = newItem.find("#course14-" + i)[0].checked == true;       
-                let course15 = newItem.find("#course15-" + i)[0].checked == true;       
-                let course16 = newItem.find("#course16-" + i)[0].checked == true;       
-                let course17 = newItem.find("#course17-" + i)[0].checked == true;          
+                let course14 = newItem.find("#course14-" + i)[0].checked == true;               
  
                 let paccess = newItem.find("#accesslevel-" + i)[0].value;
                 let stid = newItem.find("#stid-" + i)[0].value;
@@ -922,40 +873,6 @@ location.href = '/login'
                         .set({ chicboxcourse: false }, { merge: true });
                     }
                   
-                              if (course15) {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ sbcourse: true }, { merge: true });
-                    } else {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ sbcourse: false }, { merge: true });
-                    }
-                              if (course16) {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ mlcourse: true }, { merge: true });
-                    } else {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ mlcourse: false }, { merge: true });
-                    }
-                              if (course17) {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ tscourse: true }, { merge: true });
-                    } else {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ tscourse: false }, { merge: true });
-                    }
-
                     if (paccess === "preq") {
                       firebase
                         .firestore()
