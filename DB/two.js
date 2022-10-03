@@ -674,13 +674,15 @@ location.href = '/login'
                 newItem.find("#accesslevel-" + i)[0].value = "";
               }
 
-              if (!!accessps3) {
-                newItem.find("#accesslevel-" + i)[0].value = "operations";
-              }
 
               if (!!accessps) {
                 newItem.find("#accesslevel-" + i)[0].value = "preq";
               }
+
+              if (!!accessps3) {
+                newItem.find("#accesslevel-" + i)[0].value = "operations";
+              }
+
 
               if (!!accessps && !!accessps2) {
                 newItem.find("#accesslevel-" + i)[0].value = "admin";
@@ -953,7 +955,17 @@ location.href = '/login'
                         .doc("users/" + tid)
                         .set({ tscourse: false }, { merge: true });
                     }
-                  
+
+                    if (paccess === "preq") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ prereq: true }, { merge: true });
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ admin: false }, { merge: true });
+                    }
                   
                     if (paccess === "operations") {
                       firebase
@@ -966,16 +978,6 @@ location.href = '/login'
                         .set({ prereq: true }, { merge: true });
                     }
 
-                    if (paccess === "preq") {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ prereq: true }, { merge: true });
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ admin: false }, { merge: true });
-                    }
 
                     if (paccess === "admin") {
                       firebase
