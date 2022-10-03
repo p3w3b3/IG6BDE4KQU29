@@ -874,28 +874,18 @@ location.href = '/login'
                     }
                   
                     if (paccess === "preq") {
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ prereq: true }, { merge: true });
-                      firebase
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ admin: false }, { merge: true });
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ enterprise: false }, { merge: true });
-                        .firestore()
-                        .doc("users/" + tid)
-                        .set({ operations: false }, { merge: true });
+                      firebase.firestore().doc("users/" + tid).set({ prereq: true }, { merge: true });
+                      firebase.firestore().doc("users/" + tid).set({ admin: false }, { merge: true });
+		      firestore().doc("users/" + tid).set({ enterprise: false }, { merge: true });
+                      firestore().doc("users/" + tid).set({ operations: false }, { merge: true });
                     }
                   
                     if (paccess === "operations") {
-                      firebase
+                      	firebase
                         .firestore()
                         .doc("users/" + tid)
                         .set({ operations: true }, { merge: true });
-                      firebase
+                     	firebase
                         .firestore()
                         .doc("users/" + tid)
                         .set({ prereq: true }, { merge: true });
