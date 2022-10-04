@@ -7,9 +7,14 @@ var j = document.createElement(s); j.async = 1; j.type = 'text/javascript'; j.sr
 w.GLR = w.GLR || {};
 d.getElementsByTagName("head")[0].appendChild(j);
 })(window, document, "script");
-setTimeout(() => {
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+
 kare.onEscalate(function(callbackEvent, messageBody) {
 Intercom('show');
 kare.close()
 });
-}, "2500")
+
+  }
+}
