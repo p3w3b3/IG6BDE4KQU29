@@ -1,3 +1,4 @@
+setTimeout(() => { 
 let language = document.querySelector('#lang').textContent
 
 
@@ -250,3 +251,7 @@ document.getElementById('cf4').options[4].text = 'Annat';
     });
 
 }
+}, 7500)
+
+    
+    
