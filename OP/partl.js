@@ -1,6 +1,4 @@
-setTimeout(() => { 
-
-let language = document.querySelector('#languageselector').textContent
+let language = document.querySelector('#lang').textContent
 
 
 let hungarr = ['Vezérlőpult','Ranglista','Mérőszámok','Felkészülési idő','Működési idő','Múlt hét','Előző hét','Múlt hét','Múlt hét','Múlt hét','Heti célok','Értékelés','Felkészülési idő','Egymást követő hetek','A hét megjegyzése','Promóció','Promóció','Promóció','Intézkedés','Megjegyzés','Akció','Hívás dátuma','Hívás foglalása','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Promóció','Intézkedés','Promóció','Promóció','Képzett csapattagok','Múlt heti bruttó értékesítés','Értékelési ranglista','Ertékesítés','Értékelési','Aktuális hét','Múlt hét','Különbség','Ertékesítés','Értékelési','Értékelési ranglista','Működési idő módosítása','Típus','Időkeret','Nap','Nyitás (reggel)','Zárás (reggel)','Nyitás (este)','Zárás (este)','Zárva','Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap','Kihívás visszautasítása','Platform','Márka','Párttag','Ok','Megrendelés azonosítója','Megrendelés dátuma','Megrendelés ideje','Bizonyíték','Értékesítés','Értékesítés','Értékesítés','Megrendelés','Mindig','Múlt hónap','Mindig','Mindig','Dátum','Referencia','Értékesítés','PWB Díj + áfa','Módosítások','Fizetve','Számlamenedzser','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával','Kiemelt promóciók','Peckwater Kezelt kampányok','Nem szeretnél részt venni a kampányban, vagy kérdésed van?','Vezérlőpult','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Vezérlőpult','Ranglisták','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Profil','Kijelentkezés','Vezérlőpult','Vezérlőpult','Heti célok','Visszacsatolás','Az én étterem','Analitika','Képzés','Kontakt','Ranglisták','Visszatérítések','Nyitvatartási idő','Teljesítmény','Számlákat','Kampányok','Kontakt','Kontakt','Hozzáadása','Saját adatok','Étterem','Név','E-mail cím']
@@ -8,8 +6,9 @@ let hungarr = ['Vezérlőpult','Ranglista','Mérőszámok','Felkészülési idő
 
 if(language === 'hungarian'){
     for (i = 0 ; i < hungarr.length; i++) {
+        if ($('#itemt-'+i).length){
     document.getElementById('itemt-'+i).textContent = hungarr[i]
-    }
+    }}
 
     document.getElementById('intercom-url').textContent = 'kattints ide'
     
@@ -66,7 +65,7 @@ document.getElementById('cf4').options[3].text = 'Neobjevil se'
 document.getElementById('cf4').options[4].text = 'Jiné';
     
 
-    $('.submit-ops').text('Beküldés')
+    $('.submit-opse').text('Beküldés')
     document.getElementById('submitbutt').value = 'Beküldés'
     document.getElementById('sub-butt').value = 'Beküldés'
 
@@ -82,8 +81,9 @@ let czecharr = ['Přístrojová deska','Žebříčky','Metriky','Čas na přípr
 
 if(language === 'czech'){
     for (i = 0 ; i < czecharr.length; i++) {
+        if ($('#itemt-'+i).length){
     document.getElementById('itemt-'+i).textContent = czecharr[i]
-    }
+    }}
 
     document.getElementById('intercom-url').textContent = 'klikněte zde'
     
@@ -113,7 +113,7 @@ if(language === 'czech'){
 
 
 
-    $('.submit-ops').text('Předložit')
+    $('.submit-opse').text('Předložit')
     document.getElementById('submitbutt').value = 'Předložit'
     document.getElementById('sub-butt').value = 'Předložit'
     const compl = document.querySelectorAll('.complete');
@@ -123,14 +123,15 @@ if(language === 'czech'){
 
 }
 
-let finarr = ['Kojelauta','Ravintolani','Mittarit','Valm. aika','Käytettävyys','Tämä viikko','Edellinen viikko','Edellinen viikko','Edellinen viikko','Edellinen viikko','Viikoittaiset tavoitteet','Luokitus','Valmistusaika','Peräkkäiset viikot','Kommenti','Palkinto','Palkinto','Palkinto','Sanktio','Kommenti','Tehtävä','Tuleva puhelu','Varaa puhelu','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Palkinto','Sanktio','Palkinto','Palkinto','Koulutetut Jäsenet','Viimeisen viikon bruttomyynnit','Sinun sijoituksesi','Bruttomyynnit','Arviointi','Kuluva viikko','Edellinen viikko','Muutos','Myynnit','Arvio','Ranking lista','Muuta aukioloaikaa','Brändi','Muutoksen pysyvyys','Päivä','Aukeaa (Aamu)','Sulkeutuu (Aamu)','Aukeaa (Ilta)','Sulkeutuu (Ilta)','Suljettu','Maanantai','Tiistai','Keskiviikko','Torstai','Perjantai','Lauantai','Sunnuntai','Haasteen hyvitys','Alusta','Brändi','Henkilö','Syy','Tilausnumero','Tilauksen pvm','Tilausaika','Todiste','Brutto myynnit','Brutto myynnit','Brutto myynnit','Tilaukset','Kuukausi tähän päivään asti','Viimeinen kuukausi','Kaikkien aikojen','Kaikkien aikojen','Pvm','Viite','Brutto myynnit','PWB maksu + alv','Muutokset','Maksettu','Tilin johtaja','Jos tarvitset lisätukea, käytä chat-tukiominaisuutta.','Syyskuun kampanjat','Peckwaterin hallitsemat kampanjat','Haluatko lopettaa kampanjan tilauksen tai sinulla on muuta kysyttävää?','Kojelauta','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Kojelauta','Tulostaulukko','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Profiili','Kirjaudu ulos','Kojelauta','Kojelauta','Tavoitteet','Palaute','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Aukioloajat','Korvaus','Aukioloajat','Analytiikka','Laskut','Markkinointi','Ota yhteyttä','Kommentoi','Omat tiedot','Ravintola','Nimi','Sähköposti']
+let finarr = ['Kojelauta','Ravintolani','Mittarit','Valm. aika','Käytettävyys','Tämä viikko','Edellinen viikko','Edellinen viikko','Edellinen viikko','Edellinen viikko','Viikoittaiset tavoitteet','Luokitus','Valmistusaika','Peräkkäiset viikot','Kommenti','Palkinto','Palkinto','Palkinto','Sanktio','Kommenti','Tehtävä','Tuleva puhelu','Varaa puhelu','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Kommenti','Tehtävä','Palkinto','Sanktio','Palkinto','Palkinto','Koulutetut Jäsenet','Viimeisen viikon bruttomyynnit','Sinun sijoituksesi','Bruttomyynnit','Arviointi','Kuluva viikko','Edellinen viikko','Muutos','Myynnit','Arvio','Ranking lista','Muuta aukioloaikaa','Brändi','Muutoksen pysyvyys','Päivä','Aukeaa (Aamu)','Sulkeutuu (Aamu)','Aukeaa (Ilta)','Sulkeutuu (Ilta)','Suljettu','Maanantai','Tiistai','Keskiviikko','Torstai','Perjantai','Lauantai','Sunnuntai','Haasteen hyvitys','Alusta','Brändi','Henkilö','Syy','Tilausnumero','Tilauksen pvm','Tilausaika','Todiste','Brutto myynnit','Brutto myynnit','Brutto myynnit','Tilaukset','Kuukausi tähän päivään asti','Viimeinen kuukausi','Kaikkien aikojen','Kaikkien aikojen','Pvm','Viite','Brutto myynnit','PWB maksu + alv','Muutokset','Maksettu','Tilin johtaja','Jos tarvitset lisätukea, käytä chat-tukiominaisuutta.','Kampanjat','Peckwaterin hallitsemat kampanjat','Haluatko lopettaa kampanjan tilauksen tai sinulla on muuta kysyttävää?','Kojelauta','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Kojelauta','Tulostaulukko','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Profiili','Kirjaudu ulos','Kojelauta','Kojelauta','Tavoitteet','Palaute','Oma ravintola','Analytiikka','Kurssit','Ota yhteyttä','Markkinointi','Aukioloajat','Korvaus','Aukioloajat','Analytiikka','Laskut','Markkinointi','Ota yhteyttä','Kommentoi','Omat tiedot','Ravintola','Nimi','Sähköposti']
 
 if(language === 'finnish'){
     for (i = 0 ; i < finarr.length; i++) {
-    document.getElementById('itemt-'+i).textContent = finarr[i] 
-    }
+        if ($('#itemt-'+i).length){
+    document.getElementById('itemt-'+i).textContent = finarr[i]
+    }}
     document.getElementById('intercom-url').textContent = 'Paina tästä'
-    
+     
     document.getElementById('ops1').textContent = 'Kojelauta'
     document.getElementById('ops2').textContent =   'Tulostaulukko'
     document.getElementById('ops3').textContent = 'Liiketoiminta'
@@ -154,7 +155,7 @@ if(language === 'finnish'){
     document.getElementById('act6').textContent = 'Kommentoi'
 
 
-    $('.submit-ops').text('Lähetä')
+    $('.submit-opse').text('Lähetä')
     document.getElementById('submitbutt').value = 'Lähetä'
     document.getElementById('sub-butt').value = 'Lähetä'
 
@@ -193,9 +194,10 @@ document.getElementById('cf4').options[4].text = 'Muu syy';
 let swedarr = ['Instrumentbräda','Min restaurang','Mätvärden','Förbereda tid','Användbarhet','Denna vecka','Föregående vecka','Föregående vecka','Föregående vecka','Föregående vecka','Veckomål','Betyg','Förberedelsetid','På varandra följande veckor','Veckans kommentar','Kampanj','Kampanj','Kampanj','Sanktion','Kommentar','Uppdrag','Kommande samtal','Boka ett samtal','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kampanj','Sanktion','Kampanj','Kampanj','Utbildade medlemmar','Ledartavla för betygsättning','Din ranking','Bruttoförsäljning','Betyg','Veckan som går','Föregående vecka','Förändra','Försäljning','Betyg','Rankinglista','Ändra öppettider','Brännmärka','Förändringens varaktighet','Dag','Öppet (morgon)','Stäng (morgon)','Öppet(kväll)','Stäng(kväll)','Stängd','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag','Återbetalning för utmaning','Plattform','Brännmärka','Person','Anledning','Beställnings-ID','Beställningsdatum','Beställningstid','Bevis','Bruttoförsäljning','Bruttoförsäljning','Bruttoförsäljning','Tilaukset','En månad kvar till idag','Förra månaden','Hela tiden','Hela tiden','Datum','Referens','Bruttoförsäljning','PWB Avgift + moms','Ändringar','Betalt','Kontoansvarig','Om du behöver ytterligare stöd kan du använda chattfunktionen för att kontakta oss.','Kampanjer','Kampanjer som hanteras av Peckwater','Vill du sluta prenumerera på kampanjen eller har du andra frågor?','Dashboard','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Dashboard','Topplistor','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Profil','Logga ut','Dashboard','Dashboard','Mål','Respons','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Besökstid','Korvaus','Besökstid','Analytics','Fakturor','Marknadsföring','Kontakt','Kommentera','Min information','Restaurang','Namn','E-post']
 
 if(language === 'swedish'){
-    for (i = 0 ; i < swedarr.length; i++) {
-    document.getElementById('itemt-'+i).textContent = swedarr[i] 
-    }
+        for (i = 0 ; i < swedarr.length; i++) {
+            if ($('#itemt-'+i).length){
+        document.getElementById('itemt-'+i).textContent = swedarr[i]
+        }}
     document.getElementById('intercom-url').textContent = 'Klicka här'
     
     document.getElementById('ops1').textContent = 'Instrumentbräda'
@@ -221,7 +223,7 @@ if(language === 'swedish'){
     document.getElementById('act6').textContent = 'Kommentera'
 
 
-    $('.submit-ops').text('Skicka')
+    $('.submit-opse').text('Skicka')
     document.getElementById('submitbutt').value = 'Skicka'
     document.getElementById('sub-butt').value = 'Skicka'
 
@@ -248,15 +250,3 @@ document.getElementById('cf4').options[4].text = 'Annat';
     });
 
 }
-    
-
-  {
-  const loader = document.querySelector("#loadanimation");
-  const maincontent = document.querySelector("#maincontent");
-  maincontent.style.display = 'flex'
-  loader.style.display = 'none'
-  }
-  
-
-    
-}, 5000)
