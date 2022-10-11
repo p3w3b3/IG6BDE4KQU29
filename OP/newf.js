@@ -120,8 +120,9 @@ let course17=data['tscourse']
 function updatemarketing() { 
     let camp1 = document.querySelectorAll('.coll-marketing')
     let camp2 = document.querySelectorAll('.featured-promo')
-    let mysel = document.querySelector('#selectstid').value
+
     for (var i = 0; i < camp1.length; i++) {
+    let mysel = document.querySelector('#selectstid').value
     let cam1 = camp1[i].children[0].children[1].children[0].textContent
     let camb1 = camp1[i].children[0].children[5].children[1]
     if(!!data[mysel+cam1]){
@@ -132,8 +133,8 @@ function updatemarketing() {
     camb1.classList.remove("on")
     }}
     
-    
     for (var i = 0; i < camp2.length; i++) {
+    let mysel = document.querySelector('#selectstid').value
     let camb2 = camp2[i].children[1].children[3].children[1]
     let cam2 = camp2[i].children[1].children[3].children[2].textContent
     if(!!data[mysel+cam2]){
