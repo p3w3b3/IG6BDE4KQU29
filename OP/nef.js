@@ -117,40 +117,6 @@ let course15=data['sbcourse']
 let course16=data['mlcourse']
 let course17=data['tscourse']
 
-function updatemarketing() { 
-    let camp1 = document.querySelectorAll('.coll-marketing')
-    let camp2 = document.querySelectorAll('.featured-promo')
-
-    for (var i = 0; i < camp1.length; i++) {
-    let mysel = document.querySelector('#selectstid').value
-    let cam1 = camp1[i].children[0].children[1].children[0].textContent
-    let camb1 = camp1[i].children[0].children[5].children[1]
-    if(!!data[mysel+cam1]){
-    camb1.textContent = 'Opted In'
-    camb1.classList.add("on")
-    }else{
-    camb1.textContent = 'Opt In'
-    camb1.classList.remove("on")
-    }}
-    
-    for (var i = 0; i < camp2.length; i++) {
-    let mysel = document.querySelector('#selectstid').value
-    let camb2 = camp2[i].children[1].children[3].children[1]
-    let cam2 = camp2[i].children[1].children[3].children[2].textContent
-    if(!!data[mysel+cam2]){
-    camb2.textContent = 'Opted In'
-    camb2.classList.add("on")
-    } else {
-    camb2.textContent = 'Opt In'
-    camb2.classList.remove("on")
-    }}}
-    
-    document.querySelector('#selectstid').addEventListener('change', updatemarketing);
-
-
-    
-
-
 let rtrue = data['rated'];
 if(rtrue === true) {
 document.querySelector('#npsdiv').style.display = 'none'
@@ -357,7 +323,7 @@ let cam = campaign[i].children[0].children[1].children[0].textContent.toString()
 let cambutton = campaign[i].children[0].children[5].children[1]
 cambutton.addEventListener("click", function() {
 let mysel = document.querySelector('#selectstid').value
-firebase.firestore().doc("users/"+firebase.auth().currentUser.uid).set({ [mysel+cam]:mysel+cam }, {merge:true})
+firebase.firestore().doc("stid/"+mysel).set({ [cam]:cam }, {merge:true})
 
 this.textContent = 'Opted In'
 cambutton.classList.add("on")
@@ -370,7 +336,7 @@ let campbutton2 = campaign2[i].children[1].children[3].children[1]
 let cam2 = campaign2[i].children[1].children[3].children[2].textContent
 campbutton2.addEventListener("click", function() {
 let mysel = document.querySelector('#selectstid').value
-firebase.firestore().doc("users/"+firebase.auth().currentUser.uid).set({ [mysel+cam2]:mysel+cam2 }, {merge:true})
+firebase.firestore().doc("stid/"+mysel).set({ [cam2]:cam2 }, {merge:true})
 this.textContent = 'Opted In'
 campbutton2.classList.add("on")
 
