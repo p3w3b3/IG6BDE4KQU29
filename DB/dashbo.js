@@ -67,6 +67,7 @@ const authChanged = firebase.auth().onAuthStateChanged((user) => {
         let pdt4 = data["pdate4"];
         let pdt5 = data["pdate5"];
         let datastid = data["stid"]
+        let dataprid = data["prid"]
         let lang = data["language"];
 
 
@@ -152,6 +153,7 @@ document.querySelector('#question-stid').value = data['stid']
 
         
 document.querySelector('#mystid').textContent = datastid
+
     
         let admin = data["admin"];
 
@@ -519,8 +521,11 @@ location.href = '/login'
               newItem.find("#course17")[0].id = "course17-" + i;
               newItem.find("#popfieldfirst")[0].id = "popfieldfirst-" + i;
               newItem.find("#stid")[0].id = "stid-" + i;
+              newItem.find("#prid")[0].id = "prid-" + i;
 
               newItem.find("#uSTID")[0].id = "uSTID-" + i;
+              newItem.find("#uPRID")[0].id = "uPRID-" + i;
+
               newItem.find("#ftbcount")[0].id = "ftbcount-" + i;
               newItem.find("#seccount")[0].id = "seccount-" + i;
               newItem.find("#wbwcount")[0].id = "wbwcount-" + i;
@@ -546,6 +551,7 @@ location.href = '/login'
               var pfield5 = myResults[i].data.pdate5;
 
               var datastid = myResults[i].data.stid;
+              var dataprid = myResults[i].data.prid;
               
               var countryus = myResults[i].data.uscontent;
               
@@ -771,6 +777,7 @@ location.href = '/login'
  
                 let paccess = newItem.find("#accesslevel-" + i)[0].value;
                 let stid = newItem.find("#stid-" + i)[0].value;
+                let prid = newItem.find("#prid-" + i)[0].value;
                 
                 let uscont = newItem.find("#country-" + i)[0].value;
                 
@@ -1069,6 +1076,12 @@ location.href = '/login'
                     }
 
 
+                    if (prid !== undefined && stid !== "-" && stid !== " ") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ prid: prid }, { merge: true });
+                    }
 
                     if (!!pdate1) {
                       firebase
@@ -1130,6 +1143,7 @@ location.href = '/login'
               var wbwn = parseInt(myResults[i].data.WBW);
               var dlv = parseInt(myResults[i].data.deliverect);
               var stidtxt = myResults[i].data.stid;
+              var pridtxt = myResults[i].data.prid;
 
               var ftbtrue = myResults[i].data.ftbtrue;
               var sectrue = myResults[i].data.sectrue;
@@ -1180,6 +1194,13 @@ location.href = '/login'
                 newItem.children("#uSTID-" + i)[0].textContent = stidtxt;
               }
 
+              if (myResults[i].data.prid == undefined) {
+                newItem.children("#uPRID-" + i)[0].textContent = "-";
+              } else {
+                newItem.children("#uPRID-" + i)[0].textContent = pridtxt;
+              }
+		    
+		    
               let totaln = ((secn + ftbn + wbwn + dlv) / 400) * 100;
               let ntotal = Math.round(totaln) + "%";
               if (ntotal !== "NaN%") {
