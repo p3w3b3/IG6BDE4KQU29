@@ -251,7 +251,7 @@ document.getElementById('cf4').options[4].text = 'Annat';
     });
 
 }
-}, 7500)
+}, 10000)
 
     
     
