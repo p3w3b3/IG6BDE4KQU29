@@ -248,11 +248,11 @@ $('#sb022').hide()
 }
 
 if(course16 == true){
-$('#sb02').css('display', 'flex');
-$('#sb022').css('display', 'flex');
+$('#ml02').css('display', 'flex');
+$('#ml022').css('display', 'flex');
 } else  {
-$('#sb02').hide()
-$('#sb022').hide()
+$('#ml02').hide()
+$('#ml022').hide()
 }
 
 if(course17 == true){
