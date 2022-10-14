@@ -41,6 +41,8 @@ let name = data['Name'];
 let emaild = data['Email'];
 let prereq = data['prereq'];
 let lang = data["language"];
+let usc = data["uscontent"];
+
 
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
@@ -53,6 +55,7 @@ myselect.add(new Option(mys[i],mys[i]));
 myselect.add(new Option(stid,stid));
 }
 
+document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
 let profileuids = curUser.uid
 {
