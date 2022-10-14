@@ -325,7 +325,11 @@ contentvis()
 donutcharts()
 updatecharts()
 updateaws()
-contdif()
+if(language === 'swedish' || language === 'finnish' || language === 'czech' || language === 'hungarian') {
+contdif('€')
+} else if(usc === '1') {
+contdif('$')
+}
 }
 }, 10000)
 
