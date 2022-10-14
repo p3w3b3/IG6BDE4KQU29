@@ -246,7 +246,7 @@ function contdif(cur) {
 
 if(language === 'swedish' || language === 'finnish' || language === 'czech' || language === 'hungarian') {
 contdif('€')
-} else if(usc === 'true') {
+} else if(usc === '1') {
 contdif('$')
 }
 
@@ -325,6 +325,7 @@ contentvis()
 donutcharts()
 updatecharts()
 updateaws()
+contdif()
 }
 }, 10000)
 
