@@ -267,6 +267,7 @@ updatemarketing()
 contentvis()
 donutcharts()
 updatecharts()
+updateaws()
 }
 }, 10000)
 
