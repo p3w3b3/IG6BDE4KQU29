@@ -194,6 +194,63 @@ document.getElementById('cf4').options[4].text = 'Muu syy';
 
 let swedarr = ['Instrumentbräda','Min restaurang','Mätvärden','Förbereda tid','Användbarhet','Denna vecka','Föregående vecka','Föregående vecka','Föregående vecka','Föregående vecka','Veckomål','Betyg','Förberedelsetid','På varandra följande veckor','Veckans kommentar','Kampanj','Kampanj','Kampanj','Sanktion','Kommentar','Uppdrag','Kommande samtal','Boka ett samtal','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kampanj','Sanktion','Kampanj','Kampanj','Utbildade medlemmar','Ledartavla för betygsättning','Din ranking','Bruttoförsäljning','Betyg','Veckan som går','Föregående vecka','Förändra','Försäljning','Betyg','Rankinglista','Ändra öppettider','Brännmärka','Förändringens varaktighet','Dag','Öppet (morgon)','Stäng (morgon)','Öppet(kväll)','Stäng(kväll)','Stängd','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag','Återbetalning för utmaning','Plattform','Brännmärka','Person','Anledning','Beställnings-ID','Beställningsdatum','Beställningstid','Bevis','Bruttoförsäljning','Bruttoförsäljning','Bruttoförsäljning','Beställning','En månad kvar till idag','Förra månaden','Hela tiden','Hela tiden','Datum','Referens','Bruttoförsäljning','PWB Avgift + moms','Ändringar','Betalt','Kontoansvarig','Om du behöver ytterligare stöd kan du använda chattfunktionen för att kontakta oss.','Kampanjer','Kampanjer som hanteras av Peckwater','Vill du sluta prenumerera på kampanjen eller har du andra frågor?','Dashboard','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Dashboard','Topplistor','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Profil','Logga ut','Dashboard','Dashboard','Mål','Respons','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Besökstid','Korvaus','Besökstid','Analytics','Fakturor','Marknadsföring','Kontakt','Kommentera','Min information','Restaurang','Namn','E-post']
 
+function contdif(cur) {
+
+  document.getElementById('rev11').textContent = cur
+  document.getElementById('rev22').textContent = cur
+  document.getElementById('uscontent4').textContent = cur
+  document.getElementById('uscontent5').textContent = cur
+  document.getElementById('uscontent6').textContent = cur
+  document.getElementById('uscontent7').textContent = cur
+  
+      
+  let usconte = document.querySelectorAll('.uscontentsign');
+  usconte.forEach(usconte => {
+  usconte.innerHTML = cur;
+  });
+  
+  let usconte2 = document.querySelectorAll('.uscontentsign1');
+  usconte2.forEach(usconte2 => {
+  usconte2.innerHTML = cur;
+  });
+      
+  let usconte3 = document.querySelectorAll('.amtextsign3');
+  usconte3.forEach(usconte3 => {
+  usconte3.innerHTML = cur
+  });
+  
+  let usconte4 = document.querySelectorAll('.amtext3');
+  usconte4.forEach(usconte4 => {
+  usconte4.innerHTML = cur
+  });
+  
+  let usconte5 = document.querySelectorAll('.amtext0');
+  usconte5.forEach(usconte5 => {
+  usconte5.innerHTML = cur
+  });
+  
+  let usconte6 = document.querySelectorAll('.amtext1');
+  usconte6.forEach(usconte6 => {
+  usconte6.innerHTML = cur
+  });
+  
+  
+  
+  
+  let langq = document.querySelectorAll('.poundmarkuscontent');
+  langq.forEach(langq => {
+  langq.innerHTML = cur
+  });
+  
+  }
+
+if(language === 'swedish' || language === 'finnish' || language === 'czech' || language === 'hungarian') {
+contdif('€')
+} else if(language === 'true') {
+contdif('$')
+}
+
+
 if(language === 'swedish'){
         for (i = 0 ; i < swedarr.length; i++) {
             if ($('#itemt-'+i).length){
