@@ -396,12 +396,7 @@ $("#trackermob").hide();
       
 let sstid = data['stid'].toLowerCase()
 let ops = data['operations']
-document.querySelector("#mydas").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
-document.querySelector("#mbmenu1").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
+
 
 if(ops === true){
 $("#operations").css("display", "flex");
@@ -634,10 +629,6 @@ let spn = Math.round(sp)+'%'
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   .set({FTB:spn}, {merge:true})
 
-
- if(prereq !== true) {
-        location.href = '/onboarding';
-        }
  if(!!name) {
       $('#userName2').html(name);
   } else {
