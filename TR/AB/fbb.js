@@ -75,8 +75,8 @@ mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true});
 
     $(".section1selection").css("background-color", "white");
     $(".section1div").hide();
-    $("#s1p1video").show();
-    $("#s1p1button").css("background-color", "#e7edf0");
+    $("#k1p1video").show();
+    $("#k1p1button").css("background-color", "#e7edf0");
 
       
 {
