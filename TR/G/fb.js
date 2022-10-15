@@ -45,9 +45,8 @@ let name = data["Name"];
 let emaild = data["Email"];
 let firstletter = name.substring(0, 1);
 $(".firstletter").html(firstletter);
-if (prereq !== true) {
-location.href = "/onboarding";
-}
+
+ 
 if (!!name) {
 $("#userName2").html(name);
 } else {
@@ -115,12 +114,8 @@ document.querySelector('#languageselector').textContent = lang
 
 let sstid = data['stid'].toLowerCase()
 let ops = data['operations']
-document.querySelector("#mydas").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
-document.querySelector("#mbmenu1").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
+
+
 if(ops == true){
 $("#operations").css("display", "flex");
 $('#normal').hide()
