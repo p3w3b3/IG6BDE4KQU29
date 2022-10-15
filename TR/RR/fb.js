@@ -59,12 +59,7 @@ mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true});
 
 let sstid = data['stid'].toLowerCase()
 let ops = data['operations']
-document.querySelector("#mydas").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
-document.querySelector("#mbmenu1").addEventListener("click", () => {
-window.location.href = '/operations/'+sstid
-})
+
 
 if(ops == true){
 $("#operations").css("display", "flex");
@@ -558,9 +553,6 @@ $('#mwingery').hide()
           .doc("users/" + firebase.auth().currentUser.uid)
           .set({ RRITO: spn }, { merge: true });
 
-        if (prereq !== true) {
-          location.href = "/onboarding";
-        }
         if (!!name) {
           $("#userName2").html(name);
         } else {
