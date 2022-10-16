@@ -45,8 +45,10 @@ let usc = data["uscontent"];
 
 
 let stid = data['stid'].toUpperCase()
-let myselect = document.querySelector('#selectstid')
 
+setTimeout(() => {
+
+let myselect = document.querySelector('#selectstid')
 
 if(stid.includes(',')){
   let mys = stid.split(',')
@@ -57,8 +59,8 @@ if(stid.includes(',')){
 let cusd = document.getElementById('username-'+stid).textContent
   myselect.add(new Option(cusd,stid));
   }
+}, "2500")
 
-  
   
   
 
