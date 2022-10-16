@@ -329,13 +329,13 @@ let cusd = document.getElementById('username-'+stid).textContent
   myselect.add(new Option(cusd,stid));
   }
 })}
-
+fetchstids()
 let selectElement = document.getElementById('selectstid');
 let optionNames = [...selectElement.options].map(o => o.text);
 
 if(optionNames.length>0){
+
 selectElement.value = optionNames[1]
-fetchstids()
 updatedata()
 updatedata2()
 updatedata3()
