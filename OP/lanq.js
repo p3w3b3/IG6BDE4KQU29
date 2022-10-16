@@ -309,27 +309,6 @@ document.getElementById('cf4').options[4].text = 'Annat';
 
 }
 
-function fetchstids() {
-let curUser = firebase.auth().currentUser;
-let myFS = firebase.firestore()
-let docRef = myFS.doc("users/" + curUser.uid);
-docRef.get().then(docSnap => {
-let data = docSnap.data()
-let stid = data['stid'].toUpperCase()
-let myselect = document.querySelector('#selectstid')
-
-
-if(stid.includes(',')){
-  let mys = stid.split(',')
-  for (i = 0 ; i < mys.length; i++) {
-  let cus = document.getElementById('username-'+mys[i]).textContent
-  myselect.add(new Option(cus,mys[i]));
-  }} else {
-let cusd = document.getElementById('username-'+stid).textContent
-  myselect.add(new Option(cusd,stid));
-  }
-})}
-fetchstids()
 let selectElement = document.getElementById('selectstid');
 let optionNames = [...selectElement.options].map(o => o.text);
 
