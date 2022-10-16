@@ -46,14 +46,23 @@ let usc = data["uscontent"];
 
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
+let cusd = document.getElementById('username-'+stid).textContent
 
 if(stid.includes(',')){
 let mys = stid.split(',')
 for (i = 0 ; i < mys.length; i++) {
-myselect.add(new Option(mys[i],mys[i]));
+let cus = document.getElementById('username-'+mys[i]).textContent
+myselect.add(new Option(cus,mys[i]));
 }} else {
-myselect.add(new Option(stid,stid));
+myselect.add(new Option(cusd,stid));
 }
+  
+})
+
+  
+  
+  
+
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
