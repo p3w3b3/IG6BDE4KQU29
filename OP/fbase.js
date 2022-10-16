@@ -51,9 +51,9 @@ let cusd = document.getElementById('username-'+stid).textContent
 if(stid.includes(',')){
   let mys = stid.split(',')
   for (i = 0 ; i < mys.length; i++) {
-  let cus = document.getElementById('username-'+mys[i]).textContent
   myselect.add(new Option(cus,mys[i]));
   }} else {
+  let cus = document.getElementById('username-'+mys[i]).textContent
   myselect.add(new Option(cusd,stid));
   }
 
