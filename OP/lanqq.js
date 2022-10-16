@@ -314,7 +314,7 @@ let optionNames = [...selectElement.options].map(o => o.text);
 
 if(optionNames.length>0){
 
-selectElement.value = optionNames[1]
+//selectElement.value = optionNames[1]
 updatedata()
 updatedata2()
 updatedata3()
