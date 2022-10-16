@@ -46,24 +46,6 @@ let usc = data["uscontent"];
 
 let stid = data['stid'].toUpperCase()
 
-setTimeout(() => {
-
-let myselect = document.querySelector('#selectstid')
-
-if(stid.includes(',')){
-  let mys = stid.split(',')
-  for (i = 0 ; i < mys.length; i++) {
-  let cus = document.getElementById('username-'+mys[i]).textContent
-  myselect.add(new Option(cus,mys[i]));
-  }} else {
-let cusd = document.getElementById('username-'+stid).textContent
-  myselect.add(new Option(cusd,stid));
-  }
-}, "2500")
-
-  
-  
-
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
