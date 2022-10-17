@@ -45,7 +45,8 @@ let usc = data["uscontent"];
 
 
 let stid = data['stid'].toUpperCase()
-
+let myselect = document.querySelector('#selectstid')
+ 
 if(stid.includes(',')){
   let mys = stid.split(',')
   for (i = 0 ; i < mys.length; i++) {
