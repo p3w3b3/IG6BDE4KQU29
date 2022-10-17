@@ -71,7 +71,7 @@ myselect.add(new Option('Select site',''));
   let cusd = document.getElementById('username-'+stid).textContent
   myselect.add(new Option(cusd,stid));
 }
-}, "5000")
+}, "8000")
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
