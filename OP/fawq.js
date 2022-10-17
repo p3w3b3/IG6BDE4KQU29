@@ -46,6 +46,14 @@ let usc = data["uscontent"];
 
 let stid = data['stid'].toUpperCase()
 
+if(stid.includes(',')){
+  let mys = stid.split(',')
+  for (i = 0 ; i < mys.length; i++) {
+  myselect.add(new Option(mys[i],mys[i]));
+  }} else {
+  myselect.add(new Option(stid,stid));
+  }
+  
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
