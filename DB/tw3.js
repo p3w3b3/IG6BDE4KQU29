@@ -453,17 +453,27 @@ location.href = '/login'
             var e = $("#training-table");
             for (let i = 0; i < myResults.length; i++) {
               const newItem = e.clone();
+		    
+		if(!!myResults[i].data.Name){
               newItem.children("#uName")[0].textContent =
-                myResults[i].data.Name;
+                myResults[i].data.Name}
+		if(!!myResults[i].data.Enrolled){
               newItem.children("#Enrolled")[0].textContent =
                 myResults[i].data.Enrolled;
+		}
+		if(!!myResults[i].data.Restaurant){
               newItem.children("#uRestaurant")[0].textContent =
                 myResults[i].data.Restaurant;
+		}
+		if(!!myResults[i].data.Timestamp){
               newItem.children("#uTimestamp")[0].textContent =
                 myResults[i].data.Timestamp;
+		}
               newItem[0].id = "user-" + i;
+		if(!!myResults[i].data.Name){
               newItem.find("#tracking-name")[0].textContent =
                 "User - " + myResults[i].data.Name;
+		}
               newItem.find("#tracking-id")[0].textContent = myUid[i].id;
               newItem.children("#uPopup")[0].id = "uPopup-" + i;
               newItem.find("#uButton")[0].id = "uButton-" + i;
