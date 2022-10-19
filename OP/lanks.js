@@ -244,12 +244,30 @@ function contdif(cur) {
   
   }
 
-if(language === 'swedish' || language === 'finnish' || language === 'czech' || language === 'hungarian') {
+if(language === 'swedish'){
+contdif('SEK')
+}
+if (language === 'finnish'){
 contdif('€')
-} else if(usc === '1') {
+}
+if (language === 'belgium'){
+contdif('€')
+}
+if(language === 'czech'){
+contdif('Kč')
+}
+if(language === 'hungarian'){
+contdif('HUF')
+} 
+if(usc === '1') {
 contdif('$')
 }
-
+if(usc === '0') {
+contdif('£')
+}
+else {
+contdif('')
+}
 
 if(language === 'swedish'){
         for (i = 0 ; i < swedarr.length; i++) {
