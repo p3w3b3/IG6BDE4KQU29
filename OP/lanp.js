@@ -245,31 +245,6 @@ function contdif(cur) {
   }
 
 if(language === 'swedish'){
-contdif('SEK')
-}
-if (language === 'finnish'){
-contdif('€')
-}
-if (language === 'belgium'){
-contdif('€')
-}
-if(language === 'czech'){
-contdif('Kč')
-}
-if(language === 'hungarian'){
-contdif('HUF')
-} 
-if(usc === '1') {
-contdif('$')
-}
-if(usc === '0') {
-contdif('£')
-}
-else {
-contdif('')
-}
-
-if(language === 'swedish'){
         for (i = 0 ; i < swedarr.length; i++) {
             if ($('#itemt-'+i).length){
         document.getElementById('itemt-'+i).textContent = swedarr[i]
@@ -342,11 +317,27 @@ contentvis()
 donutcharts()
 updatecharts()
 updateaws()
-if(language === 'swedish' || language === 'finnish' || language === 'czech' || language === 'hungarian') {
-contdif('€')
-} else if(usc === '1') {
-contdif('$')
+
+    
+if(language === 'swedish'){
+  contdif('SEK')
 }
+  if (language === 'finnish'){
+  contdif('€')
+}
+  if (language === 'belgium'){
+  contdif('€')
+}
+  if(language === 'czech'){
+  contdif('Kč')
+}
+  if(language === 'hungarian'){
+  contdif('HUF')
+} 
+  if(usc === '1') {
+  contdif('$')
+}
+    
 }
 }, 10000)
 
