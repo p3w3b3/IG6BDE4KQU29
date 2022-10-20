@@ -265,8 +265,6 @@ if(language === 'swedish'){
 } 
   if(language === 'usa') {
   contdif('$')
-} else {
-contdif('')
 }
 
 if(language === 'swedish'){
