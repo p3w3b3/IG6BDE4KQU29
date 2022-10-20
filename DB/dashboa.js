@@ -579,9 +579,10 @@ location.href = '/login'
 
 	      var language = myResults[i].data.language;
 
-              if (countryus == true) {
-                newItem.find("#country-" + i)[0].value = "us";
-              } else {
+              if (language === 'usa') {
+                newItem.find("#country-" + i)[0].value = "usa";
+              }
+	      if(language === 'uk') {
                 newItem.find("#country-" + i)[0].value = "uk";
               }
 		    
@@ -792,18 +793,18 @@ location.href = '/login'
                   .find("#uButton-" + i)[0]
                   .addEventListener("click", function () {
 
-                    if (uscont === "us") {
+                    if (uscont === "usa") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
-                        .set({ uscontent: true }, { merge: true });
+                        .set({ language: 'usa' }, { merge: true });
                     }
 
                     if (uscont === "uk") {
                       firebase
                         .firestore()
                         .doc("users/" + tid)
-                        .set({ uscontent: false }, { merge: true });
+                        .set({ language: 'uk' }, { merge: true });
                     }
 
                     if (uscont === "hungarian") {
