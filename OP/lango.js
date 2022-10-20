@@ -1,8 +1,7 @@
 setTimeout(() => { 
 let language = document.querySelector('#lang').textContent
-let usc = document.querySelector('#uscontent').textContent
 
-let hungarr = ['Vezérlőpult','Ranglista','Mérőszámok','Felkészülési idő','Működési idő','Múlt hét','Előző hét','Múlt hét','Múlt hét','Múlt hét','Heti célok','Értékelés','Felkészülési idő','Egymást követő hetek','A hét megjegyzése','Promóció','Promóció','Promóció','Intézkedés','Megjegyzés','Akció','Hívás dátuma','Hívás foglalása','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Promóció','Intézkedés','Promóció','Promóció','Képzett csapattagok','Múlt heti bruttó értékesítés','Értékelési ranglista','Ertékesítés','Értékelési','Aktuális hét','Múlt hét','Különbség','Ertékesítés','Értékelési','Értékelési ranglista','Működési idő módosítása','Típus','Időkeret','Nap','Nyitás (reggel)','Zárás (reggel)','Nyitás (este)','Zárás (este)','Zárva','Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap','Kihívás visszautasítása','Platform','Márka','Párttag','Ok','Megrendelés azonosítója','Megrendelés dátuma','Megrendelés ideje','Bizonyíték','Értékesítés','Értékesítés','Értékesítés','Megrendelés','Mindig','Múlt hónap','Mindig','Mindig','Dátum','Referencia','Értékesítés','PWB Díj + áfa','Módosítások','Fizetve','Számlamenedzser','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával','Kiemelt promóciók','Peckwater Kezelt kampányok','Nem szeretnél részt venni a kampányban, vagy kérdésed van?','Vezérlőpult','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Vezérlőpult','Ranglisták','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Profil','Kijelentkezés','Vezérlőpult','Vezérlőpult','Heti célok','Visszacsatolás','Az én étterem','Analitika','Képzés','Kontakt','Ranglisták','Visszatérítések','Nyitvatartási idő','Teljesítmény','Számlákat','Kampányok','Kontakt','Kontakt','Hozzáadása','Saját adatok','Étterem','Név','E-mail cím']
+let hungarr = ['Vezérlőpult','Bevétel','Mérőszámok','Elkészítési idő','Nyitvatartási idő','Múlt hét','Előző hét','Múlt hét','Múlt hét','Múlt hét','Heti célok','Értékelés','Felkészülési idő','Egymást követő hetek','A hét megjegyzése','Promóció','Promóció','Promóció','Intézkedés','Megjegyzés','Akció','Hívás dátuma','Hívás foglalása','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Promóció','Intézkedés','Promóció','Promóció','Képzett csapattagok','Múlt heti bruttó értékesítés','Értékelési ranglista','Ertékesítés','Értékelési','Aktuális hét','Múlt hét','Különbség','Ertékesítés','Értékelési','Értékelési ranglista','Nyitvatartási idő módosítása','Típus','Időkeret','Nap','Nyitás (reggel)','Zárás (reggel)','Nyitás (este)','Zárás (este)','Zárva','Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap','Visszatérítés visszautasítása','Platform','Márka','Párttag','Ok','Megrendelés azonosítója','Megrendelés dátuma','Megrendelés ideje','Bizonyíték','Értékesítés','Értékesítés','Értékesítés','Megrendelés','Eddig','Múlt hónap','Eddig','Eddig','Dátum','Referencia','Értékesítés','PWB Díj + áfa','Módosítások','Fizetve','Számlamenedzser','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával','Kiemelt promóciók','Peckwater Kezelt kampányok','Nem szeretnél részt venni a kampányban, vagy kérdésed van?','Vezérlőpult','Az én éttermem','Analitika','Képzés','Kontakt','Értékesítés','Vezérlőpult','Ranglisták','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Profil','Kijelentkezés','Vezérlőpult','Vezérlőpult','Heti célok','Visszacsatolás','Az én étterem','Analitika','Képzés','Kontakt','Ranglisták','Visszatérítések','Nyitvatartási idő','Teljesítmény','Számlákat','Kampányok','Kontakt','Kontakt','Hozzáadása','Saját adatok','Étterem','Név','E-mail cím']
 
 
 if(language === 'hungarian'){
@@ -17,7 +16,7 @@ if(language === 'hungarian'){
     document.getElementById('ops2').textContent = 'Ranglisták'
     document.getElementById('ops3').textContent = 'Üzleti műveletek'
     document.getElementById('ops4').textContent = 'Fiókok'
-    document.getElementById('ops-in').textContent = 'Belátások'
+    document.getElementById('ops-in').textContent = 'Teljesítmény mutatók'
     document.getElementById('ops5').textContent = 'Kontakt'
     document.getElementById('marketingops').textContent = 'Kampányok'
     document.getElementById('profiledesk').textContent = 'Profil'
@@ -78,7 +77,7 @@ document.getElementById('cf4').options[4].text = 'Jiné';
 
     }
 
-let czecharr = ['Přístrojová deska','Žebříčky','Metriky','Čas na přípravu','Doba provozuschopnosti','Minulý týden','Týden předtím','Minulý týden','Minulý týden','Minulý týden','Týdenní cíle','Hodnocení','Čas na přípravu','Po sobě jdoucí týdny','Komentář týdne','Prémie','Prémie','Prémie','Sankce','Komentář','Akce','Další hovor','Rezervovat hovor','Komentář','Akce','Komentář','Akce','Komentář','Akce','Komentář','Akce','Komentář','Akce','Prémie','Sankce','Prémie','Prémie','Členové týmu vyškoleni','Prodejní žebříček','Žebříček hodnocení','Prodejní částka','Hodnocení','Tento týden','Minulý týden','Změnit částku','Prodejní částka','Hodnocení','Vaše hodnocení','Změnit provozní dobu','Značka','Časové okno','Den','Otevřeno (ráno)','Zavřít (ráno)','Otevřeno (večer)','Zavřít (večer)','Zavřeno','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota','Neděle','Refundace výzvy','Plošina','Značka','Clen strany','Důvod','Číslo objednávky','Datum objednávky','Čas objednávky','Důkaz','Prodejní částka','Prodejní částka','Prodejní částka','Objednávky','Měsíc k dnešnímu dni','Minulý měsíc','Pořád','Pořád','Datum','Referenční','Prodejní částka','PWB Poplatek + hovor','Dodatky','Částka vyplacená','Account manažer','Pro jakoukoli další podporu prosím použijte funkci chatové podpory','Promo akce na září','Peckwater Spravované kampaně','Chcete se odhlásit z kampaně nebo máte otázku?','Řídící panel','Moje restaurace','Analytika','Výcvik','Kontakt','Žebříčky','Marketing','Řídící panel','Moje restaurace','Analytika','Výcvik','Kontakt','Marketing','Profil','Odhlásit','Řídící panel','Řídící panel','Cíle','Zpětná vazba','Moje restaurace','Analytika','Výcvik','Kontakt','Marketing','Otevírací doba','Náhrady','Otevírací doba','Výkon','Faktury','Marketing','Kontakt','Komentovat','Moje informace','Restaurace','Jméno','E-Mail']
+let czecharr = ['Přehled','Promo akce','Hodnocení','Čas přípravy','Online čas','Minulý týden','Týden předtím','Minulý týden','Minulý týden','Minulý týden','Týdenní cíle','Hodnocení','Čas přípravu','Po sobě jdoucí týdny','Komentář týdne','Prémie','Prémie','Prémie','Sankce','Komentář','Akce','Další hovor','Rezervovat hovor','Komentář','Akce','Komentář','Akce','Komentář','Akce','Komentář','Akce','Komentář','Akce','Prémie','Sankce','Prémie','Prémie','Vyškolení členové týmu','Tržby profilů - pořadí','Tržba a hodnocení','Tržba','Hodnocení','Tento týden','Minulý týden','Změnit částku','Tržba','Hodnocení','Hodnocení profilů - pořadí','Změnit provozní dobu','Značka','Časové okno','Den','Otevřeno (ráno)','Zavřít (ráno)','Otevřeno (večer)','Zavřít (večer)','Zavřeno','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota','Neděle','Refundace objednávek','Plošina','Značka','Clen strany','Důvod','Číslo objednávky','Datum objednávky','Čas objednávky','Důkaz','Tržba','Tržba','Tržba','Objednávky','Měsíc k dnešnímu dni','Minulý měsíc','Od startu profilu','Od startu profilu','Datum','Referenční číslo','Tržba','PWB Poplatek + hovor','Dodatky','Částka vyplacená','Operations Manažer','Pro jakoukoli další podporu prosím použijte funkci chatové podpory','PPromo akce na:','Peckwater Spravované kampaně','Chcete se odhlásit z kampaně nebo máte otázku?','Přehled profilu','Moje restaurace','Statistiky','Zaškolení','Kontakt','Promo akce','Marketing','Přehled profilu','Moje restaurace','Statistiky','Zaškolení','Kontakt','Marketing','Profil','Odhlásit','Přehled profilu','Přehled profilu','Cíle','Zpětná vazba','Moje restaurace','Statistiky','Zaškoleníc','Kontakt','Marketing','Otevírací doba','Náhrady','Otevírací doba','Výkon','Faktury','Marketing','Kontakt','Komentovat','Moje informace','Restaurace','Jméno','E-Mail']
 
 if(language === 'czech'){
     for (i = 0 ; i < czecharr.length; i++) {
@@ -88,11 +87,11 @@ if(language === 'czech'){
 
     document.getElementById('intercom-url').textContent = 'klikněte zde'
     
-    document.getElementById('ops1').textContent = 'Řídící panel'
-    document.getElementById('ops2').textContent = 'Žebříčky'
-    document.getElementById('ops3').textContent = 'Obchodní operace'
-    document.getElementById('ops4').textContent = 'Účty'
-    document.getElementById('ops-in').textContent = 'Postřehy'
+    document.getElementById('ops1').textContent = 'Přehled profilu'
+    document.getElementById('ops2').textContent = 'Promo akce'
+    document.getElementById('ops3').textContent = 'Správa profilu'
+    document.getElementById('ops4').textContent = 'Tržba a faktury'
+    document.getElementById('ops-in').textContent = 'Statistiky'
     document.getElementById('ops5').textContent = 'Kontakt'
     document.getElementById('marketingops').textContent = 'Kampaň'
     document.getElementById('profiledesk').textContent = 'Profil'
@@ -192,7 +191,7 @@ document.getElementById('cf4').options[4].text = 'Muu syy';
 
 }
 
-let swedarr = ['Instrumentbräda','Min restaurang','Mätvärden','Förbereda tid','Användbarhet','Denna vecka','Föregående vecka','Föregående vecka','Föregående vecka','Föregående vecka','Veckomål','Betyg','Förberedelsetid','På varandra följande veckor','Veckans kommentar','Kampanj','Kampanj','Kampanj','Sanktion','Kommentar','Uppdrag','Kommande samtal','Boka ett samtal','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kampanj','Sanktion','Kampanj','Kampanj','Utbildade medlemmar','Ledartavla för betygsättning','Din ranking','Bruttoförsäljning','Betyg','Veckan som går','Föregående vecka','Förändra','Försäljning','Betyg','Rankinglista','Ändra öppettider','Brännmärka','Förändringens varaktighet','Dag','Öppet (morgon)','Stäng (morgon)','Öppet(kväll)','Stäng(kväll)','Stängd','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag','Återbetalning för utmaning','Plattform','Brännmärka','Person','Anledning','Beställnings-ID','Beställningsdatum','Beställningstid','Bevis','Bruttoförsäljning','Bruttoförsäljning','Bruttoförsäljning','Beställning','En månad kvar till idag','Förra månaden','Hela tiden','Hela tiden','Datum','Referens','Bruttoförsäljning','PWB Avgift + moms','Ändringar','Betalt','Kontoansvarig','Om du behöver ytterligare stöd kan du använda chattfunktionen för att kontakta oss.','Kampanjer','Kampanjer som hanteras av Peckwater','Vill du sluta prenumerera på kampanjen eller har du andra frågor?','Dashboard','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Dashboard','Topplistor','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Profil','Logga ut','Dashboard','Dashboard','Mål','Respons','Min restaurang','Analytics','Utbildning','Kontakt','Marknadsföring','Besökstid','Korvaus','Besökstid','Analytics','Fakturor','Marknadsföring','Kontakt','Kommentera','Min information','Restaurang','Namn','E-post']
+let swedarr = ['Dashboard','Min restaurang','Betyg','Tillagningstid','Användbarhet','Denna vecka','Föregående vecka','Föregående vecka','Föregående vecka','Föregående vecka','Veckomål','Betyg','Förberedelsetid','På varandra följande veckor','Veckans kommentar','Kampanj','Kampanj','Kampanj','Sanktion','Kommentar','Uppdrag','Kommande samtal','Boka ett samtal','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kampanj','Sanktion','Kampanj','Kampanj','Utbildade medlemmar','Ledartavla för betygsättning','Din ranking','Bruttoförsäljning','Betyg','Veckan som går','Föregående vecka','Förändra','Försäljning','Betyg','Rankinglista','Ändra öppettider','Koncept','Förändringens varaktighet','Dag','Öppet (morgon)','Stäng (morgon)','Öppet(kväll)','Stäng(kväll)','Stängd','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag','Återbetalning för utmaning','Plattform','Koncept','Person','Anledning','Beställnings-ID','Beställningsdatum','Beställningstid','Bevis','Bruttoförsäljning','Bruttoförsäljning','Bruttoförsäljning','Beställning','Innevarande månad','Förra månaden','Hela tiden','Hela tiden','Datum','Referens','Bruttoförsäljning','PWB Avgift + moms','Ändringar','Betalt','Kontoansvarig','Om du behöver ytterligare stöd kan du använda chattfunktionen för att kontakta oss.','Kampanjer','Kampanjer som hanteras av Peckwater','Vill du sluta prenumerera på kampanjen eller har du andra frågor?','Dashboard','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Dashboard','Topplistor','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Profil','Logga ut','Dashboard','Dashboard','Mål','Respons','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Besökstid','Korvaus','Besökstid','Analyser','Fakturor','Marknadsföring','Kontakt','Kommentera','Min information','Restaurang','Namn','E-post']
 
 function contdif(cur) {
 
@@ -251,7 +250,7 @@ if(language === 'swedish'){
         }}
     document.getElementById('intercom-url').textContent = 'Klicka här'
     
-    document.getElementById('ops1').textContent = 'Instrumentbräda'
+    document.getElementById('ops1').textContent = 'Dashboard'
     document.getElementById('ops2').textContent = 'Topplistor'
     document.getElementById('ops3').textContent = 'Företag'
     document.getElementById('ops4').textContent = 'Konton'
@@ -295,28 +294,13 @@ document.getElementById('cf4').options[4].text = 'Annat';
 
 
 
+
     const compl = document.querySelectorAll('.complete');
     compl.forEach(comple => {
     comple.innerHTML = 'Komplett';
     });
 
 }
-
-let selectElement = document.getElementById('selectstid');
-let optionNames = [...selectElement.options].map(o => o.value);
-
-if(optionNames.length>0){
-
-//selectElement.value = optionNames[1]
-updatedata()
-updatedata2()
-updatedata3()
-updatedata4()
-updatemarketing()
-contentvis()
-donutcharts()
-updatecharts()
-updateaws()
 
     
 if(language === 'swedish'){
@@ -334,9 +318,30 @@ if(language === 'swedish'){
   if(language === 'hungarian'){
   contdif('HUF')
 } 
-  if(usc === '1') {
+  if(language === 'usa') {
   contdif('$')
+} else {
+contdif('')
 }
+    
+let selectElement = document.getElementById('selectstid');
+let optionNames = [...selectElement.options].map(o => o.value);
+
+if(optionNames.length>0){
+
+//selectElement.value = optionNames[1]
+updatedata()
+updatedata2()
+updatedata3()
+updatedata4()
+updatemarketing()
+contentvis()
+donutcharts()
+updatecharts()
+updateaws()
+
+    
+
     
 }
 }, 10000)
