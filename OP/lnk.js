@@ -36,7 +36,7 @@ if(language === 'hungarian'){
     document.getElementById('act4').textContent = 'Hozzáadása'
     document.getElementById('act5').textContent = 'Hozzáadása'
     document.getElementById('act6').textContent = 'Hozzáadása'
-    
+
 
 
 document.getElementById('Type').options[1].text = 'Mindkét';
@@ -112,8 +112,8 @@ if(language === 'czech'){
     document.getElementById('act5').textContent = 'Komentovat'
     document.getElementById('act6').textContent = 'Komentovat'
     
-
-
+    document.getElementById('nps1').textContent = 'Jak byste ohodnotili vaší zkušenost s Peckwater Brands?'
+    document.querySelector('.glr-horizontal-launcher__text').textContent = 'Podpora'
 
 
     $('.submit-opse').text('Předložit')
@@ -295,6 +295,8 @@ if(language === 'swedish'){
     document.getElementById('act4').textContent = 'Kommentera'
     document.getElementById('act5').textContent = 'Kommentera'
     document.getElementById('act6').textContent = 'Kommentera'
+
+    document.getElementById('nps1').textContent = 'Hur skulle du bedöma din upplevelse av Peckwater Brands?'
 
 
     $('.submit-opse').text('Skicka')
