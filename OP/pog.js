@@ -79,33 +79,35 @@ selectup()
 }
 
 setTimeout(() => {
-while (myselect.options.length > 0) {                
-myselect.remove(0);
-}
-myselect.add(new Option('Select site',''));
-
-  if(stid.includes(',')){
-  let mys = stid.split(',')
-  for (i = 0 ; i < mys.length; i++) {
-  let cus = document.getElementById('username-'+mys[i]).textContent
-  myselect.add(new Option(cus,mys[i]));
-  }} else {
-  let cusd = document.getElementById('username-'+stid).textContent
-  myselect.add(new Option(cusd,stid));
-}
-selectup()
-}, "8000")
-
-setTimeout(() => {
-if(stid === '*'){ 
-myselect.remove(0);
-myselect.add(new Option('Select site',''));
-const cll = document.getElementsByClassName("user-stid");
-for (let i = 0; i < cll.length; i++) {
-myselect.add(new Option(cll[i].textContent,cll[i].textContent));
-}}
-selectup()
-}, "15000") 
+  while (myselect.options.length > 0) {                
+  myselect.remove(0);
+  }
+  myselect.add(new Option('Select site',''));
+  
+    if(stid.includes(',')){
+    let mys = stid.split(',')
+    for (i = 0 ; i < mys.length; i++) {
+    let cus = document.getElementById('username-'+mys[i]).textContent
+    myselect.add(new Option(cus,mys[i]))}
+    selectup()  
+  } else if( (stid !== '*') && (!stid.includes(',')) ) {
+    let cusd = document.getElementById('username-'+stid).textContent
+    myselect.add(new Option(cusd,stid));
+    selectup()  
+  }
+  }, "8000")
+  
+  setTimeout(() => {
+  if(stid === '*'){ 
+  myselect.remove(0);
+  myselect.add(new Option('Select site',''));
+  const cll = document.getElementsByClassName("user-stid");
+  for (let i = 0; i < cll.length; i++) {
+  myselect.add(new Option(cll[i].textContent,cll[i].textContent));
+  }
+  selectup()
+  }
+  }, "15000") 
 
 
 document.querySelector('#uscontent').textContent = usc
