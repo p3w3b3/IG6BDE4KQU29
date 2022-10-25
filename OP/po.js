@@ -1,5 +1,22 @@
-
 {
+function selectup() {
+$('#selectstid').selectize({ 
+onInitialize: function() {
+this.trigger('change', true);
+},
+onChange: function() {
+contentvis()
+updateaws()
+updatemarketing()
+donutcharts()
+updatecharts()
+updatedata()
+updatedata2()
+updatedata3()
+updatedata4()
+}})}
+
+ 
 const firebaseConfig = {
 apiKey: "AIzaSyB5X0NgXNQ8d3UjqVP5p_xB9Yt8cOk1ut8",
 authDomain: "peckwater-system.firebaseapp.com",
@@ -58,6 +75,7 @@ myselect.add(new Option(mys[i],mys[i]));
  
 else {
 myselect.add(new Option(stid,stid));
+selectup()
 }
 
 setTimeout(() => {
@@ -75,6 +93,7 @@ myselect.add(new Option('Select site',''));
   let cusd = document.getElementById('username-'+stid).textContent
   myselect.add(new Option(cusd,stid));
 }
+selectup()
 }, "8000")
 
 setTimeout(() => {
@@ -85,7 +104,9 @@ const cll = document.getElementsByClassName("user-stid");
 for (let i = 0; i < cll.length; i++) {
 myselect.add(new Option(cll[i].textContent,cll[i].textContent));
 }}
+selectup()
 }, "15000") 
+
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
