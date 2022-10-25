@@ -47,13 +47,6 @@ let usc = data["uscontent"];
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
 
-setTimeout(() => {
-if(stid === '*'){ 
-const collection = document.getElementsByClassName("user-stid");
-for (let i = 0; i < collection.length; i++) {
-let cds = document.getElementById('username-'+collection[i]).textContent
-myselect.add(new Option(cds,collection[i].textContent));
-}}
  
  
 if(stid.includes(',')){
@@ -66,7 +59,6 @@ myselect.add(new Option(mys[i],mys[i]));
 else {
 myselect.add(new Option(stid,stid));
 }
-}, "8000")
 
 setTimeout(() => {
 while (myselect.options.length > 0) {                
@@ -84,6 +76,16 @@ myselect.add(new Option('Select site',''));
   myselect.add(new Option(cusd,stid));
 }
 }, "8000")
+
+setTimeout(() => {
+if(stid === '*'){ 
+myselect.remove(0);
+myselect.add(new Option('Select site',''));
+const cll = document.getElementsByClassName("user-stid");
+for (let i = 0; i < cll.length; i++) {
+myselect.add(new Option(cll[i],cll[i].textContent));
+}}
+}, "15000") 
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
