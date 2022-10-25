@@ -48,12 +48,23 @@ let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
  
 if(stid.includes(',')){
-  let mys = stid.split(',')
-  for (i = 0 ; i < mys.length; i++) {
-  myselect.add(new Option(mys[i],mys[i]));
-  }} else {
-  myselect.add(new Option(stid,stid));
-  }
+
+let mys = stid.split(',')
+for (i = 0 ; i < mys.length; i++) {
+myselect.add(new Option(mys[i],mys[i]));
+}} 
+
+else if(stid === '*'){ 
+const collection = document.getElementsByClassName("user-stid");
+for (let i = 0; i < collection.length; i++) {
+myselect.add(new Option(collection[i].textContent,collection[i].textContent));
+}
+
+}
+
+else {
+myselect.add(new Option(stid,stid));
+}
 
 
 setTimeout(() => {
