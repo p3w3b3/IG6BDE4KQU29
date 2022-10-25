@@ -108,7 +108,7 @@ setTimeout(() => {
   }
   selectup()
   }
-  }, "15000"
+  }, "15000")
  
 
 document.querySelector('#uscontent').textContent = usc
