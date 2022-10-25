@@ -46,7 +46,8 @@ let usc = data["uscontent"];
 
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
- 
+
+setTimeout(() => {
 if(stid === '*'){ 
 const collection = document.getElementsByClassName("user-stid");
 for (let i = 0; i < collection.length; i++) {
@@ -65,7 +66,7 @@ myselect.add(new Option(mys[i],mys[i]));
 else {
 myselect.add(new Option(stid,stid));
 }
-
+}, "8000")
 
 setTimeout(() => {
 while (myselect.options.length > 0) {                
