@@ -47,21 +47,21 @@ let usc = data["uscontent"];
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
  
+if(stid === '*'){ 
+const collection = document.getElementsByClassName("user-stid");
+for (let i = 0; i < collection.length; i++) {
+let cds = document.getElementById('username-'+collection[i]).textContent
+myselect.add(new Option(cds,collection[i].textContent));
+}}
+ 
+ 
 if(stid.includes(',')){
 
 let mys = stid.split(',')
 for (i = 0 ; i < mys.length; i++) {
 myselect.add(new Option(mys[i],mys[i]));
 }} 
-
-else if(stid === '*'){ 
-const collection = document.getElementsByClassName("user-stid");
-for (let i = 0; i < collection.length; i++) {
-myselect.add(new Option(collection[i].textContent,collection[i].textContent));
-}
-
-}
-
+ 
 else {
 myselect.add(new Option(stid,stid));
 }
