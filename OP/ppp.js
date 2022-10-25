@@ -83,7 +83,7 @@ myselect.remove(0);
 myselect.add(new Option('Select site',''));
 const cll = document.getElementsByClassName("user-stid");
 for (let i = 0; i < cll.length; i++) {
-myselect.add(new Option(cll[i],cll[i].textContent));
+myselect.add(new Option(cll[i].textContent,cll[i].textContent));
 }}
 }, "15000") 
 
