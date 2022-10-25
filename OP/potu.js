@@ -90,8 +90,9 @@ setTimeout(() => {
     for (i = 0 ; i < mys.length; i++) {
     let cus = document.getElementById('username-'+mys[i]).textContent
     myselect.add(new Option(cus,mys[i]))}
-    selectup()  
-  } else if(stid !== '*') {
+    selectup() 
+  }
+   else if(stid !== '*' && !stid.includes(',') ) {
     let cusd = document.getElementById('username-'+stid).textContent
     myselect.add(new Option(cusd,stid));
     selectup()  
