@@ -65,7 +65,7 @@ let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
 
  
- 
+/**
 if(stid.includes(',')){
 
 let mys = stid.split(',')
@@ -77,6 +77,7 @@ else {
 myselect.add(new Option(stid,stid));
 selectup()
 }
+**/
 
 setTimeout(() => {
   while (myselect.options.length > 0) {                
@@ -96,18 +97,6 @@ setTimeout(() => {
     selectup()  
   }
   }, "8000")
-  
-  setTimeout(() => {
-  if(stid === '*'){ 
-  myselect.remove(0);
-  myselect.add(new Option('Select site',''));
-  const cll = document.getElementsByClassName("user-stid");
-  for (let i = 0; i < cll.length; i++) {
-  myselect.add(new Option(cll[i].textContent,cll[i].textContent));
-  }
-  selectup()
-  }
-  }, "15000") 
 
 
 document.querySelector('#uscontent').textContent = usc
