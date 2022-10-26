@@ -69,35 +69,39 @@ let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
 
 
-    myselect.remove(0);
-    myselect.add(new Option('Select site',''));  
 
+setTimeout(() => {
+  while (myselect.options.length > 0) {                
+  myselect.remove(0);
+  }
+  myselect.add(new Option('Select site',''));
+  
     if(stid.includes(',')){
-      setTimeout(() => {
     let mys = stid.split(',')
     for (i = 0 ; i < mys.length; i++) {
-    myselect.add(new Option(mys[i],mys[i]))}
+    let cus = document.getElementById('username-'+mys[i]).textContent
+    myselect.add(new Option(cus,mys[i]))}
     selectup() 
-  }, 10000);  
-
   }
     if(stid !== '*') {
-    myselect.add(new Option(stid,stid));
+    let cusd = document.getElementById('username-'+stid).textContent
+    myselect.add(new Option(cusd,stid));
     selectup()  
-    }
-    if(stid === '*'){ 
-    setTimeout(() => {
-    myselect.remove(0);
-    myselect.add(new Option('Select site',''));
-    const cll = document.getElementsByClassName("user-stid");
-    for (let i = 0; i < cll.length; i++) {
-    myselect.add(new Option(cll[i],cll[i].textContent));
-    }
-    selectup()
-  }, 15000);
-    }
+  }
+  }, "15000")
 
-
+setTimeout(() => {
+  if(stid === '*'){ 
+  myselect.remove(0);
+  myselect.add(new Option('Select site',''));
+  const cll = document.getElementsByClassName("user-stid");
+  for (let i = 0; i < cll.length; i++) {
+  myselect.add(new Option(cll[i].textContent,cll[i].textContent));
+  }
+  selectup()
+  }
+  }, "15000")
+ 
 
 document.querySelector('#uscontent').textContent = usc
 document.querySelector('#languageselector').textContent = lang
@@ -367,4 +371,3 @@ campbutton2.classList.add("on")
 
 });
 }
-
