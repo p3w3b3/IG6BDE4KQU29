@@ -87,16 +87,20 @@ selectup()
     myselect.add(new Option('Select site',''));  
 
     if(stid.includes(',')){
+      setTimeout(() => {
     let mys = stid.split(',')
     for (i = 0 ; i < mys.length; i++) {
     myselect.add(new Option(mys[i],mys[i]))}
     selectup() 
-    }
+  }, 10000);  
+
+  }
     if(stid !== '*') {
     myselect.add(new Option(stid,stid));
     selectup()  
     }
     if(stid === '*'){ 
+      setTimeout(() => {
     myselect.remove(0);
     myselect.add(new Option('Select site',''));
     const cll = document.getElementsByClassName("user-stid");
@@ -104,6 +108,7 @@ selectup()
     myselect.add(new Option(cll[i].textContent,cll[i].textContent));
     }
     selectup()
+  }, 15000);
     }
 
 
