@@ -68,20 +68,6 @@ let usc = data["uscontent"];
 let stid = data['stid'].toUpperCase()
 let myselect = document.querySelector('#selectstid')
 
- 
-/**
-if(stid.includes(',')){
-
-let mys = stid.split(',')
-for (i = 0 ; i < mys.length; i++) {
-myselect.add(new Option(mys[i],mys[i]));
-}} 
- 
-else {
-myselect.add(new Option(stid,stid));
-selectup()
-}
-**/
 
     myselect.remove(0);
     myselect.add(new Option('Select site',''));  
@@ -90,15 +76,13 @@ selectup()
       setTimeout(() => {
     let mys = stid.split(',')
     for (i = 0 ; i < mys.length; i++) {
-    let cl = document.getElementById('username-'+mys[i]).textContent
-    myselect.add(new Option(cl,mys[i]))}
+    myselect.add(new Option(mys[i],mys[i]))}
     selectup() 
   }, 10000);  
 
   }
     if(stid !== '*') {
-    let clp = document.getElementById('username-'+stid).textContent
-    myselect.add(new Option(clp,stid));
+    myselect.add(new Option(stid,stid));
     selectup()  
     }
     if(stid === '*'){ 
@@ -107,8 +91,7 @@ selectup()
     myselect.add(new Option('Select site',''));
     const cll = document.getElementsByClassName("user-stid");
     for (let i = 0; i < cll.length; i++) {
-    let cp = document.getElementById('username-'+cll[i]).textContent
-    myselect.add(new Option(cp,cll[i].textContent));
+    myselect.add(new Option(cll[i],cll[i].textContent));
     }
     selectup()
   }, 15000);
