@@ -90,22 +90,25 @@ selectup()
       setTimeout(() => {
     let mys = stid.split(',')
     for (i = 0 ; i < mys.length; i++) {
-    myselect.add(new Option(mys[i],mys[i]))}
+    let cl = document.getElementById('username-'+mys[i]).textContent
+    myselect.add(new Option(cl,mys[i]))}
     selectup() 
   }, 10000);  
 
   }
     if(stid !== '*') {
-    myselect.add(new Option(stid,stid));
+    let clp = document.getElementById('username-'+stid).textContent
+    myselect.add(new Option(clp,stid));
     selectup()  
     }
     if(stid === '*'){ 
-      setTimeout(() => {
+    setTimeout(() => {
     myselect.remove(0);
     myselect.add(new Option('Select site',''));
     const cll = document.getElementsByClassName("user-stid");
     for (let i = 0; i < cll.length; i++) {
-    myselect.add(new Option(cll[i].textContent,cll[i].textContent));
+    let cp = document.getElementById('username-'+cll[i]).textContent
+    myselect.add(new Option(cp,cll[i].textContent));
     }
     selectup()
   }, 15000);
