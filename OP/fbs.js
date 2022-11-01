@@ -66,45 +66,49 @@ let lang = data["language"];
 let usc = data["uscontent"];
 
  // start
-let myselect = document.querySelector('#selectstid')
+ let myselect = document.querySelector('#selectstid')
 
-if(stid.includes(',')){
-let mys = stid.split(',')
-for (i = 0 ; i < mys.length; i++) {
+ if(stid.includes(',')){
+ let mys = stid.split(',')
+ for (i = 0 ; i < mys.length; i++) {
+ 
+ let docstid1 = myFS.doc("stids/" + mys[i])
+ docstid1.get().then(docSnap => {
+ let data2 = docSnap.data()
+ let nm1 = data2['NAME']
+ let sm1 = data2['STID']
+ myselect.add(new Option(nm1,sm1));
+   
+})}
+selectup()
 
-let docstid1 = myFS.doc("stids/" + mys[i])
-docstid1.get().then(docSnap => {
-let data2 = docSnap.data()
-let nm1 = data2['NAME']
-let sm1 = data2['STID']
-myselect.add(new Option(nm1,sm1));
-  
+}
+ 
+ if(stid !== '*' && !stid.includes(',')) {
+ 
+ let docstid2 = myFS.doc("stids/" + stid)
+ docstid2.get().then(docSnap => {
+ let data3 = docSnap.data()
+ let nm2 = data3['NAME']
+ let sm2 = data3['STID']
+ myselect.add(new Option(nm2,sm2));
+ 
 })
-}}
-
-if(stid !== '*' && !stid.includes(',')) {
-
-let docstid2 = myFS.doc("stids/" + stid)
-docstid2.get().then(docSnap => {
-let data3 = docSnap.data()
-let nm2 = data3['NAME']
-let sm2 = data3['STID']
-myselect.add(new Option(nm2,sm2));
-
+selectup()
 }
-)}
-
-if(stid === '*'){
-myFS.collection("stids").get().then((docSnap) => {
-docSnap.forEach((doc) => {
-let data4 = doc.data()
-let nm3 = data4['NAME']
-let sm3 = data4['STID']
-myselect.add(new Option(nm3,sm3));
-})})
-
-}
- // end
+ 
+ if(stid === '*'){
+ myFS.collection("stids").get().then((docSnap) => {
+ docSnap.forEach((doc) => {
+ let data4 = doc.data()
+ let nm3 = data4['NAME']
+ let sm3 = data4['STID']
+ myselect.add(new Option(nm3,sm3));
+ })})
+ selectup()
+ }
+// end
+  
  
  
  
