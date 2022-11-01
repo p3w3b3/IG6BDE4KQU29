@@ -1,6 +1,6 @@
 {
 function selectup() {
-$('#selectstid').selectize({ 
+document.querySelector('#selectstid').selectize({ 
 onInitialize: function() {
 this.trigger('change', true);
 document.querySelector('#selectstid').style.display = 'flex'
