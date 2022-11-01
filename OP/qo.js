@@ -46,7 +46,7 @@ let usc = data["uscontent"];
  // start
 
  let myselect = document.querySelector('#selectstid')
-setTimeout(() => {
+
   while (myselect.options.length > 0) {                
   myselect.remove(0);
   }
