@@ -80,7 +80,6 @@ let usc = data["uscontent"];
  myselect.add(new Option(nm1,sm1));
    
 })}
-selectup()
 
 }
  
@@ -94,7 +93,7 @@ selectup()
  myselect.add(new Option(nm2,sm2));
  
 })
-selectup()
+
 }
  
  if(stid === '*'){
@@ -105,7 +104,7 @@ selectup()
  let sm3 = data4['STID']
  myselect.add(new Option(nm3,sm3));
  })})
- selectup()
+
  }
 // end
   
@@ -381,3 +380,5 @@ campbutton2.classList.add("on")
 
 });
 }
+
+ selectup()
