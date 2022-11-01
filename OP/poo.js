@@ -44,8 +44,14 @@ let lang = data["language"];
 let usc = data["uscontent"];
 
  // start
- let myselect = document.querySelector('#selectstid')
 
+ let myselect = document.querySelector('#selectstid')
+setTimeout(() => {
+  while (myselect.options.length > 0) {                
+  myselect.remove(0);
+  }
+  myselect.add(new Option('Select site',''));
+ 
  if(stid.includes(',')){
  let mys = stid.split(',')
  for (i = 0 ; i < mys.length; i++) {
@@ -62,7 +68,7 @@ let usc = data["uscontent"];
 }
  
  if(stid !== '*' && !stid.includes(',')) {
- 
+
  let docstid2 = myFS.doc("stids/" + stid)
  docstid2.get().then(docSnap => {
  let data3 = docSnap.data()
