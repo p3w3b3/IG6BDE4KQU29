@@ -64,43 +64,48 @@ let prereq = data['prereq'];
 let lang = data["language"];
 let usc = data["uscontent"];
 
-
-let stid = data['stid'].toUpperCase()
+ // start
 let myselect = document.querySelector('#selectstid')
 
+if(stid.includes(',')){
+let mys = stid.split(',')
+for (i = 0 ; i < mys.length; i++) {
 
-
-setTimeout(() => {
-  while (myselect.options.length > 0) {                
-  myselect.remove(0);
-  }
-  myselect.add(new Option('Select site',''));
+let docstid1 = myFS.doc("stids/" + mys[i])
+docstid1.get().then(docSnap => {
+let data2 = docSnap.data()
+let nm1 = data2['NAME']
+let sm1 = data2['STID']
+myselect.add(new Option(nm1,sm1));
   
-    if(stid.includes(',')){
-    let mys = stid.split(',')
-    for (i = 0 ; i < mys.length; i++) {
-    let cus = document.getElementById('username-'+mys[i]).textContent
-    myselect.add(new Option(cus,mys[i]))}
-    selectup() 
-  }
-    if(stid !== '*') {
-    let cusd = document.getElementById('username-'+stid).textContent
-    myselect.add(new Option(cusd,stid));
-    selectup()  
-  }
-  }, "15000")
+})
+}}
 
-setTimeout(() => {
-  if(stid === '*'){ 
-  myselect.remove(0);
-  myselect.add(new Option('Select site',''));
-  const cll = document.getElementsByClassName("user-stid");
-  for (let i = 0; i < cll.length; i++) {
-  myselect.add(new Option(cll[i].textContent,cll[i].textContent));
-  }
-  selectup()
-  }
-  }, "15000")
+if(stid !== '*' && !stid.includes(',')) {
+
+let docstid2 = myFS.doc("stids/" + stid)
+docstid2.get().then(docSnap => {
+let data3 = docSnap.data()
+let nm2 = data3['NAME']
+let sm2 = data3['STID']
+myselect.add(new Option(nm2,sm2));
+
+}
+)}
+
+if(stid === '*'){
+myFS.collection("stids").get().then((docSnap) => {
+docSnap.forEach((doc) => {
+let data4 = doc.data()
+let nm3 = data4['NAME']
+let sm3 = data4['STID']
+myselect.add(new Option(nm3,sm3));
+})})
+
+}
+ // end
+ 
+ 
  
 
 document.querySelector('#uscontent').textContent = usc
