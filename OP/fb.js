@@ -58,6 +58,7 @@ let myFS = firebase.firestore()
 let docRef = myFS.doc("users/" + curUser.uid);
 docRef.get().then(docSnap => {
 let data = docSnap.data()
+let stid = data['stid'].toUpperCase()
 let name = data['Name'];
 let emaild = data['Email'];
 let prereq = data['prereq'];
