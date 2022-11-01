@@ -358,26 +358,3 @@ campbutton2.classList.add("on")
 
 });
 }
-
-function selectup() {
-document.querySelector('#selectstid').selectize({ 
-onInitialize: function() {
-this.trigger('change', true);
-document.querySelector('#selectstid').style.display = 'flex'
-},
-onChange: function() {
-contentvis()
-updateaws()
-updatemarketing()
-donutcharts()
-updatecharts()
-updatedata()
-updatedata2()
-updatedata3()
-updatedata4()
-updatedata5()
-invoices1()
-invoices2()
-}})}
-
-selectup()
