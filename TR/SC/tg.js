@@ -177,6 +177,12 @@ document.querySelector('#userName2').textContent=name;
 document.querySelector('#email').textContent=emaild;
 document.querySelector('#email2').textContent=emaild;
 
+if(emaild.length>30) {
+document.querySelector('#email').textContent = emaild.slice(0,24) + '...'
+document.querySelector('#email2').textContent = emaild.slice(0,24) + '...'
+}
+
+	  
 document.querySelector('#profile-email').textContent=emaild;
 if(!!restaurant) {
 document.querySelector('#profile-restaurant').textContent=restaurant;
