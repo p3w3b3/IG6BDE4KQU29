@@ -240,7 +240,7 @@ document.querySelector('#comment-stid').value = sstid
 window.intercomSettings = {
     api_base: "https://api-iam.intercom.io",
     app_id: "e84ncf6y",
-    hide_default_launcher: true,
+    hide_default_launcher: false,
     name: name, // Full name
     email: emaild, // Email address
     user_id: profileuids // UID FIREBASE
