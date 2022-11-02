@@ -415,7 +415,8 @@ signOutButton2.addEventListener('click', signout2);
 document.querySelector('#profile-uid').textContent=profileuid;
 document.querySelector('#profile-name').textContent=name;
 document.querySelector('#profile-email').textContent=emaild;
-
+document.querySelector('#userName3').textContent=name;
+	      
 document.querySelector('#userName').textContent=name;
 document.querySelector('#userName2').textContent=name;
 
