@@ -40,8 +40,8 @@
       let prereq = data['prereq'];
         let name = data['Name'];
         let emaild = data['Email']; 
-            let firstletter = name.substring(0, 1)
-          $('.firstletter').html(firstletter);
+        let firstletter = name.substring(0, 1)
+         $('.firstletter').html(firstletter);
       let sm1p1 = data['sm1p1'];    
   
   mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true}); 
@@ -53,7 +53,19 @@
   
         let curUser = firebase.auth().currentUser;
         let restaurant = data['Restaurant']; 
-        let profileuid = curUser.uid      
+        let profileuid = curUser.uid   
+
+document.querySelector('#userName3').textContent=name;
+document.querySelector('#userName2').textContent=name;
+document.querySelector('#userName4').textContent=name;
+	  
+if(emaild.length>30) {
+document.querySelector('#email').textContent = emaild.slice(0,17) + '...'
+document.querySelector('#email2').textContent = emaild.slice(0,17) + '...'
+} else {
+document.querySelector('#email').textContent=emaild;
+document.querySelector('#email2').textContent=emaild;
+}
   
   let sstid = data['stid'].toLowerCase()
   let ops = data['operations']
@@ -71,7 +83,7 @@
   window.intercomSettings = {
       api_base: "https://api-iam.intercom.io",
       app_id: "e84ncf6y",
-      hide_default_launcher: true,
+      hide_default_launcher: false,
       name: "'"+name+"'", // Full name
       email: "'"+emaild+"'", // Email address
       user_id: "'"+profileuid+"'" // UID FIREBASE
@@ -393,7 +405,6 @@ $("#trackermob").hide();
     }
   
     if(!!emaild) {
-        $('#email').html(emaild);
     }} else {
       console.log('user logged out');
       signOutButton.style.display="none";
