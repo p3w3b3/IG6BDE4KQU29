@@ -157,6 +157,95 @@ document.querySelector('#mystid').textContent = datastid
     
         let admin = data["admin"];
 
+//admin start
+if(!!admin){
+{
+
+const config = {
+  apiKey: "AIzaSyB5X0NgXNQ8d3UjqVP5p_xB9Yt8cOk1ut8",
+  authDomain: "peckwater-system.firebaseapp.com",
+  projectId: "peckwater-system",
+  storageBucket: "peckwater-system.appspot.com",
+  messagingSenderId: "620518934310",
+  appId: "1:620518934310:web:84c9c701f5794161d863e7",
+  measurementId: "G-EZSWDWDTB6"
+};
+
+var secondaryApp = firebase.initializeApp(config, "Secondary");
+const signupButton = document.querySelector('#signupButton');
+const signupName = document.querySelector('#signupname');
+const signupEmail = document.querySelector('#signupemail');
+const signupPassword = document.querySelector('#signuppassword');
+const stidcreate = document.querySelector('#stidcreate');
+const pridcreate = document.querySelector('#pridcreate');
+
+var today = new Date();
+var date = (today.getDate()+'-'+(today.getMonth()+1)+'-')+today.getFullYear() 
+
+//  SignUp Fuctions
+document.getElementById('signform').addEventListener('submit', function(el) {
+el.preventDefault();
+ el.stopPropagation();
+
+secondaryApp.auth().createUserWithEmailAndPassword(signupEmail.value, signupPassword.value).then(function(secondaryAppUser) {
+
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({Name:signupName.value}, {merge:true})
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({Email:signupEmail.value}, {merge:true})
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({Enrolled:date}, {merge:true})
+ 
+if(!!stidcreate.value){
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({stid:stidcreate.value}, {merge:true})
+}
+
+if(!!pridcreate.value){
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({prid:pridcreate.value}, {merge:true})
+}
+
+
+if(document.querySelector('#Access-level').value === 'preq') {
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({prereq:true}, {merge:true})
+}
+
+if(document.querySelector('#Access-level').value === 'operations') {
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({operations:true}, {merge:true})
+}
+
+if(document.querySelector('#Access-level').value === 'admin') {
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({prereq:true}, {merge:true})
+firebase.firestore().doc("users/"+secondaryApp.auth().currentUser.uid)
+.set({admin:true}, {merge:true})
+}
+
+$('.signwrapper').hide() 
+$('#createuserpopup').hide()
+$('#signupname').val("");
+$('#signupemail').val("");
+$('#signuppassword').val("");
+$('#Access-level').val("")
+$('#stidcreate').val("")
+secondaryApp.auth().signOut();
+setTimeout(() => { 
+window.location.replace("http://www.peckwaterbrands.com/dashboard#tracking");
+}, 1000)
+      }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+       $('#errormsg').show(); 
+       $('#errormsg').html(errorMessage);
+          });
+
+})}
+}
+// admin end	      
+	      
         firebase
           .firestore()
           .doc("users/" + firebase.auth().currentUser.uid)
