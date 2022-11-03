@@ -118,8 +118,8 @@ custom_launcher_selector:'#intercom-url'
 
 // if gsign and no name
 if(!!name) {
-$('#userName').html(name);
-$('#userName2').html(name);
+document.querySelector('userName').textContent = name
+document.querySelector('userName2').textContent = name
 } else {
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
 .set({Name:user.displayName}, {merge:true})
@@ -128,8 +128,8 @@ setTimeout(() => {
 window.location.href = '/portal/dashboard'
 }, 2000);
 }
-$('#userName2').html(name);
-$('#userName').html(name);
+document.querySelector('userName').textContent = name
+document.querySelector('userName2').textContent = name
 }
 
 {
