@@ -62,9 +62,8 @@ let usc = data["uscontent"];
  let nm1 = data2['NAME']
  let sm1 = data2['STID']
  myselect.add(new Option(nm1,sm1));
-   
 })}
-
+document.querySelector('.finishedloading').textContent = '1'
 }
  
  if(stid !== '*' && !stid.includes(',')) {
@@ -75,7 +74,7 @@ let usc = data["uscontent"];
  let nm2 = data3['NAME']
  let sm2 = data3['STID']
  myselect.add(new Option(nm2,sm2));
- 
+document.querySelector('.finishedloading').textContent = '1'
 })
 
 }
@@ -88,7 +87,7 @@ let usc = data["uscontent"];
  let sm3 = data4['STID']
  myselect.add(new Option(nm3,sm3));
  })})
-
+document.querySelector('.finishedloading').textContent = '1'
  }
 // end
   
@@ -368,25 +367,31 @@ campbutton2.classList.add("on")
 
 
 window.addEventListener('load', (event) => {
-function selectup() {
-$('#selectstid').selectize({ 
-onInitialize: function() {
-this.trigger('change', true);
-document.querySelector('#selectstid').style.display = 'flex'
-},
-onChange: function() {
-contentvis()
-updateaws()
-updatemarketing()
-donutcharts()
-updatecharts()
-updatedata()
-updatedata2()
-updatedata3()
-updatedata4()
-updatedata5()
-invoices1()
-invoices2()
-}})}
-selectup()
-});
+let pagload = document.querySelector('.finishedloading').textContent
+var interval = setInterval(function() {
+  if (pageload === '1') {
+       clearInterval(interval);
+        function selectup() {
+        $('#selectstid').selectize({ 
+        onInitialize: function() {
+        this.trigger('change', true);
+        document.querySelector('#selectstid').style.display = 'flex'
+        },
+        onChange: function() {
+        contentvis()
+        updateaws()
+        updatemarketing()
+        donutcharts()
+        updatecharts()
+        updatedata()
+        updatedata2()
+        updatedata3()
+        updatedata4()
+        updatedata5()
+        invoices1()
+        invoices2()
+        }})}
+        selectup()     
+  }
+}, 1000);
+});   
