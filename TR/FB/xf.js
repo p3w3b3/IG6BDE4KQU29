@@ -410,10 +410,10 @@ $("#normal").css("display", "flex");
 window.intercomSettings = {
     api_base: "https://api-iam.intercom.io",
     app_id: "e84ncf6y",
-    hide_default_launcher: true,
+    hide_default_launcher: false,
     name: "'"+name+"'", // Full name
     email: "'"+emaild+"'", // Email address
-		user_id: "'"+profileuid+"'" // UID FIREBASE
+    user_id: "'"+profileuid+"'" // UID FIREBASE
   };
 }
 {
@@ -451,7 +451,20 @@ signOutButton2.addEventListener('click', signout2);
 
 document.querySelector('#profile-uid').textContent=profileuid;
 document.querySelector('#profile-name').textContent=name;
+
 document.querySelector('#userName3').textContent=name;
+document.querySelector('#userName2').textContent=name;
+document.querySelector('#userName4').textContent=name;
+	  
+if(emaild.length>30) {
+document.querySelector('#email').textContent = emaild.slice(0,17) + '...'
+document.querySelector('#email2').textContent = emaild.slice(0,17) + '...'
+} else {
+document.querySelector('#email').textContent=emaild;
+document.querySelector('#email2').textContent=emaild;
+}
+	  
+	  
 document.querySelector('#profile-email').textContent=emaild;
 if(!!restaurant) {
 document.querySelector('#profile-restaurant').textContent=restaurant;
@@ -647,7 +660,6 @@ firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   }
 
   if(!!emaild) {
-      $('#email').html(emaild);
   }} else {
     console.log('user logged out');
     signOutButton.style.display="none";
