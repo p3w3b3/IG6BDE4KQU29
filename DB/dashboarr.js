@@ -158,7 +158,7 @@ document.querySelector('#mystid').textContent = datastid
         let admin = data["admin"];
 
 //admin start
-if(!!admin){
+if(admin === true){
 {
 
 const config = {
