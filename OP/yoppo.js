@@ -135,10 +135,10 @@ document.querySelector('#userName2').textContent = name
 {
 let firstletter = name.substring(0, 1)
 
-var slides = document.getElementsByClassName("firstletters");
-for(var i = 0; i < slides.length; i++)
+var fel = document.getElementsByClassName("firstletters");
+for(var i = 0; i < fel.length; i++)
 {
-slides.textContent = firstletter
+fel[i].textContent = firstletter
 }
  
 let restaurant = data['Restaurant'];
