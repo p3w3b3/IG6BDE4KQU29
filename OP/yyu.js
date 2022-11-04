@@ -134,7 +134,13 @@ document.querySelector('#userName2').textContent = name
 
 {
 let firstletter = name.substring(0, 1)
-$('.firstletters').html(firstletter);
+
+var slides = document.getElementsByClassName("firstletters");
+for(var i = 0; i < slides.length; i++)
+{
+slides.textContent = firstletter
+}
+ 
 let restaurant = data['Restaurant'];
 let profileuid = curUser.uid
 
