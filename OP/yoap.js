@@ -175,141 +175,141 @@ document.querySelector('#npsdiv').style.display = 'flex'
 
 
 if(course1 == true){
-$('#train1').css('display', 'flex');
-$('#train11').css('display', 'flex');
-$('#mbtraining2').css('display', 'flex');
+document.querySelector('#train1').style.display = 'flex'
+document.querySelector('#train11').style.display = 'flex'
+document.querySelector('#mbtraining2').style.display = 'flex'
 } else  {
-$('#train1').hide()
-$('#train11').hide()
-$('#mbtraining2').hide()
+document.querySelector('#train1').style.display = 'none'
+document.querySelector('#train11').style.display = 'none'
+document.querySelector('#mbtraining2').style.display = 'none'
 }
 
 if(course2 == true){
-$('#train22').css('display', 'flex');
-$('#mbtraining1').css('display', 'flex');
+document.querySelector('#train22').style.display = 'flex'
+document.querySelector('#mbtraining1').style.display = 'flex'
 } else  {
-$('#train22').hide()
-$('#mbtraining1').hide()
+document.querySelector('#train22').style.display = 'none'
+document.querySelector('#mbtraining1').style.display = 'none'
 }
 
 if(course3 == true){
-$('#mbtraining3').css('display', 'flex');
-$('#train33').css('display', 'flex');
+document.querySelector('#mbtraining3').style.display = 'flex'
+document.querySelector('#train33').style.display = 'flex'
 } else  {
-$('#mbtraining3').hide()
-$('#train33').hide()
+document.querySelector('#mbtraining3').style.display = 'none'
+document.querySelector('#train33').style.display = 'none'
 }
 
 if(course4 == true){
-$('#mbtraining4').css('display', 'flex');
-$('#train44').css('display', 'flex');
+document.querySelector('#mbtraining4').style.display = 'flex'
+document.querySelector('#train44').style.display = 'flex'
 } else  {
-$('#mbtraining4').hide()
-$('#train44').hide()
+document.querySelector('#mbtraining4').style.display = 'none'
+document.querySelector('#train44').style.display = 'none'
 }
 
 if(course5 == true){
-$('#train55').css('display', 'flex');
-$('#mbtraining10').css('display', 'flex');
+document.querySelector('#mbtraining10').style.display = 'flex'
+document.querySelector('#train55').style.display = 'flex'
 } else  {
-$('#train55').hide()
-$('#mbtraining10').hide()
+document.querySelector('#mbtraining10').style.display = 'none'
+document.querySelector('#train55').style.display = 'none'
 }
 
 if(course6 == true){
-$('#train66').css('display', 'flex');
-$('#mbtraining11').css('display', 'flex');
+document.querySelector('#mbtraining11').style.display = 'flex'
+document.querySelector('#train66').style.display = 'flex'
 } else  {
-$('#train66').hide()
-$('#mbtraining11').hide()
+document.querySelector('#mbtraining11').style.display = 'none'
+document.querySelector('#train66').style.display = 'none'
 }
 
 if(course7 == true){
-$('#train77').css('display', 'flex');
-$('#mbfiesta').css('display', 'flex');
+document.querySelector('#mbfiesta').style.display = 'flex'
+document.querySelector('#train77').style.display = 'flex'
 } else  {
-$('#train77').hide()
-$('#mbfiesta').hide()
+document.querySelector('#mbfiesta').style.display = 'none'
+document.querySelector('#train77').style.display = 'none'
 }
 
 if(course8 == true){
-$('#train88').css('display', 'flex');
-$('#mbrebelrito').css('display', 'flex');
+document.querySelector('#mbrebelrito').style.display = 'flex'
+document.querySelector('#train88').style.display = 'flex'
 } else  {
-$('#train88').hide()
-$('#mbrebelrito').hide()
+document.querySelector('#mbrebelrito').style.display = 'none'
+document.querySelector('#train88').style.display = 'none'
 }
 
 if(course9 == true){
-$('#train99').css('display', 'flex');
-$('#mbnomnyam').css('display', 'flex');
+document.querySelector('#mbnomnyam').style.display = 'flex'
+document.querySelector('#train99').style.display = 'flex'
 } else  {
-$('#train99').hide()
-$('#mbnomnyam').hide()
+document.querySelector('#mbnomnyam').style.display = 'none'
+document.querySelector('#train99').style.display = 'none'
 }
 
 if(course10 == true){
-$('#train100').css('display', 'flex');
-$('#mblockednloaded').css('display', 'flex');
+document.querySelector('#mblockednloaded').style.display = 'flex'
+document.querySelector('#train100').style.display = 'flex'
 } else  {
-$('#train100').hide()
-$('#mblockednloaded').hide()
+document.querySelector('#mblockednloaded').style.display = 'none'
+document.querySelector('#train100').style.display = 'none'
 }
 
 if(course11 == true){
-$('#train111').css('display', 'flex');
-$('#mbclucknrun').css('display', 'flex');
+document.querySelector('#mbclucknrun').style.display = 'flex'
+document.querySelector('#train111').style.display = 'flex'
 } else  {
-$('#train111').hide()
-$('#mbclucknrun').hide()
+document.querySelector('#mbclucknrun').style.display = 'none'
+document.querySelector('#train111').style.display = 'none'
 }
 
 if(course12 == true){
-$('#train122').css('display', 'flex');
-$('#mbrealrito').css('display', 'flex');
+document.querySelector('#mbrealrito').style.display = 'flex'
+document.querySelector('#train122').style.display = 'flex'
 } else  {
-$('#train122').hide()
-$('#mbrealrito').hide()
+document.querySelector('#mbrealrito').style.display = 'none'
+document.querySelector('#train122').style.display = 'none'
 }
 
 if(course13 == true){
-$('#train133').css('display', 'flex');
-$('#mbktown').css('display', 'flex');
+document.querySelector('#train133').style.display = 'flex'
+document.querySelector('#mbktown').style.display = 'flex'
 } else  {
-$('#train133').hide()
-$('#mbktown').hide()
+document.querySelector('#train133').style.display = 'none'
+document.querySelector('#mbktown').style.display = 'none'
 }
 
 if(course14 == true){
-$('#train144').css('display', 'flex');
-$('#mbcbox').css('display', 'flex');
+document.querySelector('#train144').style.display = 'flex'
+document.querySelector('#mbcbox').style.display = 'flex'
 } else  {
-$('#train144').hide()
-$('#mbcbox').hide()
+document.querySelector('#train144').style.display = 'none'
+document.querySelector('#mbcbox').style.display = 'none'
 }
 
 if(course15 == true){
-$('#sb02').css('display', 'flex');
-$('#sb022').css('display', 'flex');
+document.querySelector('#sb02').style.display = 'flex'
+document.querySelector('#sb022').style.display = 'flex'
 } else  {
-$('#sb02').hide()
-$('#sb022').hide()
+document.querySelector('#sb02').style.display = 'none'
+document.querySelector('#sb022').style.display = 'none'
 }
 
 if(course16 == true){
-$('#ml02').css('display', 'flex');
-$('#ml022').css('display', 'flex');
+document.querySelector('#ml02').style.display = 'flex'
+document.querySelector('#ml022').style.display = 'flex'
 } else  {
-$('#ml02').hide()
-$('#ml022').hide()
+document.querySelector('#ml02').style.display = 'none'
+document.querySelector('#ml022').style.display = 'none'
 }
 
 if(course17 == true){
-$('#sm02').css('display', 'flex');
-$('#sm022').css('display', 'flex');
+document.querySelector('#sm02').style.display = 'flex'
+document.querySelector('#sm022').style.display = 'flex'
 } else  {
-$('#sm02').hide()
-$('#sm022').hide()
+document.querySelector('#sm02').style.display = 'none'
+document.querySelector('#sm022').style.display = 'none'
 }
 
 
@@ -324,11 +324,11 @@ firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
 
 
 if(!!emaild) {
-$('#email').html(emaild);
+document.querySelector('#email').textContent = emaild
 } else {
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
 .set({Email:user.email}, {merge:true})
-$('#email').html(emaild);
+document.querySelector('#email').textContent = emaild
 }
 }})
 
