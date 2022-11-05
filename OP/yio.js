@@ -63,7 +63,9 @@ let usc = data["uscontent"];
  let sm1 = data2['STID']
  myselect.add(new Option(nm1,sm1));
 })}
+setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
  
  if(stid !== '*' && !stid.includes(',')) {
@@ -74,7 +76,9 @@ document.querySelector('.finishedloading').textContent = '1'
  let nm2 = data3['NAME']
  let sm2 = data3['STID']
  myselect.add(new Option(nm2,sm2));
+setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 })
 
 }
@@ -87,7 +91,9 @@ document.querySelector('.finishedloading').textContent = '1'
  let sm3 = data4['STID']
  myselect.add(new Option(nm3,sm3));
  })})
+setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
  }
 // end
   
