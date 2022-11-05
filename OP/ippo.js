@@ -382,6 +382,7 @@ window.addEventListener('load', (event) => {
 var interval = setInterval(function() {
 let pagload = document.querySelector('.finishedloading').textContent
   if (pagload === '1') {
+document.querySelector('.loadingnewportal').style.display = 'none'
        clearInterval(interval);
         function selectup() {
         $('#selectstid').selectize({ 
@@ -402,7 +403,6 @@ let pagload = document.querySelector('.finishedloading').textContent
         invoices2()
         }})}
         selectup()     
-        document.querySelector('.loadingnewportal').style.display = 'none'
   }
 }, 1000);
 });   
