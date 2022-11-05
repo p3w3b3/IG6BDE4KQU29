@@ -386,12 +386,10 @@ let pagload = document.querySelector('.finishedloading').textContent
         onChange: function() {
         contentvis()
         updateaws()
-        updatemarketing()
         donutcharts()
         updatecharts()
         updatedata()
         updatedata2()
-        updatedata3()
         updatedata4()
         updatedata5()
         invoices1()
