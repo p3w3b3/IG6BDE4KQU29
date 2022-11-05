@@ -402,6 +402,7 @@ let pagload = document.querySelector('.finishedloading').textContent
         invoices2()
         }})}
         selectup()     
+        document.querySelector('.loadingnewportal').style.display = 'none'
   }
 }, 1000);
 });   
