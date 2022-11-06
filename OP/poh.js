@@ -404,7 +404,15 @@ if (pagload === '1' && itemcount>900) {
         invoices1()
         invoices2()
         }})}
-        selectup()     
+
+function setdefval() {
+let firstval = document.querySelector('.selectize-dropdown-content').children[0].getAttribute('data-value')
+var selectElement = $('#selectstid').eq(0);
+var selectize = selectElement.data('selectize');
+if (!!selectize) selectize.setValue(firstval);
+}
+        selectup()   
+        setdefval()  
   }
 }, 1000);
 });   
