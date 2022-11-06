@@ -420,13 +420,11 @@ selectize.setValue(firstval);
 
 var interval2 = setInterval(function() {
     
-if (!!Selectize) {
+if (!!selectize && pagload === '1' && itemcount>900 ) {
 clearInterval(interval2);
 setdefval()
 }
+
 }, 1000);
 
-
- 
-});
-
+})
