@@ -406,9 +406,13 @@ if (pagload === '1' && itemcount>900) {
         }})}
 
 function setdefval() {
-let firstval = document.querySelector('.selectize-dropdown-content').children[0].getAttribute('data-value')
+
+let obj = $('#selectstid')[0].selectize.options
+let firstval = obj[Object.keys(obj)[0]].value
+
 var selectElement = $('#selectstid').eq(0);
 var selectize = selectElement.data('selectize');
+
 if (!!selectize) selectize.setValue(firstval);
 }
         selectup()   
