@@ -1,5 +1,5 @@
 { 
-const firebaseConfig = {
+const firebaseConfig = { 
 apiKey: "AIzaSyB5X0NgXNQ8d3UjqVP5p_xB9Yt8cOk1ut8",
 authDomain: "peckwater-system.firebaseapp.com",
 projectId: "peckwater-system",
@@ -378,10 +378,11 @@ campbutton2.classList.add("on")
 
 
 
+
 window.addEventListener('load', (event) => {
 var interval = setInterval(function() {
 let pagload = document.querySelector('.finishedloading').textContent
-let itemcount  document.querySelectorAll('.userinfo').length
+var itemcount = document.querySelectorAll('.userinfo').length
 if (pagload === '1' && itemcount>900) {
        document.querySelector('.loadingnewportal').style.display = 'none'
        clearInterval(interval);
