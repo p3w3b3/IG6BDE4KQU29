@@ -381,8 +381,9 @@ campbutton2.classList.add("on")
 window.addEventListener('load', (event) => {
 var interval = setInterval(function() {
 let pagload = document.querySelector('.finishedloading').textContent
-  if (pagload === '1') {
-document.querySelector('.loadingnewportal').style.display = 'none'
+let itemcount  document.querySelectorAll('.userinfo').length
+if (pagload === '1' && itemcount>900) {
+       document.querySelector('.loadingnewportal').style.display = 'none'
        clearInterval(interval);
         function selectup() {
         $('#selectstid').selectize({ 
