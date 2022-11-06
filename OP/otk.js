@@ -409,25 +409,6 @@ if (pagload === '1' && itemcount>900) {
 }
 }, 1000);
 
-
-function setdefval() {
-let obj = $('#selectstid')[0].selectize.options
-let firstval = obj[Object.keys(obj)[0]].value
-var selectElement = $('#selectstid').eq(0);
-var selectize = selectElement.data('selectize');
-selectize.setValue(firstval);
-}
-
-var pagload2 = document.querySelector('.finishedloading').textContent
-var itemcount2 = document.querySelectorAll('.userinfo').length
-
-var interval2 = setInterval(function() {
-
-if (pagload2 === '1' && itemcount2>900 ) {
-clearInterval(interval2);
-setdefval()
-}
-
-}, 1000);
-
 })
+
+
