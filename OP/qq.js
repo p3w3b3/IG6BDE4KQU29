@@ -418,9 +418,12 @@ var selectize = selectElement.data('selectize');
 selectize.setValue(firstval);
 }
 
+var pagload2 = document.querySelector('.finishedloading').textContent
+var itemcount2 = document.querySelectorAll('.userinfo').length
+
 var interval2 = setInterval(function() {
-    
-if (pagload === '1' && itemcount>900 ) {
+
+if (pagload2 === '1' && itemcount2>900 ) {
 clearInterval(interval2);
 setdefval()
 }
