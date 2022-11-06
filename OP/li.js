@@ -405,18 +405,28 @@ if (pagload === '1' && itemcount>900) {
         invoices2()
         }})}
 
-function setdefval() {
+        selectup()   
+}
+}, 1000);
 
+
+function setdefval() {
 let obj = $('#selectstid')[0].selectize.options
 let firstval = obj[Object.keys(obj)[0]].value
-
 var selectElement = $('#selectstid').eq(0);
 var selectize = selectElement.data('selectize');
-
-if (!!selectize) selectize.setValue(firstval);
+selectize.setValue(firstval);
 }
-        selectup()   
-        setdefval()  
-  }
+
+var interval2 = setInterval(function() {
+    
+if (!!Selectize) {
+clearInterval(interval2);
+setdefval()
+}
 }, 1000);
-});   
+
+
+ 
+});
+
