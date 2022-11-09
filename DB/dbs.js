@@ -512,7 +512,10 @@ $("#trackermob").hide();
         }
 
         if (!!name) {
-          $("#userName2").html(name);
+        $("#userName2").html(name);
+        let firstletter = name.substring(0, 1);
+        $(".firstletter").html(firstletter);
+        
         } else {
           firebase
             .firestore()
@@ -523,11 +526,7 @@ $("#trackermob").hide();
               window.location.href = "/dashboard";
             }, 2000);
           }
-          $("#userName2").html(name);
         }
-        
-        let firstletter = name.substring(0, 1);
-        $(".firstletter").html(firstletter);
         
 
       });
