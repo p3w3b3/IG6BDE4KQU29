@@ -403,7 +403,6 @@ if (pagload === '1' && itemcount>900) {
         updatedata5()
         invoices1()
         invoices2()
-        mixpanel()
         }})}
 
         selectup()   
