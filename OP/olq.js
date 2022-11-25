@@ -394,7 +394,6 @@ if (pagload === '1' && itemcount>900) {
         },
         onChange: function() {
         contentvis()
-        updateaws()
         donutcharts()
         updatecharts()
         updatedata()
