@@ -400,6 +400,7 @@ if (pagload === '1' && itemcount>900) {
         updatedata2()
         updatedata4()
         updatedata5()
+        updatedata6()
         invoices1()
         invoices2()
         embedDashboard()
