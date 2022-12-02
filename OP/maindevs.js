@@ -406,7 +406,9 @@ if (pagload === '1' && itemcount>900) {
         ordernum1()
         ordernum2()
         updaterating()
+        ratinglength()      
         embedDashboard()
+
         }})}
 
         selectup()   
