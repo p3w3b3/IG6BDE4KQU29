@@ -408,8 +408,6 @@ if (pagload === '1' && itemcount>900) {
         updaterating()
         ratinglength()      
         embedDashboard()
-        fillarrays()
-        checkspots()
         }})}
 
         selectup()   
