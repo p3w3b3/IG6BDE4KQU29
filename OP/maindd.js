@@ -408,6 +408,12 @@ if (pagload === '1' && itemcount>900) {
         updaterating()
         ratinglength()      
         embedDashboard()
+
+let curstid = document.querySelector('#selectstid').value
+if(curstid !== ''){
+let curco = document.querySelector('#stid-'+curstid).textContent.split('|')[2].toLowerCase()
+checkspot(curco)
+}
         }})}
 
         selectup()   
