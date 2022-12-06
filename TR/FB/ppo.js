@@ -148,15 +148,26 @@ let course16 = data['mlcourse']
 let course17 = data['tscourse']
 
 
+
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
 if(lang === 'usa'){
+document.querySelector('#section00button').style.display = 'flex'
 document.querySelector('#usonly1').style.display = 'flex'
 document.querySelector('#usonly2').style.display = 'flex'
+	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
 } else {
+document.querySelector('#section00button').style.display = 'none'
+document.querySelector('#usonly1').style.display = 'none'
+document.querySelector('#usonly2').style.display = 'none'
+	
+document.querySelector('#section0button').style.display = 'flex'
 document.querySelector('#nonus').style.display = 'flex'
 }
+
 	  
 	  
 if(course1 == true){
