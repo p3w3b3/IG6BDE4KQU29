@@ -108,10 +108,18 @@ $("#cb6-quiz-completed").hide();
   let course14 = data['chicboxcourse']
   let course15 = data['sbcourse']
   let course16 = data['mlcourse']
-  let course17 = data['tscourse'] 
+  let course17 = data['tscourse']
+  
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
+if(lang === 'usa'){
+document.querySelector('#usonly1').style.display = 'flex'
+document.querySelector('#usonly2').style.display = 'flex'
+} else {
+document.querySelector('#nonus').style.display = 'flex'
+}
+	
 if(!!quiz1) {
 $('#cb1-quiz').hide()
 $('#cb1-quiz-completed').css("display", "flex");
