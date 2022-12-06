@@ -127,9 +127,18 @@ let admin = data["admin"];
   let course15 = data['sbcourse']
   let course16 = data['mlcourse']
   let course17 = data['tscourse']
+  
+  
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
+if(lang === 'usa'){
+document.querySelector('#usonly1').style.display = 'flex'
+document.querySelector('#usonly2').style.display = 'flex'
+} else {
+document.querySelector('#nonus').style.display = 'flex'
+}
+	      
      let restaurant = data['Restaurant']; 
       let quiz1 = data['k2p4']; 
       let quiz3 = data['k3p6']; 
