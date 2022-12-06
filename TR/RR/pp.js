@@ -307,9 +307,20 @@ window.intercomSettings = {
     let course15 = data['sbcourse']
     let course16 = data['mlcourse']
     let course17 = data['tscourse']
+
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
-   
+
+if(lang === 'usa'){
+document.querySelector('#section00button').style.display = 'flex'	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
+} else {
+document.querySelector('#section00button').style.display = 'none'
+document.querySelector('#section0button').style.display = 'flex'
+}
+	      
+	      
 if (admin == true) {
 $("#n5").show();
 $("#trackermob").show();
