@@ -227,7 +227,8 @@ let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
 if(lang === 'usa'){
-document.querySelector('#usonly').style.display = 'flex'
+document.querySelector('#usonly1').style.display = 'flex'
+document.querySelector('#usonly2').style.display = 'flex'
 } else {
 document.querySelector('#nonus').style.display = 'flex'
 }
