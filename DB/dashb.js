@@ -714,6 +714,14 @@ location.href = '/login'
                 newItem.find("#country-" + i)[0].value = "czech";
               }
 
+              if (language === 'french') {
+                newItem.find("#country-" + i)[0].value = "french";
+              }
+
+              if (language === 'belgium') {
+                newItem.find("#country-" + i)[0].value = "belgium";
+              }
+
               
               
               if (course11 == undefined) {
@@ -943,6 +951,20 @@ location.href = '/login'
                         .doc("users/" + tid)
                         .set({ language: 'czech' }, { merge: true });
                     }
+                  if (uscont === "french") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'french' }, { merge: true });
+                    }
+
+                  if (uscont === "belgium") {
+                      firebase
+                        .firestore()
+                        .doc("users/" + tid)
+                        .set({ language: 'belgium' }, { merge: true });
+                    }
+
 
                     if (course1) {
                       firebase
