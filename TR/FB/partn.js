@@ -160,14 +160,14 @@ document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 }
 
-if(lang === 'fr'){
+if(lang === 'frenvh'){
 document.querySelector('#sectionfrbutton').style.display = 'flex'	
 document.querySelector('#sectionbgbutton').style.display = 'none'
 document.querySelector('#section00button').style.display = 'none'	
 document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 }
-if(lang === 'bg'){
+if(lang === 'belgium'){
 document.querySelector('#sectionfrbutton').style.display = 'none'	
 document.querySelector('#sectionbgbutton').style.display = 'flex'
 document.querySelector('#section00button').style.display = 'none'	
