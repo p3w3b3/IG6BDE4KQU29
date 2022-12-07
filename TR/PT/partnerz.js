@@ -596,7 +596,7 @@ document.querySelector('#profile-restaurant').textContent=restaurant;
         firebase
           .firestore()
           .doc("users/" + firebase.auth().currentUser.uid)
-          .set({ MXC: spn }, { merge: true });
+          .set({ ptaco: spn }, { merge: true });
 
 
         if (!!name) {
@@ -608,7 +608,7 @@ document.querySelector('#profile-restaurant').textContent=restaurant;
             .set({ Name: user.displayName }, { merge: true });
           {
             setTimeout(() => {
-              window.location.href = "/dashboard/training/rebel-rito";
+              window.location.href = "/dashboard/training/papi-taco";
             }, 2000);
           }
 
