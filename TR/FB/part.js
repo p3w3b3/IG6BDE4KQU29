@@ -153,14 +153,37 @@ let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
 if(lang === 'usa'){
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
 document.querySelector('#section00button').style.display = 'flex'	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
+}
+
+if(lang === 'fr'){
+document.querySelector('#sectionfrbutton').style.display = 'flex'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
+document.querySelector('#section00button').style.display = 'none'	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
+}
+if(lang === 'bg'){
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'flex'
+document.querySelector('#section00button').style.display = 'none'	
 document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 } else {
 document.querySelector('#section00button').style.display = 'none'
 document.querySelector('#section0button').style.display = 'flex'
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
 }
 
+
+	  
+	  
+	  
 	  
 	  
 if(course1 == true){
