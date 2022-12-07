@@ -160,14 +160,14 @@ document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 }
 
-if(lang === 'french'){
+else if(lang === 'french'){
 document.querySelector('#sectionfrbutton').style.display = 'flex'	
 document.querySelector('#sectionbgbutton').style.display = 'none'
 document.querySelector('#section00button').style.display = 'none'	
 document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 }
-if(lang === 'belgium'){
+else if(lang === 'belgium'){
 document.querySelector('#sectionfrbutton').style.display = 'none'	
 document.querySelector('#sectionbgbutton').style.display = 'flex'
 document.querySelector('#section00button').style.display = 'none'	
@@ -179,6 +179,7 @@ document.querySelector('#section0button').style.display = 'flex'
 document.querySelector('#sectionfrbutton').style.display = 'none'	
 document.querySelector('#sectionbgbutton').style.display = 'none'
 }
+
 
 
 	  
