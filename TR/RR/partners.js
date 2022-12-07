@@ -308,16 +308,36 @@ window.intercomSettings = {
     let course16 = data['mlcourse']
     let course17 = data['tscourse']
 
+
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
 if(lang === 'usa'){
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
 document.querySelector('#section00button').style.display = 'flex'	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
+}
+
+else if(lang === 'french'){
+document.querySelector('#sectionfrbutton').style.display = 'flex'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
+document.querySelector('#section00button').style.display = 'none'	
+document.querySelector('#section0button').style.display = 'none'
+document.querySelector('#nonus').style.display = 'none'
+}
+else if(lang === 'belgium'){
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'flex'
+document.querySelector('#section00button').style.display = 'none'	
 document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 } else {
 document.querySelector('#section00button').style.display = 'none'
 document.querySelector('#section0button').style.display = 'flex'
+document.querySelector('#sectionfrbutton').style.display = 'none'	
+document.querySelector('#sectionbgbutton').style.display = 'none'
 }
 	      
 	      
