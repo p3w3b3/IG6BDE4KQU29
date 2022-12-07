@@ -606,7 +606,7 @@ $('#mwingery').hide()
             .set({ Name: user.displayName }, { merge: true });
           {
             setTimeout(() => {
-              window.location.href = "/dashboard/training/rebel-rito";
+              window.location.href = "/dashboard/training/rito";
             }, 2000);
           }
 
