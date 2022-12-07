@@ -160,7 +160,7 @@ document.querySelector('#section0button').style.display = 'none'
 document.querySelector('#nonus').style.display = 'none'
 }
 
-if(lang === 'frenvh'){
+if(lang === 'french'){
 document.querySelector('#sectionfrbutton').style.display = 'flex'	
 document.querySelector('#sectionbgbutton').style.display = 'none'
 document.querySelector('#section00button').style.display = 'none'	
