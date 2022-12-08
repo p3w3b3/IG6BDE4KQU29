@@ -674,11 +674,13 @@ $('#sp5x').show()
 prognum8++
 }
 
-
+function checkprogress(){
 let sp =((prognum+prognum2+prognum3+prognum4+prognum5+prognum6+prognum8)/30*100)
 let spn = Math.round(sp)+'%'
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   .set({FTB:spn}, {merge:true})
+}
+	  
 
  if(!!name) {
       $('#userName2').html(name);
