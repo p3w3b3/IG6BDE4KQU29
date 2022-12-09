@@ -675,7 +675,7 @@ let pnum7 = Number(document.querySelector('#prognum8').textContent)
 	  
 var interval7 = setInterval(function() {
 checkprog()
-}, 2000);
+}, 10000);
 	  
 	  
 	  
