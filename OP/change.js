@@ -409,6 +409,9 @@ if (pagload === '1' && itemcount>900) {
         ratinglength()      
         embedDashboard()
         checkspot()
+setTimeout(() => {
+checkdonuts()
+}, "2500")
         }})}
 
         selectup()   
