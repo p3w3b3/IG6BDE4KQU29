@@ -398,7 +398,7 @@ function checkprog(){
 let pnum1 = Number(document.querySelector('#prognumsm').textContent)
 
 
-let sp =((prognumv)/1*100)
+let sp =((pnum1)/1*100)
 let spn = Math.round(sp)+'%'
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   .set({sammies:spn}, {merge:true})
