@@ -588,15 +588,24 @@ $('#mwingery').hide()
 }
 
 
-        let sp =
-          ((rrprognum + rrprognum2 + rrprognum3 + rrprognum4 + rrprognum5) / 24) *
-          100;
-        let spn = Math.round(sp) + "%";
-        firebase
-          .firestore()
-          .doc("users/" + firebase.auth().currentUser.uid)
-          .set({ RRITO: spn }, { merge: true });
+function checkprog(){
+let pnum1 = Number(document.querySelector('#rrprognum').textContent)
+let pnum2 = Number(document.querySelector('#rrprognum2').textContent)
+let pnum3 = Number(document.querySelector('#rrprognum3').textContent)
+let pnum4 = Number(document.querySelector('#rrprognum4').textContent)
+let pnum5 = Number(document.querySelector('#rrprognum5').textContent)
 
+let sp =((pnum1+pnum2+pnum3+pnum4+pnum5)/24*100)
+let spn = Math.round(sp)+'%'
+firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
+  .set({RRITO:spn}, {merge:true})
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 10000);
+	      
+	      
         if (!!name) {
           $("#userName2").html(name);
         } else {
