@@ -620,11 +620,29 @@ document.querySelector('#profile-restaurant').textContent=restaurant;
     kprognum7++
     }
           
-    let sp =((kprognum+kprognum2+kprognum3+kprognum4+kprognum5+kprognum6+kprognum7)/28*100)
+function checkprog(){
+let pnum1 = Number(document.querySelector('#kprognum').textContent)
+let pnum2 = Number(document.querySelector('#kprognum2').textContent)
+let pnum3 = Number(document.querySelector('#kprognum3').textContent)
+let pnum4 = Number(document.querySelector('#kprognum4').textContent)
+let pnum5 = Number(document.querySelector('#kprognum5').textContent)
+let pnum6 = Number(document.querySelector('#kprognum6').textContent)
+let pnum7 = Number(document.querySelector('#kprognum7').textContent)
+
+
+    let sp =((pnum1+pnum2+pnum3+pnum4+pnum5+pnum6+pnum7)/28*100)
     let spn = Math.round(sp)+'%'
     firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
       .set({KTOWN:spn}, {merge:true})
-    
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 10000);
+	  
+	  
+	  
+
      if(!!name) {
           $('#userName2').html(name);
       } else {
