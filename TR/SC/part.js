@@ -656,11 +656,36 @@ $('#s7p5x').show()
 prognum8++
 }
 	  
-let sp =((prognum+prognum2+prognum3+prognum4+prognum5+prognum6+prognum8)/28*100)
-let spn = Math.round(sp)+'%'
-firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
-  .set({SEC:spn}, {merge:true})
 
+function checkprog(){
+let pnum1 = Number(document.querySelector('#prognum').textContent)
+let pnum2 = Number(document.querySelector('#prognum2').textContent)
+let pnum3 = Number(document.querySelector('#prognum3').textContent)
+let pnum4 = Number(document.querySelector('#prognum4').textContent)
+let pnum5 = Number(document.querySelector('#prognum5').textContent)
+let pnum6 = Number(document.querySelector('#prognum6').textContent)
+let pnum7 = Number(document.querySelector('#prognum8').textContent)
+
+
+    let sp =((pnum1+pnum2+pnum3+pnum4+pnum5+pnum6+pnum7)/28*100)
+    let spn = Math.round(sp)+'%'
+    firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
+      .set({SEC:spn}, {merge:true})
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 2000);
+	  
+	  
+	  
+
+
+	  
+	  
+	  
+	  
+	  
  if(!!name) {
       $('#userName2').html(name);
   } else {
