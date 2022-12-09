@@ -587,12 +587,24 @@ $("#n5").hide();
 $("#trackermob").hide();
 }
   
-  
-  let sp =((mprognum+mprognum2+mprognum3+mprognum4+mprognum5)/24*100)
-  let spn = Math.round(sp)+'%'
-  firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
-    .set({MXC:spn}, {merge:true})
-  
+function checkprog(){
+let pnum1 = Number(document.querySelector('#mprognum').textContent)
+let pnum2 = Number(document.querySelector('#mprognum2').textContent)
+let pnum3 = Number(document.querySelector('#mprognum3').textContent)
+let pnum4 = Number(document.querySelector('#mprognum4').textContent)
+let pnum5 = Number(document.querySelector('#mprognum5').textContent)
+
+let sp =((pnum1+pnum2+pnum3+pnum4+pnum5)/24*100)
+let spn = Math.round(sp)+'%'
+firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
+  .set({MXC:spn}, {merge:true})
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 10000);
+	    
+ 
  
    if(!!name) {
         $('#userName2').html(name);
