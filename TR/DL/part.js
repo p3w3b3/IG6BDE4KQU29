@@ -413,7 +413,7 @@ function checkprog(){
 let pnum1 = Number(document.querySelector('#prognum').textContent)
 
 
-let sp =((prognum)/4*100)
+let sp =((prognum)/1*100)
 let spn = Math.round(sp)+'%'
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   .set({deliverect:spn}, {merge:true})
