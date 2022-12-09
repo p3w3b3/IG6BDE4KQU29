@@ -393,12 +393,23 @@ $("#n5").hide();
 $("#trackermob").hide();
 }
   
-  
-  let sp =((prognumsm)/1*100)
-  let spn = Math.round(sp)+'%'
-  firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
-    .set({sammies:spn}, {merge:true})
-  
+   
+function checkprog(){
+let pnum1 = Number(document.querySelector('#prognumsm').textContent)
+
+
+let sp =((prognumv)/1*100)
+let spn = Math.round(sp)+'%'
+firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
+  .set({sammies:spn}, {merge:true})
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 10000);
+	    
+	    
+	    
    if(!!name) {
         $('#userName2').html(name);
     } else {
