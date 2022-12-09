@@ -391,11 +391,22 @@ $('#v1p1x').show()
 prognumv++
 }
 
-let sp =((prognumv)/1*100)
+function checkprog(){
+let pnum1 = Number(document.querySelector('#prognumv').textContent)
+
+
+let sp =((pnum1)/1*100)
 let spn = Math.round(sp)+'%'
 firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
   .set({verygoodburger:spn}, {merge:true})
-
+}
+	  
+var interval7 = setInterval(function() {
+checkprog()
+}, 10000);
+	  
+	  
+	  
 
  if(prereq !== true) {
         location.href = '/login';
