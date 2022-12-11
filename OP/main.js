@@ -407,7 +407,6 @@ if (pagload === '1' && itemcount>900) {
         ordernum2()
         updaterating()
         ratinglength()      
-        embedDashboard()
         checkspot()
 setTimeout(() => {
 checkdonuts()
