@@ -68,6 +68,24 @@ document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
 }
  
+//finnish
+if(stid === 'finnish'){
+    myFS.collection("stids").get().then((docSnap) => {
+    docSnap.forEach((doc) => {
+    let data4 = doc.data()
+    let nm3 = data4['NAME']
+    let sm3 = data4['STID']
+    let cntry = data4['language']
+if(cntry = 'finnish'){
+    myselect.add(new Option(nm3,sm3));
+  }})})
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+    }
+
+ 
+ 
  if(stid !== '*' && !stid.includes(',') && stid !== 'finnish' && stid !== 'swedish' && stid !== 'czech' && stid !== 'hungary' ) {
 
  let docstid2 = myFS.doc("stids/" + stid)
@@ -95,72 +113,6 @@ setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
  }
-
- //finnish
-if(stid === 'finnish'){
-    myFS.collection("stids").get().then((docSnap) => {
-    docSnap.forEach((doc) => {
-    let data4 = doc.data()
-    let nm3 = data4['NAME']
-    let sm3 = data4['STID']
-    let cntry = data4['language']
-if(cntry = 'finnish'){
-    myselect.add(new Option(nm3,sm3));
-  }})})
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-    }
-
-
-//swedish
-if(stid === 'swedish'){
-    myFS.collection("stids").get().then((docSnap) => {
-    docSnap.forEach((doc) => {
-    let data4 = doc.data()
-    let nm3 = data4['NAME']
-    let sm3 = data4['STID']
-    let cntry = data4['language']
-if(cntry = 'swedish'){
-    myselect.add(new Option(nm3,sm3));
-  }})})
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-    }
-
-
-//czech
- if(stid === 'czech'){
-    myFS.collection("stids").get().then((docSnap) => {
-    docSnap.forEach((doc) => {
-    let data4 = doc.data()
-    let nm3 = data4['NAME']
-    let sm3 = data4['STID']
-    let cntry = data4['language']
-if(cntry = 'czech'){
-    myselect.add(new Option(nm3,sm3));
-  }})})
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-    }
-
-//hungary
-if(stid === 'hungary'){
-    myFS.collection("stids").get().then((docSnap) => {
-    docSnap.forEach((doc) => {
-    let data4 = doc.data()
-    let nm3 = data4['NAME']
-    let sm3 = data4['STID']
-    let cntry = data4['language']
-if(cntry = 'hungary'){
-    myselect.add(new Option(nm3,sm3));
-  }})})
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-    }
 
 // end
   
