@@ -68,7 +68,7 @@ document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
 }
  
- if(stid !== '*' && !stid.includes(',')) {
+ if(stid !== '*' && !stid.includes(',') && stid !== 'finnish' && stid !== 'swedish' && stid !== 'czech' && stid !== 'hungary' ) {
 
  let docstid2 = myFS.doc("stids/" + stid)
  docstid2.get().then(docSnap => {
