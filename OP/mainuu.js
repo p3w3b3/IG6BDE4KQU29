@@ -72,12 +72,12 @@ document.querySelector('.finishedloading').textContent = '1'
 if(stid === 'finnish'){
     myFS.collection("stids").get().then((docSnap) => {
     docSnap.forEach((doc) => {
-    let data4 = doc.data()
-    let nm3 = data4['NAME']
-    let sm3 = data4['STID']
+    let data6 = doc.data()
+    let nm6 = data4['NAME']
+    let sm6 = data4['STID']
     let cntry = data4['MPID']
 if(cntry = 'FI'){
-    myselect.add(new Option(nm3,sm3));
+    myselect.add(new Option(nm6,sm6));
   }})})
    setTimeout(() => {
    document.querySelector('.finishedloading').textContent = '1'
@@ -86,7 +86,7 @@ if(cntry = 'FI'){
 
  
  
- if(stid !== '*' && !stid.includes(',') && stid !== 'finnish' && stid !== 'swedish' && stid !== 'czech' && stid !== 'hungary' ) {
+ if(stid !== '*' || stid !== 'finnish' && !stid.includes(',')) {
 
  let docstid2 = myFS.doc("stids/" + stid)
  docstid2.get().then(docSnap => {
