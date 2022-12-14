@@ -75,8 +75,8 @@ if(stid === 'finnish'){
     let data4 = doc.data()
     let nm3 = data4['NAME']
     let sm3 = data4['STID']
-    let cntry = data4['language']
-if(cntry = 'finnish'){
+    let cntry = data4['MPID']
+if(cntry = 'FI'){
     myselect.add(new Option(nm3,sm3));
   }})})
    setTimeout(() => {
