@@ -69,7 +69,7 @@ document.querySelector('.finishedloading').textContent = '1'
 }
  
 
-if(stid !== 'FINNISH' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDISH' && stid !== '*' && !stid.includes(',')) {
+if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
 
     let docstid2 = myFS.doc("stids/" + stid)
     docstid2.get().then(docSnap => {
@@ -98,7 +98,7 @@ document.querySelector('.finishedloading').textContent = '1'
  }
 
 //finnish
-if(stid === 'FINNISH'){
+if(stid === 'FINLAND'){
     myFS.collection("stids").get().then((docSnap) => {
     docSnap.forEach((doc) => {
     let data6 = doc.data()
@@ -115,7 +115,7 @@ if(cntry === 'FI'){
 
  
 //swedish
-if(stid === 'SWEDISH'){
+if(stid === 'SWEDEN'){
     myFS.collection("stids").get().then((docSnap) => {
     docSnap.forEach((doc) => {
     let data6 = doc.data()
