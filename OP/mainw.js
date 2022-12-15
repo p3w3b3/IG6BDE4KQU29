@@ -113,6 +113,74 @@ if(cntry === 'FI'){
    }, 1000);
     }
 
+ 
+//swedish
+if(stid === 'SWEDISH'){
+    myFS.collection("stids").get().then((docSnap) => {
+    docSnap.forEach((doc) => {
+    let data6 = doc.data()
+    let cntry = data6['MPID']
+if(cntry === 'SE'){
+    let nm6 = data6['NAME']
+    let sm6 = data6['STID']
+    myselect.add(new Option(nm6,sm6));
+  }})})
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+    }
+ 
+
+//swedish
+if(stid === 'SWEDISH'){
+    myFS.collection("stids").get().then((docSnap) => {
+    docSnap.forEach((doc) => {
+    let data6 = doc.data()
+    let cntry = data6['MPID']
+if(cntry === 'SE'){
+    let nm6 = data6['NAME']
+    let sm6 = data6['STID']
+    myselect.add(new Option(nm6,sm6));
+  }})})
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+    }
+ 
+//czech
+if(stid === 'CZECH'){
+    myFS.collection("stids").get().then((docSnap) => {
+    docSnap.forEach((doc) => {
+    let data6 = doc.data()
+    let cntry = data6['MPID']
+if(cntry === 'CZ'){
+    let nm6 = data6['NAME']
+    let sm6 = data6['STID']
+    myselect.add(new Option(nm6,sm6));
+  }})})
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+    }
+ 
+//hungary
+if(stid === 'HUNGARY'){
+    myFS.collection("stids").get().then((docSnap) => {
+    docSnap.forEach((doc) => {
+    let data6 = doc.data()
+    let cntry = data6['MPID']
+if(cntry === 'HU'){
+    let nm6 = data6['NAME']
+    let sm6 = data6['STID']
+    myselect.add(new Option(nm6,sm6));
+  }})})
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+    }
+ 
+ 
+ 
 // end
   
  
