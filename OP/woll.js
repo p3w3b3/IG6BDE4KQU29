@@ -68,8 +68,8 @@ document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
 }
  
-/** 
-if(stid !== 'finnish' && stid !== '*' && !stid.includes(',')) {
+
+if(stid !== 'FINNISH' && stid !== '*' && !stid.includes(',')) {
 
     let docstid2 = myFS.doc("stids/" + stid)
     docstid2.get().then(docSnap => {
@@ -82,7 +82,7 @@ if(stid !== 'finnish' && stid !== '*' && !stid.includes(',')) {
    }, 1000);
    })
    }
-**/
+
  
  if(stid === '*'){
  myFS.collection("stids").get().then((docSnap) => {
@@ -98,7 +98,7 @@ document.querySelector('.finishedloading').textContent = '1'
  }
 
 //finnish
-if(stid === 'finnish'){
+if(stid === 'FINNISH'){
     myFS.collection("stids").get().then((docSnap) => {
     docSnap.forEach((doc) => {
     let data6 = doc.data()
