@@ -103,7 +103,7 @@ if(stid === 'finnish'){
     docSnap.forEach((doc) => {
     let data6 = doc.data()
     let cntry = data6['MPID']
-if(cntry = 'FI'){
+if(cntry === 'FI'){
     let nm6 = data6['NAME']
     let sm6 = data6['STID']
     myselect.add(new Option(nm6,sm6));
