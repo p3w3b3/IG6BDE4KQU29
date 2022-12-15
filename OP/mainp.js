@@ -69,7 +69,7 @@ document.querySelector('.finishedloading').textContent = '1'
 }
  
 
-if(stid !== 'FINNISH' && stid !== '*' && !stid.includes(',')) {
+if(stid !== 'FINNISH' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDISH' && stid !== '*' && !stid.includes(',')) {
 
     let docstid2 = myFS.doc("stids/" + stid)
     docstid2.get().then(docSnap => {
@@ -114,23 +114,6 @@ if(cntry === 'FI'){
     }
 
  
-//swedish
-if(stid === 'SWEDISH'){
-    myFS.collection("stids").get().then((docSnap) => {
-    docSnap.forEach((doc) => {
-    let data6 = doc.data()
-    let cntry = data6['MPID']
-if(cntry === 'SE'){
-    let nm6 = data6['NAME']
-    let sm6 = data6['STID']
-    myselect.add(new Option(nm6,sm6));
-  }})})
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-    }
- 
-
 //swedish
 if(stid === 'SWEDISH'){
     myFS.collection("stids").get().then((docSnap) => {
