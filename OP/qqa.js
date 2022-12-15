@@ -68,21 +68,21 @@ document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
 }
  
- 
- if( (stid !== 'finnish') && (stid !== '*') && (!stid.includes(',')) ) {
+/** 
+if(stid !== 'finnish' && stid !== '*' && !stid.includes(',')) {
 
- let docstid2 = myFS.doc("stids/" + stid)
- docstid2.get().then(docSnap => {
- let data3 = docSnap.data()
- let nm2 = data3['NAME']
- let sm2 = data3['STID']
- myselect.add(new Option(nm2,sm2));
-setTimeout(() => {
-document.querySelector('.finishedloading').textContent = '1'
-}, 1000);
-})
-
-}
+    let docstid2 = myFS.doc("stids/" + stid)
+    docstid2.get().then(docSnap => {
+    let data3 = docSnap.data()
+    let nm2 = data3['NAME']
+    let sm2 = data3['STID']
+    myselect.add(new Option(nm2,sm2));
+   setTimeout(() => {
+   document.querySelector('.finishedloading').textContent = '1'
+   }, 1000);
+   })
+   }
+**/
  
  if(stid === '*'){
  myFS.collection("stids").get().then((docSnap) => {
