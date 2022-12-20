@@ -450,9 +450,6 @@ if(mpd = 'HU'){
   });
   }
   
-  
-  
-  
   var intervall = setInterval(function() {
   let pagload = document.querySelector('.finishedloading').textContent
   var itemcount = document.querySelectorAll('.userinfo').length
@@ -466,7 +463,6 @@ if(mpd = 'HU'){
           document.querySelector('#selectstid').style.display = 'flex'
           },
           onChange: function() {
-
           contentvis()
           donutcharts()
           updatecharts()
@@ -482,29 +478,13 @@ if(mpd = 'HU'){
           updaterating()
           ratinglength()      
           checkspot()
-  setTimeout(() => {
-  checkdonuts()
-            
 let cstid = document.querySelector('#selectstid').value
 dashboard.setParameters({STID: cstid});
+  setTimeout(() => {
+  checkdonuts()
   }, "2500")
           }})}
           selectup()   
-          contentvis()
-          donutcharts()
-          updatecharts()
-          updatedata()
-          updatedata2()
-          updatedata4()
-          updatedata5()
-          updatedata6()
-          invoices1()
-          invoices2()
-          ordernum1()
-          ordernum2()
-          updaterating()
-          ratinglength()      
-          checkspot()
   }
   }, 1000);
 
