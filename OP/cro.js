@@ -466,9 +466,6 @@ if(mpd = 'HU'){
           document.querySelector('#selectstid').style.display = 'flex'
           },
           onChange: function() {
-            
-let cstid = document.querySelector('#selectstid').value
-dashboard.setParameters({STID: cstid});
 
           contentvis()
           donutcharts()
@@ -487,9 +484,27 @@ dashboard.setParameters({STID: cstid});
           checkspot()
   setTimeout(() => {
   checkdonuts()
+            
+let cstid = document.querySelector('#selectstid').value
+dashboard.setParameters({STID: cstid});
   }, "2500")
           }})}
           selectup()   
+          contentvis()
+          donutcharts()
+          updatecharts()
+          updatedata()
+          updatedata2()
+          updatedata4()
+          updatedata5()
+          updatedata6()
+          invoices1()
+          invoices2()
+          ordernum1()
+          ordernum2()
+          updaterating()
+          ratinglength()      
+          checkspot()
   }
   }, 1000);
 
