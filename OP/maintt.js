@@ -448,7 +448,6 @@ campbutton2.classList.add("on")
 
 
 
-window.addEventListener('load', (event) => {
 var interval = setInterval(function() {
 let pagload = document.querySelector('.finishedloading').textContent
 var itemcount = document.querySelectorAll('.userinfo').length
@@ -485,7 +484,5 @@ checkdonuts()
         selectup()   
 }
 }, 1000);
-
-})
 
 
