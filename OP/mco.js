@@ -458,6 +458,7 @@ if(mpd = 'HU'){
   var itemcount = document.querySelectorAll('.userinfo').length
   if (pagload === '1' && itemcount>900) {
          clearInterval(intervall);
+       document.querySelector('.loadingnewportal').style.display = 'none'
           function selectup() {
           $('#selectstid').selectize({ 
           onInitialize: function() {
