@@ -43,59 +43,57 @@ let prereq = data['prereq'];
 let lang = data["language"];
 let usc = data["uscontent"];
 
- // start
+// start
 
- let myselect = document.querySelector('#selectstid')
+let myselect = document.querySelector('#selectstid')
 
-  while (myselect.options.length > 0) {                
-  myselect.remove(0);
-  }
-  myselect.add(new Option('Select site',''));
+while (myselect.options.length > 0) {                
+myselect.remove(0);
+}
+myselect.add(new Option('Select site',''));
  
- if(stid.includes(',')){
- let mys = stid.split(',')
- for (i = 0 ; i < mys.length; i++) {
- 
- let docstid1 = myFS.doc("stids/" + mys[i])
- docstid1.get().then(docSnap => {
- let data2 = docSnap.data()
- let nm1 = data2['NAME']
- let sm1 = data2['STID']
- myselect.add(new Option(nm1,sm1));
-})}
+if(stid.includes(',')){
+let mys = stid.split(',')
+for (i = 0 ; i < mys.length; i++) {
+let currentdata = document.querySelector('#stid-'+mys[i]).textContent.split("|")
+
+let nm1 = currentdata[1]
+let sm1 = currentdata[0]
+myselect.add(new Option(nm1,sm1));
+}
 setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
 }
- 
 
 if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
+let currentdata = document.querySelector('#stid-'+stid).textContent.split("|")
+let nm1 = currentdata[1]
+let sm1 = currentdata[0]
+myselect.add(new Option(nm1,sm1));
 
-    let docstid2 = myFS.doc("stids/" + stid)
-    docstid2.get().then(docSnap => {
-    let data3 = docSnap.data()
-    let nm2 = data3['NAME']
-    let sm2 = data3['STID']
-    myselect.add(new Option(nm2,sm2));
-   setTimeout(() => {
-   document.querySelector('.finishedloading').textContent = '1'
-   }, 1000);
-   })
-   }
-
- 
- if(stid === '*'){
- myFS.collection("stids").get().then((docSnap) => {
- docSnap.forEach((doc) => {
- let data4 = doc.data()
- let nm3 = data4['NAME']
- let sm3 = data4['STID']
- myselect.add(new Option(nm3,sm3));
- })})
 setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
 }, 1000);
- }
+}
+
+ 
+if(stid === '*'){
+
+var stidlist = document.getElementsByClassName("userinfo");
+for (var i = 0; i < stidlist.length; i++) {  
+
+let currentdata = stidlist[i].textContent.split("|")
+let nm1 = currentdata[1]
+let sm1 = currentdata[0]
+myselect.add(new Option(nm1,sm1));
+}
+
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
+}
+
 
 //finnish
 if(stid === 'FINLAND'){
