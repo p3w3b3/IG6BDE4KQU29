@@ -453,6 +453,7 @@ if(mpd = 'HU'){
   var intervall = setInterval(function() {
   let pagload = document.querySelector('.finishedloading').textContent
   var itemcount = document.querySelectorAll('.userinfo').length
+  try {
   if (pagload === '1' && itemcount>900) {
          clearInterval(intervall);
        document.querySelector('.loadingnewportal').style.display = 'none'
@@ -486,6 +487,9 @@ dashboard.setParameters({STID: cstid});
           }})}
           selectup()   
   }
+} catch (error) {
+  console.log(error)
+}
   }, 1000);
 
 }}, 1000)
