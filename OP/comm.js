@@ -484,8 +484,9 @@ if(mpd = 'HU'){
   checkdonuts()
   }, "2500")
           }})}
-  
+          setdefval()
           selectup()   
+          document.querySelector('#selectstid').style.display = 'none'
           document.querySelector('.loadingnewportal').style.display = 'none'
   }
   }, 1000);
