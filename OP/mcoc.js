@@ -466,6 +466,10 @@ if(mpd = 'HU'){
           document.querySelector('#selectstid').style.display = 'flex'
           },
           onChange: function() {
+            
+let cstid = document.querySelector('#selectstid').value
+dashboard.setParameters({STID: cstid});
+
           contentvis()
           donutcharts()
           updatecharts()
