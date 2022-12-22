@@ -101,15 +101,13 @@ document.querySelector('.finishedloading').textContent = '1'
 
 //finnish
 if(stid === 'FINLAND'){
-
 var stidlist = document.getElementsByClassName("userinfo");
 for (var i = 0; i < stidlist.length; i++) {
-
 let currentdata = stidlist[i].textContent.split("|")
 let nm1 = currentdata[0]
 let sm1 = currentdata[1]
 let mpd = currentdata[2]
-if(mpd = 'FI'){
+if(mpd === 'FI'){
 myselect.add(new Option(nm1,sm1));
 }}
 setTimeout(() => {
@@ -128,7 +126,7 @@ let currentdata = stidlist[i].textContent.split("|")
 let nm1 = currentdata[0]
 let sm1 = currentdata[1]
 let mpd = currentdata[2]
-if(mpd = 'SE'){
+if(mpd === 'SE'){
 myselect.add(new Option(nm1,sm1));
 }}
 setTimeout(() => {
@@ -146,7 +144,7 @@ let currentdata = stidlist[i].textContent.split("|")
 let nm1 = currentdata[0]
 let sm1 = currentdata[1]
 let mpd = currentdata[2]
-if(mpd = 'CZ'){
+if(mpd === 'CZ'){
 myselect.add(new Option(nm1,sm1));
 }}
 setTimeout(() => {
@@ -159,12 +157,11 @@ if(stid === 'HUNGARY'){
 
 var stidlist = document.getElementsByClassName("userinfo");
 for (var i = 0; i < stidlist.length; i++) {
-
 let currentdata = stidlist[i].textContent.split("|")
 let nm1 = currentdata[0]
 let sm1 = currentdata[1]
 let mpd = currentdata[2]
-if(mpd = 'HU'){
+if(mpd === 'HU'){
 myselect.add(new Option(nm1,sm1));
 }}
 setTimeout(() => {
