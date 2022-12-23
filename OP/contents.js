@@ -49,7 +49,7 @@ let lang = data["language"];
 let usc = data["uscontent"];
 
   
-if(admin === 'true'){
+if(admin === true){
 document.querySelector('#trackerbutton').style.display = 'flex'
 document.querySelector('#trackerbuttonmob').style.display = 'flex'
 }
