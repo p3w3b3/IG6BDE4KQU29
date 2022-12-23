@@ -42,11 +42,18 @@ docRef.get().then(docSnap => {
 let data = docSnap.data()
 let stid = data['stid'].toUpperCase()
 let name = data['Name'];
+let admin = data['admin'];
 let emaild = data['Email'];
 let prereq = data['prereq'];
 let lang = data["language"];
 let usc = data["uscontent"];
 
+  
+if(admin === 'true'){
+document.querySelector('#trackerbutton').style.display = 'flex'
+document.querySelector('#trackerbuttonmob').style.display = 'flex'
+}
+  
 // start
 
 let myselect = document.querySelector('#selectstid')
