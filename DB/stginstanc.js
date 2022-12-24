@@ -262,14 +262,6 @@ $('#cb222').hide()
 }
 
 
-if (!!admin) {
-$("#n5").show();
-$("#trackermob").show();
-} else {
-$("#n5").hide();
-$("#trackermob").hide();
-}
-
 document.querySelector("#userName").textContent = name;
 
 if (!!pdt1) {
