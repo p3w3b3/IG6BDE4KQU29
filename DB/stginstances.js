@@ -311,20 +311,20 @@ firebase
 .set({ Timestamp: date }, { merge: true });
 
 
-document.querySelector('#userName').textContent = user.displayName
-document.querySelector('#userName2').textContent = user.displayName
+document.querySelector('#userName').textContent = name
+document.querySelector('#userName2').textContent = name
 
 
 document.querySelector('#email').textContent = user.email
 
-document.querySelector('#profile-name').textContent = user.displayName
+document.querySelector('#profile-name').textContent = name
 document.querySelector('#profile-email').textContent = user.email
 document.querySelector("#profile-uid").textContent = profileuid;
 
 
 var fletter = document.getElementsByClassName("firstletter");
 for (var i = 0; i < fletter.length; i++) {
-fletter[i].textContent = user.displayName.substring(0,1)
+fletter[i].textContent = name.substring(0,1)
 }
 
 
