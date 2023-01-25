@@ -47,6 +47,15 @@ let name = data['Name'];
 let admin = data['admin'];
 let emaild = data['Email'];
 
+if (emaild === 'stonegate@peckwaterbrands.com') {
+document.querySelector('#embeddingContainer2').style.display = 'none'
+document.querySelector('#embeddingContainer3').style.display = 'flex'
+} else {
+document.querySelector('#embeddingContainer2').style.display = 'flex'
+document.querySelector('#embeddingContainer3').style.display = 'none'
+}
+  
+  
 if(admin === true){
 document.querySelector('#trackerbutton').style.display = 'flex'
 document.querySelector('#trackerbuttonmob').style.display = 'flex'
