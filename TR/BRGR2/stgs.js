@@ -443,7 +443,7 @@ $("#trackermob").hide();
   let sp =((prognumsm)/5*100)
   let spn = Math.round(sp)+'%'
   firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
-    .set({burgercourse2:spn}, {merge:true})
+    .set({burgercourse2total:spn}, {merge:true})
   
   
    if(prereq !== true) {
