@@ -69,6 +69,52 @@ auth.onAuthStateChanged(async (user) => {
     let course15 = data['sbcourse']
     let course16 = data['mlcourse']
     let course17 = data['tscourse']
+    
+    let course18 = data['burgercourse1']
+let course19 = data['burgercourse2']
+let course20 = data['burgercourse3']
+
+if(course18 === true){
+    document.querySelector('#brgr1-1').style.display = 'flex'
+    document.querySelector('#brgr1-2').style.display = 'flex'
+    document.querySelector('#brgr1-3').style.display = 'flex'
+    document.querySelector('#brgr1-4').style.display = 'flex'
+    document.querySelector('#brgr1-5').style.display = 'flex'
+    } else {
+    document.querySelector('#brgr1-1').style.display = 'none'
+    document.querySelector('#brgr1-2').style.display = 'none'
+    document.querySelector('#brgr1-3').style.display = 'none'
+    document.querySelector('#brgr1-4').style.display = 'none'
+    document.querySelector('#brgr1-5').style.display = 'none'
+    }
+    
+    if(course19 === true){
+      document.querySelector('#brgr2-1').style.display = 'flex'
+      document.querySelector('#brgr2-2').style.display = 'flex'
+      document.querySelector('#brgr2-3').style.display = 'flex'
+      document.querySelector('#brgr2-4').style.display = 'flex'
+      document.querySelector('#brgr2-5').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr2-1').style.display = 'none'
+      document.querySelector('#brgr2-2').style.display = 'none'
+      document.querySelector('#brgr2-3').style.display = 'none'
+      document.querySelector('#brgr2-4').style.display = 'none'
+      document.querySelector('#brgr2-5').style.display = 'none'
+      }
+    
+    if(course20 === true){
+      document.querySelector('#brgr3-1').style.display = 'flex'
+      document.querySelector('#brgr3-2').style.display = 'flex'
+      document.querySelector('#brgr3-3').style.display = 'flex'
+      document.querySelector('#brgr3-4').style.display = 'flex'
+      document.querySelector('#brgr3-5').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr3-1').style.display = 'none'
+      document.querySelector('#brgr3-2').style.display = 'none'
+      document.querySelector('#brgr3-3').style.display = 'none'
+      document.querySelector('#brgr3-4').style.display = 'none'
+      document.querySelector('#brgr3-5').style.display = 'none'
+      }
 let lang = data["language"];
 document.querySelector('#languageselector').textContent = lang
 
