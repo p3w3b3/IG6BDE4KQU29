@@ -21,7 +21,8 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   const authChanged = firebase.auth().onAuthStateChanged(user =>{
-  let prognumsm = 0
+
+    let prognumsm = 0
   
   const signout = () => {
       auth.signOut();
@@ -39,11 +40,16 @@ const firebaseConfig = {
       let docSnap = await myFS.doc("users/"+firebase.auth().currentUser.uid).get();
       let data = docSnap.data()
       let prereq = data['prereq'];
-        let name = data['Name'];
-        let emaild = data['Email']; 
-            let firstletter = name.substring(0, 1)
-          $('.firstletter').html(firstletter);
-      let sm1p1 = data['sm1p1'];    
+      let name = data['Name'];
+      let emaild = data['Email']; 
+      let firstletter = name.substring(0, 1)
+      $('.firstletter').html(firstletter);
+      
+      let brg1p1 = data['brg1p1'];    
+      let brg1p2 = data['brg1p2'];    
+      let brg1p3 = data['brg1p3'];    
+      let brg1p4 = data['brg1p4'];    
+      let brg1p5 = data['brg1p5'];    
   
   mixpanel.init('bb6d2603674e27d7b31d045acf3ae77f', {debug: true}); 
 
@@ -127,11 +133,37 @@ document.querySelector('#email2').textContent=emaild;
   document.querySelector('#profile-restaurant').textContent=restaurant;
   } else {document.querySelector('#profile-restaurant').textContent='-';} 
   
-      if( sm1p1 == true) {
-  $('#sm1p1').hide()
-  $('#sm1p1x').show()
-  prognumsm++
-  }
+if( brg1p1 == true) {
+$('#sm1p1').hide()
+$('#sm1p1x').show()
+prognumsm++
+}
+
+if( brg1p2 == true) {
+$('#sm1p2').hide()
+$('#sm1p2x').show()
+prognumsm++
+}
+
+if( brg1p3 == true) {
+$('#sm1p3').hide()
+$('#sm1p3x').show()
+prognumsm++
+}
+
+if( brg1p4 == true) {
+$('#sm1p4').hide()
+$('#sm1p4x').show()
+prognumsm++
+}
+      
+if( brg1p5 == true) {
+$('#sm1p5').hide()
+$('#sm1p5x').show()
+prognumsm++
+}
+
+      
 let admin = data["admin"];
 let course1 = data["ftbcourse"];
 let course2 = data["seccourse"];
@@ -425,7 +457,7 @@ $("#trackermob").hide();
     .set({Name:user.displayName}, {merge:true})
     {
     setTimeout(() => { 
-           window.location.href = '/dashboard/training/sammies';
+           window.location.href = '/dashboard/training/mighty-burger';
     
     }, 2000);
     
