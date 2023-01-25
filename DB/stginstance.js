@@ -107,7 +107,36 @@ let course12 = data['rebelritocourse']
 let course13 = data['ktowncourse']
 let course14 = data['chicboxcourse']
 
+let course15 = data['burgercourse1']
+let course16 = data['burgercourse2']
+let course17 = data['burgercourse3']
 
+
+if(course15 === true){
+    document.querySelector('#brgr1-1').style.display = 'flex'
+    document.querySelector('#brgr1-2').style.display = 'flex'
+    } else {
+    document.querySelector('#brgr1-1').style.display = 'none'
+    document.querySelector('#brgr1-2').style.display = 'none'
+    }
+    
+    if(course16 === true){
+      document.querySelector('#brgr2-1').style.display = 'flex'
+      document.querySelector('#brgr2-2').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr2-1').style.display = 'none'
+      document.querySelector('#brgr2-2').style.display = 'none'
+      }
+    
+    if(course17 === true){
+      document.querySelector('#brgr3-1').style.display = 'flex'
+      document.querySelector('#brgr3-2').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr3-1').style.display = 'none'
+      document.querySelector('#brgr3-2').style.display = 'none'
+      }
+    
+  
 let rtrue = data['rated'];
 
 if(rtrue===true) {
