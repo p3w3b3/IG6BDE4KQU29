@@ -148,7 +148,53 @@ let course12 = data['rebelritocourse']
 let course13 = data['ktowncourse']
 let course14 = data['chicboxcourse']
 
+let course15 = data['burgercourse1']
+let course16 = data['burgercourse2']
+let course17 = data['burgercourse3']
 
+
+if(course15 === true){
+    document.querySelector('#brgr1-1').style.display = 'flex'
+    document.querySelector('#brgr1-2').style.display = 'flex'
+    document.querySelector('#brgr1-3').style.display = 'flex'
+    document.querySelector('#brgr1-4').style.display = 'flex'
+    document.querySelector('#brgr1-5').style.display = 'flex'
+    } else {
+    document.querySelector('#brgr1-1').style.display = 'none'
+    document.querySelector('#brgr1-2').style.display = 'none'
+    document.querySelector('#brgr1-3').style.display = 'none'
+    document.querySelector('#brgr1-4').style.display = 'none'
+    document.querySelector('#brgr1-5').style.display = 'none'
+    }
+    
+    if(course16 === true){
+      document.querySelector('#brgr2-1').style.display = 'flex'
+      document.querySelector('#brgr2-2').style.display = 'flex'
+      document.querySelector('#brgr2-3').style.display = 'flex'
+      document.querySelector('#brgr2-4').style.display = 'flex'
+      document.querySelector('#brgr2-5').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr2-1').style.display = 'none'
+      document.querySelector('#brgr2-2').style.display = 'none'
+      document.querySelector('#brgr2-3').style.display = 'none'
+      document.querySelector('#brgr2-4').style.display = 'none'
+      document.querySelector('#brgr2-5').style.display = 'none'
+      }
+    
+    if(course17 === true){
+      document.querySelector('#brgr3-1').style.display = 'flex'
+      document.querySelector('#brgr3-2').style.display = 'flex'
+      document.querySelector('#brgr3-3').style.display = 'flex'
+      document.querySelector('#brgr3-4').style.display = 'flex'
+      document.querySelector('#brgr3-5').style.display = 'flex'
+      } else {
+      document.querySelector('#brgr3-1').style.display = 'none'
+      document.querySelector('#brgr3-2').style.display = 'none'
+      document.querySelector('#brgr3-3').style.display = 'none'
+      document.querySelector('#brgr3-4').style.display = 'none'
+      document.querySelector('#brgr3-5').style.display = 'none'
+      }
+    
 
 if(course1 == true){
 $('#cr1').css('display', 'flex');
