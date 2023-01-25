@@ -496,7 +496,7 @@ if(course18 === true){
       .set({Name:user.displayName}, {merge:true})
       {
       setTimeout(() => { 
-             window.location.href = '/dashboard/training/mighty-burger';
+             window.location.href = '/dashboard/training/88th-street-burger-bar';
       
       }, 2000);
       
