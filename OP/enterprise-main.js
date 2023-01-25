@@ -142,6 +142,16 @@
           let data = docSnap.data();
           let name = data["Name"];
           let emaild = data["Email"];
+
+if (emaild === 'stonegate@peckwaterbrands.com') {
+document.querySelector('#embeddingContainer').style.display = 'none'
+document.querySelector('#embeddingContainer3').style.display = 'flex'
+} else {
+document.querySelector('#embeddingContainer').style.display = 'flex'
+document.querySelector('#embeddingContainer3').style.display = 'none'
+}
+
+
           let prereq = data["prereq"];
 
 document.querySelector('#question-name').value = data['Name']
