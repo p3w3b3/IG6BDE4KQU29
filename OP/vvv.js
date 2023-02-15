@@ -38,7 +38,7 @@
     docRef.get().then(docSnap => {
     let data = docSnap.data()
     stid = data['stid'].toUpperCase()
-    let name = data['Name'];
+    name = data['Name'];
     let admin = data['admin'];
     let emaild = data['Email'];
     let prereq = data['prereq'];
