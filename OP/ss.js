@@ -78,8 +78,16 @@ console.error(error);
 }}
 
 getstid(mys[i])
+  
+  
 
-}}
+}
+
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
+}
+}
 
 
 if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
@@ -102,6 +110,9 @@ myselect.add(new Option(data[i].name,data[i].uid));
 console.error(error);
 }}
 getstid()
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
 
 
@@ -138,7 +149,9 @@ console.error(error);
 }}
 
 getall()
-
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 
 }
 
@@ -165,6 +178,9 @@ myselect.add(new Option(data[i].name,data[i].uid));
 console.error(error);
 }}
 getfinland()
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
 
 
@@ -190,6 +206,9 @@ myselect.add(new Option(data[i].name,data[i].uid));
 console.error(error);
 }}
 getsweden()
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
 
 //czech
@@ -214,6 +233,9 @@ myselect.add(new Option(data[i].name,data[i].uid));
 console.error(error);
 }}
 getczech()
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
 
 //hungary
@@ -238,6 +260,9 @@ myselect.add(new Option(data[i].name,data[i].uid));
 console.error(error);
 }}
 gethungary()
+setTimeout(() => {
+document.querySelector('.finishedloading').textContent = '1'
+}, 1000);
 }
  
 
