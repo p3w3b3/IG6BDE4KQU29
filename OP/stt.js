@@ -38,7 +38,7 @@
     docRef.get().then(docSnap => {
     let data = docSnap.data()
     stid = data['stid'].toUpperCase()
-    name = data['Name'];
+    let name = data['Name'];
     let admin = data['admin'];
     let emaild = data['Email'];
     let prereq = data['prereq'];
@@ -46,6 +46,202 @@
     let usc = data["uscontent"];
     
       
+let myselect = document.querySelector('#selectstid')
+
+while (myselect.options.length > 0) {
+myselect.remove(0);
+}
+myselect.add(new Option('Select site',''));
+
+if(stid.includes(',')){
+let mys = stid.split(',')
+
+for (i = 0 ; i < mys.length; i++) {
+
+async function getstid(uid) {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/partner?uid='+uid,{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+console.log(data)
+myselect.add(new Option(data.name,data.uid));
+}
+} catch (error) {
+console.error(error);
+}}
+
+getstid(mys[i])
+
+}}
+
+
+if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
+async function getstid() {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/partner?uid='+stid,{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}}
+} catch (error) {
+console.error(error);
+}}
+getstid()
+}
+
+
+if(stid === '*'){
+
+async function getall() {
+
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/all',{
+headers: {
+'Content-type' : 'application/json'
+}
+
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+
+
+if(data !== null){
+
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+
+}
+
+
+}
+
+
+} catch (error) {
+console.error(error);
+}}
+
+getall()
+
+
+}
+
+
+//finnish
+if(stid === 'FINLAND'){
+async function getfinland() {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/bycountry?mpid=FI',{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}
+}
+} catch (error) {
+console.error(error);
+}}
+getfinland()
+}
+
+
+//swedish
+if(stid === 'SWEDEN'){
+async function getsweden() {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/bycountry?mpid=SE',{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}
+}
+} catch (error) {
+console.error(error);
+}}
+getsweden()
+}
+
+//czech
+if(stid === 'CZECH'){
+async function getczech() {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/bycountry?mpid=CZ',{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}
+}
+} catch (error) {
+console.error(error);
+}}
+getczech()
+}
+
+//hungary
+if(stid === 'HUNGARY'){
+async function gethungary() {
+try {
+const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:EXg_XR9A:v1/bycountry?mpid=HU',{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}
+}
+} catch (error) {
+console.error(error);
+}}
+gethungary()
+}
+ 
+
+        
     
 
     if(admin === true){
