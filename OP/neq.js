@@ -55,10 +55,9 @@ myselect.remove(0);
 }
 myselect.add(new Option('Select site',''));
 
-if(!!stid) {
 async function getstid() {
 try {
-const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/partner?uid='+stid,{
+const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/partner?uid=STG7034168',{
 headers: {
 'Content-type' : 'application/json'
 }
@@ -68,13 +67,18 @@ if (!response.ok) {
 throw new Error(data.message);
 }
 if(data !== null){
-for (var i = 0; i < data.length; i++) {
-myselect.add(new Option(data[i].name,data[i].uid));
-}}
+console.log(data)
+
+myselect.add(new Option(data['name'],data['uid']));
+    
+}
+
 } catch (error) {
 console.error(error);
 }}
+
 getstid()
+
 
 setTimeout(() => {
 document.querySelector('.finishedloading').textContent = '1'
