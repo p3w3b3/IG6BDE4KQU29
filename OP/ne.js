@@ -1,7 +1,3 @@
-var intervalpageload = setInterval(function() {
-var itemcount = document.querySelectorAll('.userinfo').length
-if (itemcount>400) {
-clearInterval(intervalpageload);
 {
 const firebaseConfig = {
 apiKey: "AIzaSyDApbEuGdjDf-dBlOljBvvXAPlZmUx-D5M",
@@ -301,5 +297,3 @@ maincontent.style.display='none';
 loader.style.display='flex';
 
 }})})}
-
-}}, 1000)
