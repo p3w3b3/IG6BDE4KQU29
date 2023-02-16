@@ -44,7 +44,8 @@
     let prereq = data['prereq'];
     let lang = data["language"];
     let usc = data["uscontent"];
-    
+
+    mpid = data['language']
       
 let myselect = document.querySelector('#selectstid')
 
