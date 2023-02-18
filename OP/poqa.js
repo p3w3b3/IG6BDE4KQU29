@@ -53,7 +53,6 @@
     while (myselect.options.length > 0) {
     myselect.remove(0);
     }
-    myselect.add(new Option('Select site',''));
     
     if(stid !== ''){
     async function getstid() {
