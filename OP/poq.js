@@ -58,7 +58,7 @@
     if(stid !== ''){
     async function getstid() {
     try {
-    const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/partner?uid=STG7034168',{
+    const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/partner?uid='+stid,{
     headers: {
     'Content-type' : 'application/json'
     }
