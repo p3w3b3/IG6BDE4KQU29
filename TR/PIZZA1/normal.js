@@ -47,6 +47,7 @@
            let pizza2 = data['pizza1p2'];    
            let pizza3 = data['pizza1p3'];    
            let pizza4 = data['pizza1p4'];    
+           let pizza5 = data['pizza1p5'];    
     
     mixpanel.init('34ab50f7acd413779598bfe06a25b8c3', {debug: true}); 
   
@@ -119,11 +120,11 @@
   document.querySelector('#email').textContent=emaild;
   document.querySelector('#email2').textContent=emaild;
   }
-          
-    document.querySelector('#profile-email').textContent=emaild;
-    if(!!restaurant) {
-    document.querySelector('#profile-restaurant').textContent=restaurant;
-    } else {document.querySelector('#profile-restaurant').textContent='-';} 
+ 
+document.querySelector('#profile-email').textContent=emaild;
+if(!!restaurant) {
+document.querySelector('#profile-restaurant').textContent=restaurant;
+} else {document.querySelector('#profile-restaurant').textContent='-';} 
     
 if( pizza1 == true) {
 $('#sm1p1').hide()
@@ -146,6 +147,12 @@ prognumsm++
 if( pizza4 == true) {
 $('#sm1p4').hide()
 $('#sm1p4x').show()
+prognumsm++
+}
+
+if( pizza5 == true) {
+$('#sm1p5').hide()
+$('#sm1p5x').show()
 prognumsm++
 }
 
@@ -521,8 +528,7 @@ let course23 = data['pizzacourse3']
   function checkprog(){
   let pnum1 = Number(document.querySelector('#prognumsm').textContent)
   
-  
-  let sp =((pnum1)/4*100)
+  let sp =((pnum1)/5*100)
   let spn = Math.round(sp)+'%'
   firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
     .set({pizzacourse1total:spn}, {merge:true})
