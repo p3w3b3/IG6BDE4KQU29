@@ -31,6 +31,14 @@ setTimeout(() => {
     $("#sm1p4button").css("background-color", "#e7edf0");
   });
 }
+{
+  document.getElementById("sm1p5button").addEventListener("click", (event) => {
+    $(".section1selection").css("background-color", "white");
+    $(".section1div").hide();
+    $("#sm1p5video").show();
+    $("#sm1p5button").css("background-color", "#e7edf0");
+  });
+}
 
 const checkcompleted1 = function() {
 let prognumsm = 0;
@@ -44,6 +52,9 @@ let prognumsm = 0;
       prognumsm++;
     }
     if (document.querySelector("#sm1p4x").style.display == "block") {
+      prognumsm++;
+    }
+    if (document.querySelector("#sm1p5x").style.display == "block") {
       prognumsm++;
     }
   
@@ -114,5 +125,21 @@ let prognumsm = 0;
   };
   player.on("ended", finished);
 }
+{
+  var iframe = document.querySelector("#sm1p5video");
+  var player = new Vimeo.Player(iframe);
+  var finished = function () {
+    videoended = "true";
+    $("#sm1p5").hide();
+    $("#sm1p5x").show();
+    firebase
+      .firestore()
+      .doc("users/" + firebase.auth().currentUser.uid)
+      .set({ pizza1p5: true }, { merge: true });
+    checkcompleted1()
+  };
+  player.on("ended", finished);
+}
   
+
 }, 2000);
