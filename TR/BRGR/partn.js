@@ -175,6 +175,55 @@ prognumsm++
   let course16 = data['mlcourse']
   let course17 = data['tscourse']
 
+let course21 = data['pizzacourse1']
+let course22 = data['pizzacourse2']
+let course23 = data['pizzacourse3']
+
+  if(course21 == true){
+  document.querySelector('#pza1').style.display = 'flex'
+  document.querySelector('#pza11').style.display = 'flex'
+  document.querySelector('#pza111').style.display = 'flex'
+  document.querySelector('#pza1111').style.display = 'flex'
+  document.querySelector('#pza11111').style.display = 'flex'
+
+  } else {
+  document.querySelector('#pza1').style.display = 'none'
+  document.querySelector('#pza11').style.display = 'none'
+  document.querySelector('#pza111').style.display = 'none'
+  document.querySelector('#pza1111').style.display = 'none'
+  document.querySelector('#pza11111').style.display = 'none'
+  }
+
+  if(course22 == true){
+  document.querySelector('#pza2').style.display = 'flex'
+  document.querySelector('#pza22').style.display = 'flex'
+  document.querySelector('#pza222').style.display = 'flex'
+  document.querySelector('#pza2222').style.display = 'flex'
+  document.querySelector('#pza22222').style.display = 'flex'
+
+  } else {
+  document.querySelector('#pza2').style.display = 'none'
+  document.querySelector('#pza22').style.display = 'none'
+  document.querySelector('#pza222').style.display = 'none'
+  document.querySelector('#pza2222').style.display = 'none'
+  document.querySelector('#pza22222').style.display = 'none'
+  }
+        
+  if(course23 == true){
+  document.querySelector('#pza3').style.display = 'flex'
+  document.querySelector('#pza33').style.display = 'flex'
+  document.querySelector('#pza333').style.display = 'flex'
+  document.querySelector('#pza3333').style.display = 'flex'
+  document.querySelector('#pza33333').style.display = 'flex'
+
+  } else {
+  document.querySelector('#pza3').style.display = 'none'
+  document.querySelector('#pza33').style.display = 'none'
+  document.querySelector('#pza333').style.display = 'none'
+  document.querySelector('#pza3333').style.display = 'none'
+  document.querySelector('#pza33333').style.display = 'none'
+  }
+
 let course18 = data['burgercourse1']
 let course19 = data['burgercourse2']
 let course20 = data['burgercourse3']
