@@ -547,7 +547,7 @@ let course23 = data['pizzacourse3']
       .set({Name:user.displayName}, {merge:true})
       {
       setTimeout(() => { 
-             window.location.href = '/dashboard/training/pizza-by-giorgio';
+             window.location.href = '/dashboard/training/late-night-pizza';
       
       }, 2000);
       
