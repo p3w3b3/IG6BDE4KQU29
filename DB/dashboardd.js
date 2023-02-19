@@ -138,6 +138,37 @@ if(course18 === true){
       document.querySelector('#brgr3-1').style.display = 'none'
       document.querySelector('#brgr3-2').style.display = 'none'
       }
+
+
+let course21 = data['pizzacourse1']
+let course22 = data['pizzacourse2']
+let course23 = data['pizzacourse3']
+
+  if(course21 == true){
+  document.querySelector('#pza1').style.display = 'flex'
+  document.querySelector('#pza11').style.display = 'flex'
+
+  } else {
+  document.querySelector('#pza1').style.display = 'none'
+  document.querySelector('#pza11').style.display = 'none'
+  }
+
+  if(course22 == true){
+  document.querySelector('#pza2').style.display = 'flex'
+  document.querySelector('#pza22').style.display = 'flex'
+  } else {
+  document.querySelector('#pza2').style.display = 'none'
+  document.querySelector('#pza22').style.display = 'none'
+  }
+        
+  if(course23 == true){
+  document.querySelector('#pza3').style.display = 'flex'
+  document.querySelector('#pza33').style.display = 'flex'
+
+  } else {
+  document.querySelector('#pza3').style.display = 'none'
+  document.querySelector('#pza33').style.display = 'none'
+  }
 	
 
 let rtrue = data['rated'];
