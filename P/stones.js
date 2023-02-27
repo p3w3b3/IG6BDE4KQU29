@@ -42,10 +42,13 @@
     let admin = data['admin'];
     let emaild = data['Email'];
     
-    if(admin === true){
+    const width = window.innerWidth;
+        
+    if(admin === true && width>992){
     document.querySelector('#trackerbutton').style.display = 'flex'
+    } else if(admin === true && width<992){
     document.querySelector('#trackerbuttonmob').style.display = 'flex'
-    }    
+    }
     
     let profileuids = curUser.uid
     {
