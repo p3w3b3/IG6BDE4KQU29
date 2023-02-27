@@ -86,7 +86,6 @@
     fel[i].textContent = firstletter
     }
     
-    let restaurant = data['Restaurant'];
     let profileuid = curUser.uid
 
     let course1 = data["ftbcourse"];
@@ -229,9 +228,6 @@
     document.querySelector('#profile-name').textContent=name;
     document.querySelector('#profile-email').textContent=emaild;
     
-    if(!!restaurant) {
-    document.querySelector('#profile-restaurant').textContent=restaurant;
-    } else {document.querySelector('#profile-restaurant').textContent='-';}
     firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
     .set({Timestamp:date}, {merge:true})
     
