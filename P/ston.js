@@ -42,6 +42,12 @@
     let admin = data['admin'];
     let emaild = data['Email'];
     
+if(stid !== location.href.split('/operations/')[1].toUpperCase()){
+location.href = 'https://stonegate.peckwaterbrands.com/operations/'+stid.toLowerCase() 
+}
+
+
+
     const width = window.innerWidth;
         
     if(admin === true && width>992){
@@ -88,7 +94,7 @@
     {
     fel[i].textContent = firstletter
     }
-    
+ 
     let profileuid = curUser.uid
 
     let course1 = data["ftbcourse"];
@@ -262,7 +268,7 @@
     
     firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
     .set({Timestamp:date}, {merge:true})
-    
+
     if(!!emaild) {
     document.querySelector('#email').textContent = emaild
     } else {
