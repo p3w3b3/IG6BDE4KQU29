@@ -42,9 +42,9 @@ const firebaseConfig = {
     let admin = data['admin'];
     let emaild = data['Email'];
     
-if(stid !== location.href.split('/operations/')[1].toUpperCase()){
-location.href = 'https://portal.peckwaterbrands.com/operations/'+stid.toLowerCase() 
-}
+//if(stid !== location.href.split('/operations/')[1].toUpperCase()){
+//location.href = 'https://portal.peckwaterbrands.com/operations/'+stid.toLowerCase() 
+//}
 
 
 
