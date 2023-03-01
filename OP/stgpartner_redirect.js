@@ -46,6 +46,9 @@ let stid = data['stid'].toUpperCase()
 let name = data['Name'];
 let admin = data['admin'];
 let emaild = data['Email'];
+  
+  
+location.href = 'https://stonegate.peckwaterbrands.com/operations/'+stid.toLowerCase()
 
   
 if(admin === true){
