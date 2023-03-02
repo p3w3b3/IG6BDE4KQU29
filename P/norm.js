@@ -45,6 +45,103 @@ const firebaseConfig = {
 //if(stid !== location.href.split('/operations/')[1].toUpperCase()){
 //location.href = 'https://portal.peckwaterbrands.com/operations/'+stid.toLowerCase() 
 //}
+        
+        
+        
+stidfinished = false
+
+async function stidsfetch() {
+try {
+const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/new_normal_stid',{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (let i = 0; i < data.length; i++) {
+document.querySelector('#selectstid').add(new Option(data[i].name,data[i].uid))
+}
+stidfinished = true
+}
+} catch (error) {
+console.error(error);
+}}
+
+async function stidsfetchspecific(stid) {
+try {
+const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/new_normal_stid_specific?stid='+stid,{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (let i = 0; i < data.length; i++) {
+document.querySelector('#selectstid').add(new Option(data[i].name,data[i].uid))
+}
+stidfinished = true
+}
+} catch (error) {
+console.error(error);
+}}
+
+async function getbympid(mpid) {
+try {
+const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/new_normal?mpid='+mpid,{
+headers: {
+'Content-type' : 'application/json'
+}
+});
+const data = await response.json();
+if (!response.ok) {
+throw new Error(data.message);
+}
+if(data !== null){
+for (var i = 0; i < data.length; i++) {
+myselect.add(new Option(data[i].name,data[i].uid));
+}
+stidfinished = true
+}
+} catch (error) {
+console.error(error);
+}}
+
+if(stid === '*'){
+stidsfetch()
+} 
+
+if(stid.includes(',')){
+let mys = stid.split(',')
+for (i = 0 ; i < mys.length; i++) {
+stidsfetchspecific(mys[i])
+}}
+
+if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
+stidsfetchspecific(stid)
+}
+
+if(stid === 'FINLAND'){
+getbympid('FI')
+}
+
+if(stid === 'SWEDEN'){
+getbympid('SE')
+}
+
+if(stid === 'CZECH'){
+getbympid('CZ')
+}
+
+if(stid === 'HUNGARY'){
+getbympid('HU')
+}
 
 
 
