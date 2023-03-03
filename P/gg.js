@@ -121,7 +121,6 @@ let mys = stid.split(',')
 for (i = 0 ; i < mys.length; i++) {
 stidsfetchspecific(mys[i])
 }
-stidfinished = true
 }
 
 if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
