@@ -71,6 +71,7 @@ stidfinished = true
 console.error(error);
 }}
 
+
 async function stidsfetchspecific(stid) {
 try {
 const response = await fetch('https://x828-xess-evjx.n7.xano.io/api:7Fnlue2C:v1/new_normal_stid_specific?stid='+stid,{
@@ -85,6 +86,18 @@ throw new Error(data.message);
 if(data !== null){
 for (let i = 0; i < data.length; i++) {
 document.querySelector('#selectstid').add(new Option(data[i].name,data[i].uid))
+}
+
+
+const options = []
+const mys = stid.split(',')
+document.querySelectorAll('#selectstid > option').forEach((option) => {
+if (options.includes(option.value)) option.remove()
+else options.push(option.value)
+}) 
+    
+if(options.length>mys.length){
+stidfinished = true
 }
 }
 } catch (error) {
@@ -122,22 +135,7 @@ if(stid.includes(',')){
 let mys = stid.split(',')
 for (i = 0 ; i < mys.length; i++) {
 stidsfetchspecific(mys[i])
-}
-
-const options = []
-document.querySelectorAll('#selectstid > option').forEach((option) => {
-if (options.includes(option.value)) option.remove()
-else options.push(option.value)
-}) 
-    
-if(options.length>mys.length){
-stidfinished = true
 }}
-
-if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
-stidsfetchspecific(stid)
-stidfinished = true
-}
 
 if(stid === 'FINLAND'){
 getbympid('FI')
