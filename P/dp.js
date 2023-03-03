@@ -156,7 +156,7 @@ document.querySelector('#selectstid').style.display = 'none'
 },
 onChange: function() {
 const stidselect = document.querySelector('#selectstid').value.toLowerCase()
-if(cstid !== stidselect && cstid !== ''){
+if(cstid !== stidselect && stidselect !== ''){
 location.replace('https://portal.peckwaterbrands.com/operations/'+stidselect)
 }}})
 
