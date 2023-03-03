@@ -439,13 +439,14 @@
         maincontent.style.display='none';
         loader.style.display='flex';
         
-        }})})
-        
-    
+        }})})}
+
+
+    function checklanguage(){
     let hungarr = ['Vezérlőpult','Bevétel','Mérőszámok','Elkészítési idő','Nyitvatartási idő','Múlt hét','Előző hét','Múlt hét','Múlt hét','Múlt hét','Heti célok','Értékelés','Felkészülési idő','Egymást követő hetek','A hét megjegyzése','Promóció','Promóció','Promóció','Intézkedés','Megjegyzés','Akció','Hívás dátuma','Hívás foglalása','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Megjegyzés','Akció','Promóció','Intézkedés','Promóció','Promóció','Képzett csapattagok','Múlt heti bruttó értékesítés','Értékelési ranglista','Ertékesítés','Értékelési','Aktuális hét','Múlt hét','Különbség','Ertékesítés','Értékelési','Értékelési ranglista','Nyitvatartási idő módosítása','Típus','Időkeret','Nap','Nyitás (reggel)','Zárás (reggel)','Nyitás (este)','Zárás (este)','Zárva','Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap','Visszatérítés visszautasítása','Platform','Márka','Párttag','Ok','Megrendelés azonosítója','Megrendelés dátuma','Megrendelés ideje','Bizonyíték','Értékesítés','Értékesítés','Értékesítés','Megrendelés','Eddig','Múlt hónap','Eddig','Eddig','Dátum','Referencia','Értékesítés','PWB Díj + áfa','Módosítások','Fizetve','Számlamenedzser','Ha további segítségre van szükséged, kérjük, vedd fel velünk a kapcsolatot a chat funkció használatával','Kiemelt promóciók','Peckwater Kezelt kampányok','Nem szeretnél részt venni a kampányban, vagy kérdésed van?','Vezérlőpult','Az én éttermem','Analitika','Képzés','Kontakt','Értékesítés','Vezérlőpult','Ranglisták','Az én étterem','Analitika','Képzés','Kontakt','Értékesítés','Profil','Kijelentkezés','Vezérlőpult','Vezérlőpult','Heti célok','Visszacsatolás','Az én étterem','Analitika','Képzés','Kontakt','Ranglisták','Visszatérítések','Nyitvatartási idő','Teljesítmény','Számlákat','Kampányok','Kontakt','Kontakt','Hozzáadása','Saját adatok','Étterem','Név','E-mail cím']
     if(language === 'hungarian'){
         for (i = 0 ; i < hungarr.length; i++) {
-            if ($('#itemt-'+i).length){
+        if ($('#itemt-'+i).length){
         document.getElementById('itemt-'+i).textContent = hungarr[i]
         }}
     
@@ -704,12 +705,11 @@
     }
     
     if(language === 'swedish'){
-            for (i = 0 ; i < swedarr.length; i++) {
-                if ($('#itemt-'+i).length){
-            document.getElementById('itemt-'+i).textContent = swedarr[i]
-            }}
+    for (i = 0 ; i < swedarr.length; i++) {
+    if ($('#itemt-'+i).length){
+    document.getElementById('itemt-'+i).textContent = swedarr[i]
+    }}
         document.getElementById('intercom-url').textContent = 'Klicka här'
-        
         document.getElementById('ops1').textContent = 'Dashboard'
         document.getElementById('ops2').textContent = 'Topplistor'
         document.getElementById('ops3').textContent = 'Företag'
@@ -760,4 +760,5 @@
     comple.innerHTML = 'Komplett';
     });
     
-    }}
+    }
+}
