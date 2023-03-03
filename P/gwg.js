@@ -116,11 +116,19 @@ if(stid === '*'){
 stidsfetch()
 } 
 
-if(stid.includes(',')){
-let mys = stid.split(',')
-for (i = 0 ; i < mys.length; i++) {
-stidsfetchspecific(mys[i])
-}
+    if(stid.includes(',')){
+    let mys = stid.split(',')
+    for (i = 0 ; i < mys.length; i++) {
+    stidsfetchspecific(mys[i])
+    }
+
+const options = []
+document.querySelectorAll('#selectstid > option').forEach((option) => {
+    if (options.includes(option.value)) option.remove()
+    else options.push(option.value)
+})
+if(options.length>mys.length)
+stidfinished = true
 }
 
 if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
