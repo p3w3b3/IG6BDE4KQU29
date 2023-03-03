@@ -38,6 +38,7 @@ const firebaseConfig = {
     docRef.get().then(docSnap => {
     let data = docSnap.data()
     stid = data['stid'].toUpperCase()
+    lang = data["language"];
     let name = data['Name'];
     let admin = data['admin'];
     let emaild = data['Email'];
