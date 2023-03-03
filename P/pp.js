@@ -105,7 +105,7 @@ throw new Error(data.message);
 }
 if(data !== null){
 for (var i = 0; i < data.length; i++) {
-myselect.add(new Option(data[i].name,data[i].uid));
+document.querySelector('#selectstid').add(new Option(data[i].name,data[i].uid));
 }
 stidfinished = true
 }
