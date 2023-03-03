@@ -153,6 +153,7 @@ $('#selectstid').selectize({
 onInitialize: function() {
 this.trigger('change', true);
 document.querySelector('#selectstid').style.display = 'none'
+document.querySelector('.loadingstid').style.display = 'none'
 },
 onChange: function() {
 const stidselect = document.querySelector('#selectstid').value.toLowerCase()
