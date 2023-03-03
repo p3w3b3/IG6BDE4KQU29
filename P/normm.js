@@ -143,6 +143,27 @@ if(stid === 'HUNGARY'){
 getbympid('HU')
 }
 
+        
+
+let cstid = location.href.split('/operations/')[1]
+var intervals= setInterval(function() {
+if(stidfinished === true){
+try {
+$('#selectstid').selectize({ 
+onInitialize: function() {
+this.trigger('change', true);
+document.querySelector('#selectstid').style.display = 'flex'
+},
+onChange: function() {
+const stidselect = document.querySelector('#selectstid').value.toLowerCase()
+if(cstid !== stidselect){
+location.replace('https://portal.peckwaterbrands.com/operations/'+stidselect)
+}}})
+
+clearInterval(intervals);
+} catch (error) {
+
+}}})
 
 
     const width = window.innerWidth;
