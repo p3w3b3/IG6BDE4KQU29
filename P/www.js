@@ -86,7 +86,6 @@ if(data !== null){
 for (let i = 0; i < data.length; i++) {
 document.querySelector('#selectstid').add(new Option(data[i].name,data[i].uid))
 }
-stidfinished = true
 }
 } catch (error) {
 console.error(error);
@@ -121,10 +120,13 @@ if(stid.includes(',')){
 let mys = stid.split(',')
 for (i = 0 ; i < mys.length; i++) {
 stidsfetchspecific(mys[i])
-}}
+}
+stidfinished = true
+}
 
 if(stid !== 'FINLAND' && stid !== 'CZECH' && stid !== 'HUNGARY' && stid !== 'SWEDEN' && stid !== '*' && !stid.includes(',')) {
 stidsfetchspecific(stid)
+stidfinished = true
 }
 
 if(stid === 'FINLAND'){
