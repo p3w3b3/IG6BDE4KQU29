@@ -762,9 +762,9 @@
     });
     
         
+}}
+
 
 if (window.innerWidth < 1024){
 document.querySelector('.intercom-lightweight-app-launcher.intercom-launcher').style.display = 'none'
 }        
-
-}
