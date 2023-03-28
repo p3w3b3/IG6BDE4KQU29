@@ -192,7 +192,7 @@
         email: emaild, // Email address
         user_id: profileuids, // UID FIREBASE
         custom_launcher_selector:'#intercom-url',
-        vertical_padding:80
+
         };
         }
         {
