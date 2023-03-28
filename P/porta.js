@@ -761,5 +761,24 @@
     comple.innerHTML = 'Komplett';
     });
     
+
+if (window.attachEvent) {
+  window.attachEvent('onresize', function() {
+    if (window.innerWidth < 1024)
+document.querySelector('.intercom-lightweight-app-launcher.intercom-launcher').style.display = 'none'
+    else
+document.querySelector('.intercom-lightweight-app-launcher.intercom-launcher').style.display = 'flex'
+  });
+} else if (window.addEventListener) {
+  window.addEventListener('resize', function() {
+    if (window.innerWidth < 1024)
+document.querySelector('.intercom-lightweight-app-launcher.intercom-launcher').style.display = 'none'
+    else
+document.querySelector('.intercom-lightweight-app-launcher.intercom-launcher').style.display = 'flex'
+  }, true);
+} else {
+  //The browser does not support Javascript event binding
+}
+    
     }
 }
