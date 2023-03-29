@@ -66,7 +66,7 @@ setTimeout(() => {
       document.getElementById("s2p4button").addEventListener("click", (event) => {
         $(".section1selection").css("background-color", "white");
         $(".section1div").hide();
-        $("#s2p4quiz").show();
+        $("#s2p4video").show();
         $("#s2p4button").css("background-color", "#e7edf0");
       });
     }
