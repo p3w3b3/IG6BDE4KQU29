@@ -34,27 +34,51 @@ setTimeout(() => {
         $("#s1p4button").css("background-color", "#e7edf0");
       });
     }
-
     
     {
-      document.getElementById("s1p5button").addEventListener("click", (event) => {
+      document.getElementById("s2p1button").addEventListener("click", (event) => {
         $(".section1selection").css("background-color", "white");
         $(".section1div").hide();
-        $("#s1p5video").show();
-        $("#s1p5button").css("background-color", "#e7edf0");
+        $("#s2p1video").show();
+        $("#s2p1button").css("background-color", "#e7edf0");
+      });
+    }
+    {
+      document.getElementById("s2p2button").addEventListener("click", (event) => {
+        $(".section1selection").css("background-color", "white");
+        $(".section1div").hide();
+        $("#s2p2video").show();
+        $("#s2p2button").css("background-color", "#e7edf0");
+      });
+    }
+    
+    {
+      document.getElementById("s2p3button").addEventListener("click", (event) => {
+        $(".section1selection").css("background-color", "white");
+        $(".section1div").hide();
+        $("#s2p3video").show();
+        $("#s2p3button").css("background-color", "#e7edf0");
+      });
+    }
+    
+    
+    {
+      document.getElementById("s2p4button").addEventListener("click", (event) => {
+        $(".section1selection").css("background-color", "white");
+        $(".section1div").hide();
+        $("#s2p4video").show();
+        $("#s2p4button").css("background-color", "#e7edf0");
       });
     }
 
-    
     {
-      document.getElementById("s1p6button").addEventListener("click", (event) => {
-        $(".section1selection").css("background-color", "white");
-        $(".section1div").hide();
-        $("#s1p6video").show();
-        $("#s1p6button").css("background-color", "#e7edf0");
-      });
+        document.getElementById("s2p5button").addEventListener("click", (event) => {
+          $(".section1selection").css("background-color", "white");
+          $(".section1div").hide();
+          $("#s2p5video").show();
+          $("#s2p5button").css("background-color", "#e7edf0");
+        });
     }
-  
     
     const checkcompleted1 = function() {
     let prognum = 0;
@@ -70,13 +94,27 @@ setTimeout(() => {
         if (document.querySelector("#s1p4x").style.display == "block") {
           prognum++;
         }
-        if (document.querySelector("#s1p5x").style.display == "block") {
-          prognum++;
-        }
-        if (document.querySelector("#s1p6x").style.display == "block") {
-          prognum++;
-        }
         document.querySelector("#prognum").textContent = prognum;
+    }
+    
+    const checkcompleted2 = function() {
+    let prognum2 = 0;
+        if (document.querySelector("#s2p1x").style.display == "block") {
+          prognum2++;
+        }
+        if (document.querySelector("#s2p2x").style.display == "block") {
+          prognum2++;
+        }
+        if (document.querySelector("#s2p3x").style.display == "block") {
+          prognum2++;
+        }
+        if (document.querySelector("#s2p4x").style.display == "block") {
+          prognum2++;
+        }
+        if (document.querySelector("#s2p5x").style.display == "block") {
+        prognum2++;
+        }
+        document.querySelector("#prognum2").textContent = prognum2;
     }
     
     
@@ -141,39 +179,86 @@ setTimeout(() => {
       };
       player.on("ended", finished);
     }
-
+    
     {
-      var iframe = document.querySelector("#s1p5video");
+      var iframe = document.querySelector("#s2p1video");
       var player = new Vimeo.Player(iframe);
       var finished = function () {
         videoended = "true";
-        $("#s1p5").hide();
-        $("#s1p5x").show();
+        $("#s2p1").hide();
+        $("#s2p1x").show();
         firebase
           .firestore()
           .doc("users/" + firebase.auth().currentUser.uid)
-          .set({ stacktwo_p1v5: true }, { merge: true });
-        checkcompleted1()
-      };
-      player.on("ended", finished);
-    }
-  
-    {
-      var iframe = document.querySelector("#s1p6video");
-      var player = new Vimeo.Player(iframe);
-      var finished = function () {
-        videoended = "true";
-        $("#s1p6").hide();
-        $("#s1p6x").show();
-        firebase
-          .firestore()
-          .doc("users/" + firebase.auth().currentUser.uid)
-          .set({ stacktwo_p1v6: true }, { merge: true });
-        checkcompleted1()
+          .set({ stacktwo_p2v1: true }, { merge: true });
+        checkcompleted2()
       };
       player.on("ended", finished);
     }
     
+    {
+      var iframe = document.querySelector("#s2p2video");
+      var player = new Vimeo.Player(iframe);
+      var finished = function () {
+        videoended = "true";
+        $("#s2p2").hide();
+        $("#s2p2x").show();
+        firebase
+          .firestore()
+          .doc("users/" + firebase.auth().currentUser.uid)
+          .set({ stacktwo_p2v2: true }, { merge: true });
+        checkcompleted2()
+      };
+      player.on("ended", finished);
+    }
+    
+    {
+      var iframe = document.querySelector("#s2p3video");
+      var player = new Vimeo.Player(iframe);
+      var finished = function () {
+        videoended = "true";
+        $("#s2p3").hide();
+        $("#s2p3x").show();
+        firebase
+          .firestore()
+          .doc("users/" + firebase.auth().currentUser.uid)
+          .set({ stacktwo_p2v3: true }, { merge: true });
+        checkcompleted2()
+      };
+      player.on("ended", finished);
+    }
+
+    {
+      var iframe = document.querySelector("#s2p4video");
+      var player = new Vimeo.Player(iframe);
+      var finished = function () {
+        videoended = "true";
+        $("#s2p4").hide();
+        $("#s2p4x").show();
+        firebase
+          .firestore()
+          .doc("users/" + firebase.auth().currentUser.uid)
+          .set({ stacktwo_p2v4: true }, { merge: true });
+        checkcompleted2()
+      };
+      player.on("ended", finished);
+    }
+    
+    {
+      var iframe = document.querySelector("#s2p5video");
+      var player = new Vimeo.Player(iframe);
+      var finished = function () {
+        videoended = "true";
+        $("#s2p5").hide();
+        $("#s2p5x").show();
+        firebase
+          .firestore()
+          .doc("users/" + firebase.auth().currentUser.uid)
+          .set({ stacktwo_p2v5: true }, { merge: true });
+        checkcompleted2()
+      };
+      player.on("ended", finished);
+    }
     
     
 
