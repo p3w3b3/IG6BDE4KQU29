@@ -283,56 +283,25 @@ let course23 = data['pizzacourse3']
   let lang = data["language"];
   document.querySelector('#languageselector').textContent = lang
   
-  
-  if(course1 == true){
-  $('#cr1').css('display', 'flex');
-  $('#cr11').css('display', 'flex');
-  $('#cr111').css('display', 'flex');
-  $('#crs1').css('display', 'flex');
-  $('#crs11').css('display', 'flex');
-  $('#train11').css('display', 'flex');
-  $('#mbtraining2').css('display', 'flex');
-  } else  {
-  $('#cr1').hide()
-  $('#cr11').hide()
-  $('#cr111').hide()
-  $('#crs1').hide()
-  $('#crs11').hide()
-  $('#train11').hide()
-  $('#mbtraining2').hide()
-  }
-  if(course2 == true){
-  $('#cr2').css('display', 'flex');
-  $('#cr22').css('display', 'flex');
-  $('#cr222').css('display', 'flex');
-  $('#crs2').css('display', 'flex');
-  $('#crs22').css('display', 'flex');
-  $('#train22').css('display', 'flex');
-  $('#mbtraining1').css('display', 'flex');
-  } else  {
-  $('#cr2').hide()
-  $('#cr22').hide()
-  $('#cr222').hide()
-  $('#crs2').hide()
-  $('#crs22').hide()
-  $('#train22').hide()
-  $('#mbtraining1').hide()
-  }
-  if(course3 == true){
-  $('#cr3').css('display', 'flex');
-  $('#cr33').css('display', 'flex');
-  $('#cr333').css('display', 'flex');
-  $('#crs3').css('display', 'flex');
-  $('#train33').css('display', 'flex');
-  $('#mbtraining3').css('display', 'flex');
-  } else  {
-  $('#cr3').hide()
-  $('#cr33').hide()
-  $('#cr333').hide()
-  $('#crs3').hide()
-  $('#train33').hide()
-  $('#mbtraining3').hide()
-  }
+    let chickenstack = data["chickenstack"]
+    let mexicanstack = data["mexicanstack"]
+
+    if(course1 === true | course2 === true | course3 === true | chickenstack === true){
+    document.getElementById('stack1-1').style.display = 'flex'
+    document.getElementById('stack1-2').style.display = 'flex'
+    document.getElementById('stack1-3').style.display = 'flex'
+    document.getElementById('stack1-4').style.display = 'flex'
+    document.getElementById('stack1-5').style.display = 'flex'
+    }
+    
+    if(course7 === true | course8 === true | course12 === true | mexicanstack === true){
+    document.getElementById('stack2-1').style.display = 'flex'
+    document.getElementById('stack2-2').style.display = 'flex'
+    document.getElementById('stack2-3').style.display = 'flex'
+    document.getElementById('stack2-4').style.display = 'flex'
+    document.getElementById('stack2-5').style.display = 'flex'
+    }
+          
   if(course4 == true){
   $('#cr4').css('display', 'flex');
   $('#cr44').css('display', 'flex');
@@ -376,32 +345,7 @@ let course23 = data['pizzacourse3']
   $('#train66').hide()
   $('#mbtraining11').hide()
   }
-  if(course7 == true){
-  $('#mx33').css('display', 'flex');
-  $('#mx02').css('display', 'flex');
-  $('#mx033').css('display', 'flex');
-  $('#train77').css('display', 'flex');
-  $('#mbfiesta').css('display', 'flex');
-  }else{
-  $('#mx33').hide()
-  $('#mx02').hide()
-  $('#mx033').hide()
-  $('#train77').hide()
-  $('#mbfiesta').hide()
-  }
-  if(course8 == true){
-  $('#rx33').css('display', 'flex');
-  $('#rx02').css('display', 'flex');
-  $('#rx033').css('display', 'flex');
-  $('#train88').css('display', 'flex');
-  $('#mbrebelrito').css('display', 'flex');
-  }else{
-  $('#rx33').hide()
-  $('#rx02').hide()
-  $('#rx033').hide()
-  $('#train88').hide()
-  $('#mbrebelrito').hide()
-  }
+ 
   if(course9 == true){
   $("#nyam33").css("display", "flex");
   $("#nyam44").css("display", "flex");
@@ -442,19 +386,7 @@ let course23 = data['pizzacourse3']
   $('#train111').hide()
   $('#mbclucknrun').hide()
   }
-  if(course12 == true){
-  $('#rrx33').css('display', 'flex');
-  $('#rrx02').css('display', 'flex');
-  $('#rrx033').css('display', 'flex');
-  $('#train122').css('display', 'flex');
-  $('#mbrealrito').css('display', 'flex');
-  }else{
-  $('#rrx33').hide()
-  $('#rrx02').hide()
-  $('#rrx033').hide()
-  $('#train122').hide()
-  $('#mbrealrito').hide()
-  }
+
   if(course13 == true){
   $('#kt2').css('display', 'flex');
   $('#kt22').css('display', 'flex');
