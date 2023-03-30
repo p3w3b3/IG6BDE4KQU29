@@ -490,7 +490,7 @@
     function checkprog(){
     let pnum1 = Number(document.querySelector('#prognum').textContent)
     
-        let sp =((pnum1+pnum2)/6*100)
+        let sp =((pnum1)/6*100)
         let spn = Math.round(sp)+'%'
         firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
           .set({STACKONETOTAL:spn}, {merge:true})
