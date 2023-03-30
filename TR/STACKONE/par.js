@@ -33,7 +33,6 @@
     const auth = firebase.auth();
     const authChanged = firebase.auth().onAuthStateChanged(user =>{
     let prognum = 0
-    let prognum2 = 0
     
     const signout = () => {
         auth.signOut();
@@ -64,13 +63,8 @@
         let s1p2 = data['stackone_p1v2'];    
         let s1p3 = data['stackone_p1v3'];    
         let s1p4 = data['stackone_p1v4']; 
-         
-        let s2p1 = data['stackone_p2v1'];    
-        let s2p2 = data['stackone_p2v2'];    
-        let s2p3 = data['stackone_p2v3'];
-        let s2p4 = data['stackone_p2v4']
-        let s2p5 = data['stackone_p2v5']
-    
+        let s1p5 = data['stackone_p1v5'];    
+        let s1p6 = data['stackone_p1v6']; 
     
     let admin = data["admin"];
           
@@ -480,39 +474,23 @@
     $('#s1p4x').show()
     prognum++
     }
-        if( s2p1 == true) {
-    $('#s2p1').hide()
-    $('#s2p1x').show()
-    prognum2++
-    }
-        if( s2p2 == true) {
-    $('#s2p2').hide()
-    $('#s2p2x').show()
-    prognum2++
-    }
-        if( s2p3 == true) {
-    $('#s2p3').hide()
-    $('#s2p3x').show()
-    prognum2++
+   
+       if( s1p5 == true) {
+    $('#s1p5').hide()
+    $('#s1p5x').show()
+    prognum++
     }
     
-        if( s2p4 == true) {
-    $('#s2p4').hide()
-    $('#s2p4x').show()
-    prognum2++
+        if( s1p6 == true) {
+    $('#s1p6').hide()
+    $('#s1p6x').show()
+    prognum++
     }
-
-    if( s2p5 == true) {
-    $('#s2p5').hide()
-    $('#s2p5x').show()
-    prognum2++
-    }
-
+  
     function checkprog(){
     let pnum1 = Number(document.querySelector('#prognum').textContent)
-    let pnum2 = Number(document.querySelector('#prognum2').textContent)
     
-        let sp =((pnum1+pnum2)/9*100)
+        let sp =((pnum1+pnum2)/6*100)
         let spn = Math.round(sp)+'%'
         firebase.firestore().doc("users/"+firebase.auth().currentUser.uid)
           .set({STACKONETOTAL:spn}, {merge:true})
@@ -551,7 +529,6 @@
       }
     signOutButton.addEventListener('click', signout);
     document.querySelector('#prognum').textContent = prognum
-    document.querySelector('#prognum2').textContent = prognum2
     
     })})
     
