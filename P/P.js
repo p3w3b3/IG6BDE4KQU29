@@ -244,53 +244,43 @@
      
         let profileuid = curUser.uid
     
-    let course1=data['ftbcourse']
-    let course2=data['seccourse']
-    let course3=data['wbwcourse']
-    let course4=data['dlvcourse']
-    let course5=data['smcourse']
-    let course6=data['vcourse']
-    let course7=data['mcourse']
-    let course8=data['rcourse']
-    let course9=data['nyamcourse']
-    let course10=data['lockedcourse']
-    let course11=data['cluckcourse']
-    let course12=data['rebelritocourse']
-    let course13=data['ktowncourse']
-    let course14=data['chicboxcourse']
-    let course15=data['sbcourse']
-    let course16=data['mlcourse']
-    let course17=data['tscourse']
+    let chickenstack = data['chickenstack']
+    let mexicanstack = data['mexicanstack']
+    let course4 = data['dlvcourse']
+    let course5 = data['smcourse']
+    let course6 = data['vcourse']
+    let course7 = data['mcourse']
+    let course8 = data['rcourse']
+    let course9 = data['nyamcourse']
+    let course10 = data['lockedcourse']
+    let course11 = data['cluckcourse']
+    let course12 = data['rebelritocourse']
+    let course13 = data['ktowncourse']
+    let course14 = data['chicboxcourse']
+    let course15 = data['sbcourse']
+    let course16 = data['mlcourse']
+    let course17 = data['tscourse']
     let course18 = data['burgercourse1']
     let course19 = data['burgercourse2']
     let course20 = data['burgercourse3']
     
     
-    if(course1 == true){
-    document.querySelector('#train1').style.display = 'flex'
-    document.querySelector('#train11').style.display = 'flex'
-    document.querySelector('#mbtraining2').style.display = 'flex'
+    if(chickenstack == true){
+    document.querySelector('#stack1-1').style.display = 'flex'
+    document.querySelector('#stack1-2').style.display = 'flex'
     } else  {
-    document.querySelector('#train1').style.display = 'none'
-    document.querySelector('#train11').style.display = 'none'
-    document.querySelector('#mbtraining2').style.display = 'none'
+    document.querySelector('#stack1-1').style.display = 'none'
+    document.querySelector('#stack1-2').style.display = 'none'
     }
     
-    if(course2 == true){
-    document.querySelector('#train22').style.display = 'flex'
-    document.querySelector('#mbtraining1').style.display = 'flex'
+    if(mexicanstack == true){
+    document.querySelector('#stack2-1').style.display = 'flex'
+    document.querySelector('#stack2-2').style.display = 'flex'
     } else  {
-    document.querySelector('#train22').style.display = 'none'
-    document.querySelector('#mbtraining1').style.display = 'none'
+    document.querySelector('#stack2-1').style.display = 'none'
+    document.querySelector('#stack2-2').style.display = 'none'
     }
     
-    if(course3 == true){
-    document.querySelector('#mbtraining3').style.display = 'flex'
-    document.querySelector('#train33').style.display = 'flex'
-    } else  {
-    document.querySelector('#mbtraining3').style.display = 'none'
-    document.querySelector('#train33').style.display = 'none'
-    }
     
     if(course4 == true){
     document.querySelector('#mbtraining4').style.display = 'flex'
@@ -316,22 +306,6 @@
     document.querySelector('#train66').style.display = 'none'
     }
     
-    if(course7 == true){
-    document.querySelector('#mbfiesta').style.display = 'flex'
-    document.querySelector('#train77').style.display = 'flex'
-    } else  {
-    document.querySelector('#mbfiesta').style.display = 'none'
-    document.querySelector('#train77').style.display = 'none'
-    }
-    
-    if(course8 == true){
-    document.querySelector('#mbrebelrito').style.display = 'flex'
-    document.querySelector('#train88').style.display = 'flex'
-    } else  {
-    document.querySelector('#mbrebelrito').style.display = 'none'
-    document.querySelector('#train88').style.display = 'none'
-    }
-    
     if(course9 == true){
     document.querySelector('#mbnomnyam').style.display = 'flex'
     document.querySelector('#train99').style.display = 'flex'
@@ -354,14 +328,6 @@
     } else  {
     document.querySelector('#mbclucknrun').style.display = 'none'
     document.querySelector('#train111').style.display = 'none'
-    }
-    
-    if(course12 == true){
-    document.querySelector('#mbrealrito').style.display = 'flex'
-    document.querySelector('#train122').style.display = 'flex'
-    } else  {
-    document.querySelector('#mbrealrito').style.display = 'none'
-    document.querySelector('#train122').style.display = 'none'
     }
     
     if(course13 == true){
@@ -703,8 +669,6 @@
       
       }
         
-        
-    
         
     if(language === 'swedish'){
       contdif('SEK')
