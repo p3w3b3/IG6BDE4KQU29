@@ -110,10 +110,24 @@ let course15 = data['sbcourse']
 let course16 = data['mlcourse']
 let course17 = data['tscourse']
 
-
 let course18 = data['burgercourse1']
 let course19 = data['burgercourse2']
 let course20 = data['burgercourse3']
+
+
+    let chickenstack = data["chickenstack"]
+    let mexicanstack = data["mexicanstack"]
+
+    if(course1 === true | course2 === true | course3 === true | chickenstack === true){
+    document.getElementById('stack1-1').style.display = 'flex'
+    document.getElementById('stack1-2').style.display = 'flex'
+    }
+    
+    if(course7 === true | course8 === true | course12 === true | mexicanstack === true){
+    document.getElementById('stack2-1').style.display = 'flex'
+    document.getElementById('stack2-2').style.display = 'flex'
+    }
+
 
 if(course18 === true){
     document.querySelector('#brgr1-1').style.display = 'flex'
@@ -181,30 +195,6 @@ document.querySelector('#question-name').value = data['Name']
 document.querySelector('#question-stid').value = data['stid']
 document.querySelector('#mystid').textContent = datastid
 
-if (course1) {
-$("#cr1").css("display", "flex");
-$("#crs1").css("display", "flex");
-} else {
-$("#cr1").hide();
-$("#crs1").hide();
-}
-
-if (course2) {
-$("#cr2").css("display", "flex");
-$("#crs2").css("display", "flex");
-} else {
-$("#cr2").hide();
-$("#crs2").hide();
-}
-
-if (course3) {
-$("#cr3").css("display", "flex");
-$("#crs3").css("display", "flex");
-} else {
-$("#cr3").hide();
-$("#crs3").hide();
-}
-
 if (course4) {
 $("#cr4").css("display", "flex");
 $("#crs4").css("display", "flex");
@@ -232,28 +222,6 @@ $('#crs02').hide()
 
 }
 
-if(course7 == true){
-$('#mx33').css('display', 'flex');
-$('#mx02').css('display', 'flex');
-$('#mx033').css('display', 'flex');
-
-} else  {
-$('#mx33').hide()
-$('#mx02').hide()
-$('#mx033').hide()
-
-}
-
-if(course8 == true){
-$('#rx33').css('display', 'flex');
-$('#rx02').css('display', 'flex');
-$('#rx033').css('display', 'flex');
-
-} else  {
-$('#rx33').hide()
-$('#rx02').hide()
-$('#rx033').hide()
-}
 if(course9 == true){
 $("#locked33").css("display", "flex");
 $("#locked44").css("display", "flex");
@@ -282,18 +250,6 @@ $("#cluck55").css("display", "flex");
 $('#cluck33').hide()
 $('#cluck44').hide()
 $('#cluck55').hide()
-}
-
-
-if(course12 == true){
-$('#rrx33').css('display', 'flex');
-$('#rrx02').css('display', 'flex');
-$('#rrx033').css('display', 'flex');
-
-} else  {
-$('#rrx33').hide()
-$('#rrx02').hide()
-$('#rrx033').hide()
 }
 
 if(course13 == true){
