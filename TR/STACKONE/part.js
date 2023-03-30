@@ -73,6 +73,10 @@
     
     
     let admin = data["admin"];
+          
+    let course1 = data["ftbcourse"]
+    let course2 = data["seccourse"]
+    let course3 = data["wbwcourse"]
 
     let course4 = data["dlvcourse"];
     let course5 = data["smcourse"];
@@ -97,6 +101,26 @@
     let course21 = data['pizzacourse1']
     let course22 = data['pizzacourse2']
     let course23 = data['pizzacourse3']
+
+
+    let chickenstack = data["chickenstack"]
+    let mexicanstack = data["mexicanstack"]
+
+    if(course1 === true | course2 === true | course3 === true | chickenstack === true){
+    document.getElementById('stack1-1').style.display = 'flex'
+    document.getElementById('stack1-2').style.display = 'flex'
+    document.getElementById('stack1-3').style.display = 'flex'
+    document.getElementById('stack1-4').style.display = 'flex'
+    document.getElementById('stack1-5').style.display = 'flex'
+    }
+    
+    if(course7 === true | course8 === true | course12 === true | mexicanstack === true){
+    document.getElementById('stack2-1').style.display = 'flex'
+    document.getElementById('stack2-2').style.display = 'flex'
+    document.getElementById('stack2-3').style.display = 'flex'
+    document.getElementById('stack2-4').style.display = 'flex'
+    document.getElementById('stack2-5').style.display = 'flex'
+    }
 
     let lang = data["language"];
     document.querySelector('#languageselector').textContent = lang
@@ -173,32 +197,7 @@
     $('#train66').hide()
     $('#mbtraining11').hide()
     }
-    if(course7 == true){
-    $('#mx33').css('display', 'flex');
-    $('#mx02').css('display', 'flex');
-    $('#mx033').css('display', 'flex');
-    $('#train77').css('display', 'flex');
-    $('#mbfiesta').css('display', 'flex');
-    }else{
-    $('#mx33').hide()
-    $('#mx02').hide()
-    $('#mx033').hide()
-    $('#train77').hide()
-    $('#mbfiesta').hide()
-    }
-    if(course8 == true){
-    $('#rx33').css('display', 'flex');
-    $('#rx02').css('display', 'flex');
-    $('#rx033').css('display', 'flex');
-    $('#train88').css('display', 'flex');
-    $('#mbrebelrito').css('display', 'flex');
-    }else{
-    $('#rx33').hide()
-    $('#rx02').hide()
-    $('#rx033').hide()
-    $('#train88').hide()
-    $('#mbrebelrito').hide()
-    }
+    
     if(course9 == true){
     $("#nyam33").css("display", "flex");
     $("#nyam44").css("display", "flex");
@@ -238,19 +237,6 @@
     $('#cluck55').hide()
     $('#train111').hide()
     $('#mbclucknrun').hide()
-    }
-    if(course12 == true){
-    $('#rrx33').css('display', 'flex');
-    $('#rrx02').css('display', 'flex');
-    $('#rrx033').css('display', 'flex');
-    $('#train122').css('display', 'flex');
-    $('#mbrealrito').css('display', 'flex');
-    }else{
-    $('#rrx33').hide()
-    $('#rrx02').hide()
-    $('#rrx033').hide()
-    $('#train122').hide()
-    $('#mbrealrito').hide()
     }
     if(course13 == true){
     $('#kt2').css('display', 'flex');
