@@ -329,7 +329,7 @@ let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', '
 
 if(language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
 
-    for (i = 0; i < gerarr.length; i++) {
+    for ( let i = 0; i < gerarr.length; i++) {
       if ($('#itemt-' + i).length) {
         document.getElementById('itemt-' + i).textContent = gerarr[i];
       }
