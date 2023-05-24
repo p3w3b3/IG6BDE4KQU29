@@ -269,7 +269,7 @@ if(language === 'swedish'){
 if(language === 'swedish'){
         for (i = 0 ; i < swedarr.length; i++) {
             if ($('#itemt-'+i).length){
-        document.getElementById('itemt-'+i).textContent = swedarr[i];
+        document.getElementById('itemt-'+i).textContent = swedarr[i]
         }}
     document.getElementById('intercom-url').textContent = 'Klicka här'
 
@@ -325,8 +325,11 @@ comple.innerHTML = 'Komplett';
 
 }
 
-let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', 'Benutzerfreundlichkeit', 'Diese Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Wochenziel', 'Bewertung', 'Vorbereitungszeit', 'Aufeinanderfolgende Wochen', 'Kommentar der Woche', 'Kampagne', 'Kampagne', 'Kampagne', 'Sanktion', 'Kommentar', 'Aufgabe', 'Kommende Anrufe', 'Termin vereinbaren', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kampagne', 'Sanktion', 'Kampagne', 'Kampagne', 'Geschulte Mitglieder', 'Bewertungsleitfaden', 'Dein Ranking', 'Bruttoumsatz', 'Bewertung', 'Vorherige Woche', 'Ändern', 'Verkauf', 'Bewertung', 'Rangliste', 'Öffnungszeiten ändern', 'Konzept', 'Dauer der Änderung', 'Tag', 'Geöffnet (Morgen)', 'Geschlossen (Morgen)', 'Geöffnet (Abend)', 'Geschlossen (Abend)', 'Geschlossen', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag', 'Rückerstattung für Herausforderung', 'Plattform', 'Konzept', 'Person', 'Grund', 'Bestellungs-ID', 'Bestelldatum', 'Bestellzeit', 'Beweis', 'Bruttoumsatz', 'Bruttoumsatz', 'Bruttoumsatz', 'Bestellung', 'Aktueller Monat', 'Letzter Monat', 'Insgesamt', 'Insgesamt', 'Datum', 'Referenz', 'Bruttoumsatz', 'PWB-Gebühr + MwSt.', 'Änderungen', 'Bezahlt', 'Account Manager', 'Wenn Sie weitere Unterstützung benötigen, können Sie den Chat verwenden, um uns zu kontaktieren.', 'Kampagnen', 'Kampagnen von Peckwater verwaltet', 'Möchten Sie das Abonnement für die Kampagne beenden oder haben Sie andere Fragen?', 'Dashboard', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Dashboard', 'Top-Listen', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Profil', 'Abmelden', 'Dashboard', 'Dashboard', 'Ziele', 'Feedback', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Besuchszeit', 'Ausgleich', 'Besuchszeit', 'Analysen', 'Rechnungen', 'Marketing', 'Kontakt', 'Kommentieren', 'Meine Informationen', 'Restaurant', 'Name', 'E-Mail'];
 if(language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
+
+  let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', 'Benutzerfreundlichkeit', 'Diese Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Wochenziel', 'Bewertung', 'Vorbereitungszeit', 'Aufeinanderfolgende Wochen', 'Kommentar der Woche', 'Kampagne', 'Kampagne', 'Kampagne', 'Sanktion', 'Kommentar', 'Aufgabe', 'Kommende Anrufe', 'Termin vereinbaren', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kampagne', 'Sanktion', 'Kampagne', 'Kampagne', 'Geschulte Mitglieder', 'Bewertungsleitfaden', 'Dein Ranking', 'Bruttoumsatz', 'Bewertung', 'Vorherige Woche', 'Ändern', 'Verkauf', 'Bewertung', 'Rangliste', 'Öffnungszeiten ändern', 'Konzept', 'Dauer der Änderung', 'Tag', 'Geöffnet (Morgen)', 'Geschlossen (Morgen)', 'Geöffnet (Abend)', 'Geschlossen (Abend)', 'Geschlossen', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag', 'Rückerstattung für Herausforderung', 'Plattform', 'Konzept', 'Person', 'Grund', 'Bestellungs-ID', 'Bestelldatum', 'Bestellzeit', 'Beweis', 'Bruttoumsatz', 'Bruttoumsatz', 'Bruttoumsatz', 'Bestellung', 'Aktueller Monat', 'Letzter Monat', 'Insgesamt', 'Insgesamt', 'Datum', 'Referenz', 'Bruttoumsatz', 'PWB-Gebühr + MwSt.', 'Änderungen', 'Bezahlt', 'Account Manager', 'Wenn Sie weitere Unterstützung benötigen, können Sie den Chat verwenden, um uns zu kontaktieren.', 'Kampagnen', 'Kampagnen von Peckwater verwaltet', 'Möchten Sie das Abonnement für die Kampagne beenden oder haben Sie andere Fragen?', 'Dashboard', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Dashboard', 'Top-Listen', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Profil', 'Abmelden', 'Dashboard', 'Dashboard', 'Ziele', 'Feedback', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Besuchszeit', 'Ausgleich', 'Besuchszeit', 'Analysen', 'Rechnungen', 'Marketing', 'Kontakt', 'Kommentieren', 'Meine Informationen', 'Restaurant', 'Name', 'E-Mail'];
+
+  if (language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
     for (i = 0; i < gerarr.length; i++) {
       if ($('#itemt-' + i).length) {
         document.getElementById('itemt-' + i).textContent = gerarr[i];
@@ -380,6 +383,8 @@ if(language === 'germany' || language === 'germany-at' || language === 'germany-
     compl.forEach(comple => {
       comple.innerHTML = 'Abgeschlossen';
     });
+  }
+
 
 }
 
