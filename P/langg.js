@@ -7,7 +7,7 @@ if(language === 'hungarian'){
     }}
 
     document.getElementById('intercom-url').textContent = 'kattints ide'
-    
+
     document.getElementById('ops1').textContent = 'Vezérlőpult'
     document.getElementById('ops2').textContent = 'Ranglisták'
     document.getElementById('ops3').textContent = 'Üzleti műveletek'
@@ -40,7 +40,7 @@ document.getElementById('Timeframe').options[2].text = 'Állandó';
 
 document.getElementById('cf3').options[1].text = 'Vevő';
 document.getElementById('cf3').options[2].text = 'Sofőr';
-    
+
 document.getElementById('cf4').options[1].text = 'Késett a megrendelés beszerzése (több mint 15 percet)';
 document.getElementById('cf4').options[2].text = 'Lemondott megrendelés';
 document.getElementById('cf4').options[3].text = 'Nem érkezett meg';
@@ -54,12 +54,12 @@ document.getElementById('Timeframe').options[2].text = 'Trvalý';
 
 document.getElementById('cf3').options[1].text = 'Zákazník';
 document.getElementById('cf3').options[2].text = 'Šofér';
-    
+
 document.getElementById('cf4').options[1].text = 'Byl pozdě na vyzvednutí objednávky (přes 15 min)'
 document.getElementById('cf4').options[2].text = 'Zrušená objednávka';
 document.getElementById('cf4').options[3].text = 'Neobjevil se'
 document.getElementById('cf4').options[4].text = 'Jiné';
-    
+
 
     $('.submit-opse').text('Beküldés')
     document.getElementById('submitbutt').value = 'Beküldés'
@@ -82,7 +82,7 @@ if(language === 'czech'){
     }}
 
     document.getElementById('intercom-url').textContent = 'klikněte zde'
-    
+
     document.getElementById('ops1').textContent = 'Přehled profilu'
     document.getElementById('ops2').textContent = 'Promo akce'
     document.getElementById('ops3').textContent = 'Správa profilu'
@@ -104,7 +104,7 @@ if(language === 'czech'){
     document.getElementById('act4').textContent = 'Komentovat'
     document.getElementById('act5').textContent = 'Komentovat'
     document.getElementById('act6').textContent = 'Komentovat'
-    
+
     document.getElementById('nps1').textContent = 'Jak byste ohodnotili vaší zkušenost s Peckwater Brands?'
     document.querySelector('.glr-horizontal-launcher__text').textContent = 'Podpora'
 
@@ -127,7 +127,7 @@ if(language === 'finnish'){
     document.getElementById('itemt-'+i).textContent = finarr[i]
     }}
     document.getElementById('intercom-url').textContent = 'Paina tästä'
-     
+
     document.getElementById('ops1').textContent = 'Kojelauta'
     document.getElementById('ops2').textContent =   'Tulostaulukko'
     document.getElementById('ops3').textContent = 'Liiketoiminta'
@@ -197,55 +197,61 @@ function contdif(cur) {
   document.getElementById('uscontent5').textContent = cur
   document.getElementById('uscontent6').textContent = cur
   document.getElementById('uscontent7').textContent = cur
-  
-      
+
+
   let usconte = document.querySelectorAll('.uscontentsign');
   usconte.forEach(usconte => {
   usconte.innerHTML = cur;
   });
-  
+
   let usconte2 = document.querySelectorAll('.uscontentsign1');
   usconte2.forEach(usconte2 => {
   usconte2.innerHTML = cur;
   });
-      
+
   let usconte3 = document.querySelectorAll('.amtextsign3');
   usconte3.forEach(usconte3 => {
   usconte3.innerHTML = cur
   });
-  
+
   let usconte4 = document.querySelectorAll('.amtext3');
   usconte4.forEach(usconte4 => {
   usconte4.innerHTML = cur
   });
-  
+
   let usconte5 = document.querySelectorAll('.amtext0');
   usconte5.forEach(usconte5 => {
   usconte5.innerHTML = cur
   });
-  
+
   let usconte6 = document.querySelectorAll('.amtext1');
   usconte6.forEach(usconte6 => {
   usconte6.innerHTML = cur
   });
-  
-  
-  
+
+
+
   let langq = document.querySelectorAll('.poundmarkuscontent');
   langq.forEach(langq => {
   langq.innerHTML = cur
   });
-  
-  }
-    
-    
 
-    
+  }
+
+
+
+
 if(language === 'swedish'){
   contdif('SEK')
 }
   if (language === 'finnish'){
   contdif('€')
+}
+  if(language === 'germany' || language === 'germany-at') {
+    contdif('€')
+}
+  if(language === 'germany-ch') {
+    contdif('CHF')
 }
   if (language === 'belgium'){
   contdif('€')
@@ -255,7 +261,7 @@ if(language === 'swedish'){
 }
   if(language === 'hungarian'){
   contdif('HUF')
-} 
+}
   if(language === 'usa') {
   contdif('$')
 }
@@ -266,7 +272,7 @@ if(language === 'swedish'){
         document.getElementById('itemt-'+i).textContent = swedarr[i]
         }}
     document.getElementById('intercom-url').textContent = 'Klicka här'
-    
+
     document.getElementById('ops1').textContent = 'Dashboard'
     document.getElementById('ops2').textContent = 'Topplistor'
     document.getElementById('ops3').textContent = 'Företag'
@@ -296,7 +302,7 @@ if(language === 'swedish'){
     document.getElementById('submitbutt').value = 'Skicka'
     document.getElementById('sub-butt').value = 'Skicka'
 
-    
+
 document.getElementById('Type').options[1].text = 'Båda';
 document.getElementById('Type').options[3].text = 'inhemskt brännmärka';
 
@@ -305,7 +311,7 @@ document.getElementById('Timeframe').options[2].text = 'Ständig';
 
 document.getElementById('cf3').options[1].text = 'Förare';
 document.getElementById('cf3').options[2].text = 'Kund';
-    
+
 document.getElementById('cf4').options[1].text = 'Var sen att hämta beställningen (över 15 minuter)';
 document.getElementById('cf4').options[2].text = 'Avbeställd beställning';
 document.getElementById('cf4').options[3].text = 'Kom inte till platsen';
@@ -319,4 +325,68 @@ comple.innerHTML = 'Komplett';
 
 }
 
-}); 
+if(language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
+
+  let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', 'Benutzerfreundlichkeit', 'Diese Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Wochenziel', 'Bewertung', 'Vorbereitungszeit', 'Aufeinanderfolgende Wochen', 'Kommentar der Woche', 'Kampagne', 'Kampagne', 'Kampagne', 'Sanktion', 'Kommentar', 'Aufgabe', 'Kommende Anrufe', 'Termin vereinbaren', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kampagne', 'Sanktion', 'Kampagne', 'Kampagne', 'Geschulte Mitglieder', 'Bewertungsleitfaden', 'Dein Ranking', 'Bruttoumsatz', 'Bewertung', 'Vorherige Woche', 'Ändern', 'Verkauf', 'Bewertung', 'Rangliste', 'Öffnungszeiten ändern', 'Konzept', 'Dauer der Änderung', 'Tag', 'Geöffnet (Morgen)', 'Geschlossen (Morgen)', 'Geöffnet (Abend)', 'Geschlossen (Abend)', 'Geschlossen', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag', 'Rückerstattung für Herausforderung', 'Plattform', 'Konzept', 'Person', 'Grund', 'Bestellungs-ID', 'Bestelldatum', 'Bestellzeit', 'Beweis', 'Bruttoumsatz', 'Bruttoumsatz', 'Bruttoumsatz', 'Bestellung', 'Aktueller Monat', 'Letzter Monat', 'Insgesamt', 'Insgesamt', 'Datum', 'Referenz', 'Bruttoumsatz', 'PWB-Gebühr + MwSt.', 'Änderungen', 'Bezahlt', 'Account Manager', 'Wenn Sie weitere Unterstützung benötigen, können Sie den Chat verwenden, um uns zu kontaktieren.', 'Kampagnen', 'Kampagnen von Peckwater verwaltet', 'Möchten Sie das Abonnement für die Kampagne beenden oder haben Sie andere Fragen?', 'Dashboard', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Dashboard', 'Top-Listen', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Profil', 'Abmelden', 'Dashboard', 'Dashboard', 'Ziele', 'Feedback', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Besuchszeit', 'Ausgleich', 'Besuchszeit', 'Analysen', 'Rechnungen', 'Marketing', 'Kontakt', 'Kommentieren', 'Meine Informationen', 'Restaurant', 'Name', 'E-Mail'];
+
+  if (language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
+    for (i = 0; i < gerarr.length; i++) {
+      if ($('#itemt-' + i).length) {
+        document.getElementById('itemt-' + i).textContent = gerarr[i];
+      }
+    }
+    document.getElementById('intercom-url').textContent = 'Klicken Sie hier';
+
+    document.getElementById('ops1').textContent = 'Dashboard';
+    document.getElementById('ops2').textContent = 'Top-Listen';
+    document.getElementById('ops3').textContent = 'Unternehmen';
+    document.getElementById('ops4').textContent = 'Konten';
+    document.getElementById('ops-in').textContent = 'Einblicke';
+    document.getElementById('ops5').textContent = 'Kontakt';
+    document.getElementById('marketingops').textContent = 'Kampagne';
+    document.getElementById('profiledesk').textContent = 'Profil';
+    document.getElementById('signOutButton').textContent = 'Abmelden';
+    document.getElementById('ra3').textContent = 'Erreicht';
+    document.getElementById('ra2').textContent = 'Nicht erreicht';
+    document.getElementById('ra1').textContent = 'Erreicht';
+    document.getElementById('pa3').textContent = 'Erreicht';
+    document.getElementById('pa2').textContent = 'Nicht erreicht';
+    document.getElementById('pa1').textContent = 'Erreicht';
+    document.getElementById('act1').textContent = 'Kommentieren';
+    document.getElementById('act2').textContent = 'Kommentieren';
+    document.getElementById('act3').textContent = 'Kommentieren';
+    document.getElementById('act4').textContent = 'Kommentieren';
+    document.getElementById('act5').textContent = 'Kommentieren';
+    document.getElementById('act6').textContent = 'Kommentieren';
+
+    document.getElementById('nps1').textContent = 'Wie würden Sie Ihre Erfahrung mit Peckwater Brands bewerten?';
+
+    $('.submit-opse').text('Senden');
+    document.getElementById('submitbutt').value = 'Senden';
+    document.getElementById('sub-butt').value = 'Senden';
+
+    document.getElementById('Type').options[1].text = 'Beide';
+    document.getElementById('Type').options[3].text = 'Inländisches Branding';
+
+    document.getElementById('Timeframe').options[1].text = 'Temporär';
+    document.getElementById('Timeframe').options[2].text = 'Dauerhaft';
+
+    document.getElementById('cf3').options[1].text = 'Fahrer';
+    document.getElementById('cf3').options[2].text = 'Kunde';
+
+    document.getElementById('cf4').options[1].text = 'Bestellung wurde zu spät abgeholt (über 15 Minuten)';
+    document.getElementById('cf4').options[2].text = 'Stornierte Bestellung';
+    document.getElementById('cf4').options[3].text = 'Nicht am Ort erschienen';
+    document.getElementById('cf4').options[4].text = 'Sonstiges';
+
+    const compl = document.querySelectorAll('.complete');
+    compl.forEach(comple => {
+      comple.innerHTML = 'Abgeschlossen';
+    });
+  }
+
+
+}
+
+
+});
