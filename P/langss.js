@@ -186,6 +186,66 @@ document.getElementById('cf4').options[4].text = 'Muu syy';
     });
 
 }
+let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', 'Benutzerfreundlichkeit', 'Diese Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Wochenziel', 'Bewertung', 'Vorbereitungszeit', 'Aufeinanderfolgende Wochen', 'Kommentar der Woche', 'Kampagne', 'Kampagne', 'Kampagne', 'Sanktion', 'Kommentar', 'Aufgabe', 'Kommende Anrufe', 'Termin vereinbaren', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kampagne', 'Sanktion', 'Kampagne', 'Kampagne', 'Geschulte Mitglieder', 'Bewertungsleitfaden', 'Dein Ranking', 'Bruttoumsatz', 'Bewertung', 'Vorherige Woche', 'Ändern', 'Verkauf', 'Bewertung', 'Rangliste', 'Öffnungszeiten ändern', 'Konzept', 'Dauer der Änderung', 'Tag', 'Geöffnet (Morgen)', 'Geschlossen (Morgen)', 'Geöffnet (Abend)', 'Geschlossen (Abend)', 'Geschlossen', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag', 'Rückerstattung für Herausforderung', 'Plattform', 'Konzept', 'Person', 'Grund', 'Bestellungs-ID', 'Bestelldatum', 'Bestellzeit', 'Beweis', 'Bruttoumsatz', 'Bruttoumsatz', 'Bruttoumsatz', 'Bestellung', 'Aktueller Monat', 'Letzter Monat', 'Insgesamt', 'Insgesamt', 'Datum', 'Referenz', 'Bruttoumsatz', 'PWB-Gebühr + MwSt.', 'Änderungen', 'Bezahlt', 'Account Manager', 'Wenn Sie weitere Unterstützung benötigen, können Sie den Chat verwenden, um uns zu kontaktieren.', 'Kampagnen', 'Kampagnen von Peckwater verwaltet', 'Möchten Sie das Abonnement für die Kampagne beenden oder haben Sie andere Fragen?', 'Dashboard', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Dashboard', 'Top-Listen', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Profil', 'Abmelden', 'Dashboard', 'Dashboard', 'Ziele', 'Feedback', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Besuchszeit', 'Ausgleich', 'Besuchszeit', 'Analysen', 'Rechnungen', 'Marketing', 'Kontakt', 'Kommentieren', 'Meine Informationen', 'Restaurant', 'Name', 'E-Mail'];
+
+if(language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
+
+    for ( let i = 0; i < gerarr.length; i++) {
+      if ($('#itemt-' + i).length) {
+        document.getElementById('itemt-' + i).textContent = gerarr[i];
+      }
+    }
+    document.getElementById('intercom-url').textContent = 'Klicken Sie hier';
+
+    document.getElementById('ops1').textContent = 'Dashboard';
+    document.getElementById('ops2').textContent = 'Top-Listen';
+    document.getElementById('ops3').textContent = 'Unternehmen';
+    document.getElementById('ops4').textContent = 'Konten';
+    document.getElementById('ops-in').textContent = 'Einblicke';
+    document.getElementById('ops5').textContent = 'Kontakt';
+    document.getElementById('marketingops').textContent = 'Kampagne';
+    document.getElementById('profiledesk').textContent = 'Profil';
+    document.getElementById('signOutButton').textContent = 'Abmelden';
+    document.getElementById('ra3').textContent = 'Erreicht';
+    document.getElementById('ra2').textContent = 'Nicht erreicht';
+    document.getElementById('ra1').textContent = 'Erreicht';
+    document.getElementById('pa3').textContent = 'Erreicht';
+    document.getElementById('pa2').textContent = 'Nicht erreicht';
+    document.getElementById('pa1').textContent = 'Erreicht';
+    document.getElementById('act1').textContent = 'Kommentieren';
+    document.getElementById('act2').textContent = 'Kommentieren';
+    document.getElementById('act3').textContent = 'Kommentieren';
+    document.getElementById('act4').textContent = 'Kommentieren';
+    document.getElementById('act5').textContent = 'Kommentieren';
+    document.getElementById('act6').textContent = 'Kommentieren';
+
+    document.getElementById('nps1').textContent = 'Wie würden Sie Ihre Erfahrung mit Peckwater Brands bewerten?';
+
+    $('.submit-opse').text('Senden');
+    document.getElementById('submitbutt').value = 'Senden';
+    document.getElementById('sub-butt').value = 'Senden';
+
+    document.getElementById('Type').options[1].text = 'Beide';
+    document.getElementById('Type').options[3].text = 'Inländisches Branding';
+
+    document.getElementById('Timeframe').options[1].text = 'Temporär';
+    document.getElementById('Timeframe').options[2].text = 'Dauerhaft';
+
+    document.getElementById('cf3').options[1].text = 'Fahrer';
+    document.getElementById('cf3').options[2].text = 'Kunde';
+
+    document.getElementById('cf4').options[1].text = 'Bestellung wurde zu spät abgeholt (über 15 Minuten)';
+    document.getElementById('cf4').options[2].text = 'Stornierte Bestellung';
+    document.getElementById('cf4').options[3].text = 'Nicht am Ort erschienen';
+    document.getElementById('cf4').options[4].text = 'Sonstiges';
+
+    const compl = document.querySelectorAll('.complete');
+    compl.forEach(comple => {
+      comple.innerHTML = 'Abgeschlossen';
+    });
+
+
+}
 
 let swedarr = ['Dashboard','Min restaurang','Betyg','Tillagningstid','Användbarhet','Denna vecka','Föregående vecka','Föregående vecka','Föregående vecka','Föregående vecka','Veckomål','Betyg','Förberedelsetid','På varandra följande veckor','Veckans kommentar','Kampanj','Kampanj','Kampanj','Sanktion','Kommentar','Uppdrag','Kommande samtal','Boka ett samtal','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kommentar','Uppdrag','Kampanj','Sanktion','Kampanj','Kampanj','Utbildade medlemmar','Ledartavla för betygsättning','Din ranking','Bruttoförsäljning','Betyg','Veckan som går','Föregående vecka','Förändra','Försäljning','Betyg','Rankinglista','Ändra öppettider','Koncept','Förändringens varaktighet','Dag','Öppet (morgon)','Stäng (morgon)','Öppet(kväll)','Stäng(kväll)','Stängd','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag','Återbetalning för utmaning','Plattform','Koncept','Person','Anledning','Beställnings-ID','Beställningsdatum','Beställningstid','Bevis','Bruttoförsäljning','Bruttoförsäljning','Bruttoförsäljning','Beställning','Innevarande månad','Förra månaden','Hela tiden','Hela tiden','Datum','Referens','Bruttoförsäljning','PWB Avgift + moms','Ändringar','Betalt','Kontoansvarig','Om du behöver ytterligare stöd kan du använda chattfunktionen för att kontakta oss.','Kampanjer','Kampanjer som hanteras av Peckwater','Vill du sluta prenumerera på kampanjen eller har du andra frågor?','Dashboard','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Dashboard','Topplistor','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Profil','Logga ut','Dashboard','Dashboard','Mål','Respons','Min restaurang','Analyser','Utbildning','Kontakt','Marknadsföring','Besökstid','Korvaus','Besökstid','Analyser','Fakturor','Marknadsföring','Kontakt','Kommentera','Min information','Restaurang','Namn','E-post']
 
@@ -325,66 +385,6 @@ comple.innerHTML = 'Komplett';
 
 }
 
-let gerarr = ['Dashboard', 'Mein Restaurant', 'Bewertung', 'Zubereitungszeit', 'Benutzerfreundlichkeit', 'Diese Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Vorherige Woche', 'Wochenziel', 'Bewertung', 'Vorbereitungszeit', 'Aufeinanderfolgende Wochen', 'Kommentar der Woche', 'Kampagne', 'Kampagne', 'Kampagne', 'Sanktion', 'Kommentar', 'Aufgabe', 'Kommende Anrufe', 'Termin vereinbaren', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kommentar', 'Aufgabe', 'Kampagne', 'Sanktion', 'Kampagne', 'Kampagne', 'Geschulte Mitglieder', 'Bewertungsleitfaden', 'Dein Ranking', 'Bruttoumsatz', 'Bewertung', 'Vorherige Woche', 'Ändern', 'Verkauf', 'Bewertung', 'Rangliste', 'Öffnungszeiten ändern', 'Konzept', 'Dauer der Änderung', 'Tag', 'Geöffnet (Morgen)', 'Geschlossen (Morgen)', 'Geöffnet (Abend)', 'Geschlossen (Abend)', 'Geschlossen', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag', 'Rückerstattung für Herausforderung', 'Plattform', 'Konzept', 'Person', 'Grund', 'Bestellungs-ID', 'Bestelldatum', 'Bestellzeit', 'Beweis', 'Bruttoumsatz', 'Bruttoumsatz', 'Bruttoumsatz', 'Bestellung', 'Aktueller Monat', 'Letzter Monat', 'Insgesamt', 'Insgesamt', 'Datum', 'Referenz', 'Bruttoumsatz', 'PWB-Gebühr + MwSt.', 'Änderungen', 'Bezahlt', 'Account Manager', 'Wenn Sie weitere Unterstützung benötigen, können Sie den Chat verwenden, um uns zu kontaktieren.', 'Kampagnen', 'Kampagnen von Peckwater verwaltet', 'Möchten Sie das Abonnement für die Kampagne beenden oder haben Sie andere Fragen?', 'Dashboard', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Dashboard', 'Top-Listen', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Profil', 'Abmelden', 'Dashboard', 'Dashboard', 'Ziele', 'Feedback', 'Mein Restaurant', 'Analysen', 'Schulung', 'Kontakt', 'Marketing', 'Besuchszeit', 'Ausgleich', 'Besuchszeit', 'Analysen', 'Rechnungen', 'Marketing', 'Kontakt', 'Kommentieren', 'Meine Informationen', 'Restaurant', 'Name', 'E-Mail'];
-
-if(language === 'germany' || language === 'germany-at' || language === 'germany-ch') {
-
-    for ( let i = 0; i < gerarr.length; i++) {
-      if ($('#itemt-' + i).length) {
-        document.getElementById('itemt-' + i).textContent = gerarr[i];
-      }
-    }
-    document.getElementById('intercom-url').textContent = 'Klicken Sie hier';
-
-    document.getElementById('ops1').textContent = 'Dashboard';
-    document.getElementById('ops2').textContent = 'Top-Listen';
-    document.getElementById('ops3').textContent = 'Unternehmen';
-    document.getElementById('ops4').textContent = 'Konten';
-    document.getElementById('ops-in').textContent = 'Einblicke';
-    document.getElementById('ops5').textContent = 'Kontakt';
-    document.getElementById('marketingops').textContent = 'Kampagne';
-    document.getElementById('profiledesk').textContent = 'Profil';
-    document.getElementById('signOutButton').textContent = 'Abmelden';
-    document.getElementById('ra3').textContent = 'Erreicht';
-    document.getElementById('ra2').textContent = 'Nicht erreicht';
-    document.getElementById('ra1').textContent = 'Erreicht';
-    document.getElementById('pa3').textContent = 'Erreicht';
-    document.getElementById('pa2').textContent = 'Nicht erreicht';
-    document.getElementById('pa1').textContent = 'Erreicht';
-    document.getElementById('act1').textContent = 'Kommentieren';
-    document.getElementById('act2').textContent = 'Kommentieren';
-    document.getElementById('act3').textContent = 'Kommentieren';
-    document.getElementById('act4').textContent = 'Kommentieren';
-    document.getElementById('act5').textContent = 'Kommentieren';
-    document.getElementById('act6').textContent = 'Kommentieren';
-
-    document.getElementById('nps1').textContent = 'Wie würden Sie Ihre Erfahrung mit Peckwater Brands bewerten?';
-
-    $('.submit-opse').text('Senden');
-    document.getElementById('submitbutt').value = 'Senden';
-    document.getElementById('sub-butt').value = 'Senden';
-
-    document.getElementById('Type').options[1].text = 'Beide';
-    document.getElementById('Type').options[3].text = 'Inländisches Branding';
-
-    document.getElementById('Timeframe').options[1].text = 'Temporär';
-    document.getElementById('Timeframe').options[2].text = 'Dauerhaft';
-
-    document.getElementById('cf3').options[1].text = 'Fahrer';
-    document.getElementById('cf3').options[2].text = 'Kunde';
-
-    document.getElementById('cf4').options[1].text = 'Bestellung wurde zu spät abgeholt (über 15 Minuten)';
-    document.getElementById('cf4').options[2].text = 'Stornierte Bestellung';
-    document.getElementById('cf4').options[3].text = 'Nicht am Ort erschienen';
-    document.getElementById('cf4').options[4].text = 'Sonstiges';
-
-    const compl = document.querySelectorAll('.complete');
-    compl.forEach(comple => {
-      comple.innerHTML = 'Abgeschlossen';
-    });
-
-
-}
 
 
 });
