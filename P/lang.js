@@ -33,37 +33,6 @@ var checkLanguage = setInterval(function() {
       document.getElementById('act5').textContent = 'Hozzáadása'
       document.getElementById('act6').textContent = 'Hozzáadása'
 
-
-
-  document.getElementById('Type').options[1].text = 'Mindkét';
-  document.getElementById('Type').options[3].text = 'Natív márka'
-
-  document.getElementById('Timeframe').options[1].text = 'Ideiglenes';
-  document.getElementById('Timeframe').options[2].text = 'Állandó';
-
-  document.getElementById('cf3').options[1].text = 'Vevő';
-  document.getElementById('cf3').options[2].text = 'Sofőr';
-
-  document.getElementById('cf4').options[1].text = 'Késett a megrendelés beszerzése (több mint 15 percet)';
-  document.getElementById('cf4').options[2].text = 'Lemondott megrendelés';
-  document.getElementById('cf4').options[3].text = 'Nem érkezett meg';
-  document.getElementById('cf4').options[4].text = 'Egyéb';
-
-  document.getElementById('Type').options[1].text = 'Oba';
-  document.getElementById('Type').options[3].text = 'Nativní značka'
-
-  document.getElementById('Timeframe').options[1].text = 'Dočasný';
-  document.getElementById('Timeframe').options[2].text = 'Trvalý';
-
-  document.getElementById('cf3').options[1].text = 'Zákazník';
-  document.getElementById('cf3').options[2].text = 'Šofér';
-
-  document.getElementById('cf4').options[1].text = 'Byl pozdě na vyzvednutí objednávky (přes 15 min)'
-  document.getElementById('cf4').options[2].text = 'Zrušená objednávka';
-  document.getElementById('cf4').options[3].text = 'Neobjevil se'
-  document.getElementById('cf4').options[4].text = 'Jiné';
-
-
       $('.submit-opse').text('Beküldés')
       document.getElementById('sub-butt').value = 'Beküldés'
 
@@ -110,7 +79,6 @@ var checkLanguage = setInterval(function() {
       document.getElementById('nps1').textContent = 'Jak byste ohodnotili vaší zkušenost s Peckwater Brands?'
       document.querySelector('.glr-horizontal-launcher__text').textContent = 'Podpora'
 
-
       $('.submit-opse').text('Předložit')
       document.getElementById('sub-butt').value = 'Předložit'
       const compl = document.querySelectorAll('.complete');
@@ -155,31 +123,6 @@ var checkLanguage = setInterval(function() {
       $('.submit-opse').text('Lähetä')
       document.getElementById('sub-butt').value = 'Lähetä'
 
-  document.getElementById('Type').options[1].text = 'Molemmat';
-  document.getElementById('Type').options[3].text = 'Alkuperäinen';
-
-
-  document.getElementById('Timeframe').options[1].text = 'Väliaikaisesti';
-  document.getElementById('Timeframe').options[2].text = 'Pysyvästi';
-
-  document.getElementById('cf3').options[1].text = 'Asiakas';
-  document.getElementById('cf3').options[2].text = 'Kuljettaja';
-
-
-  document.getElementById('cf4').options[1].text = 'Tilauksen nouto myöhästyi (yli 15 minuuttia)';
-
-  document.getElementById('cf4').options[2].text = 'Tilaus peruttu';
-
-  document.getElementById('cf4').options[3].text = 'Ei tullut paikalle';
-
-
-  document.getElementById('cf4').options[4].text = 'Muu syy';
-
-
-
-
-
-
       const compl = document.querySelectorAll('.complete');
       compl.forEach(comple => {
       comple.innerHTML = 'Valmis';
@@ -223,20 +166,6 @@ var checkLanguage = setInterval(function() {
 
       $('.submit-opse').text('Senden');
       document.getElementById('sub-butt').value = 'Senden';
-
-      document.getElementById('Type').options[1].text = 'Beide';
-      document.getElementById('Type').options[3].text = 'Inländisches Branding';
-
-      document.getElementById('Timeframe').options[1].text = 'Temporär';
-      document.getElementById('Timeframe').options[2].text = 'Dauerhaft';
-
-      document.getElementById('cf3').options[1].text = 'Fahrer';
-      document.getElementById('cf3').options[2].text = 'Kunde';
-
-      document.getElementById('cf4').options[1].text = 'Bestellung wurde zu spät abgeholt (über 15 Minuten)';
-      document.getElementById('cf4').options[2].text = 'Stornierte Bestellung';
-      document.getElementById('cf4').options[3].text = 'Nicht am Ort erschienen';
-      document.getElementById('cf4').options[4].text = 'Sonstiges';
 
       const compl = document.querySelectorAll('.complete');
       compl.forEach(comple => {
@@ -356,25 +285,8 @@ var checkLanguage = setInterval(function() {
 
       document.getElementById('nps1').textContent = 'Hur skulle du bedöma din upplevelse av Peckwater Brands?'
 
-
       $('.submit-opse').text('Skicka')
       document.getElementById('sub-butt').value = 'Skicka'
-
-
-  document.getElementById('Type').options[1].text = 'Båda';
-  document.getElementById('Type').options[3].text = 'inhemskt brännmärka';
-
-  document.getElementById('Timeframe').options[1].text = 'Temporär';
-  document.getElementById('Timeframe').options[2].text = 'Ständig';
-
-  document.getElementById('cf3').options[1].text = 'Förare';
-  document.getElementById('cf3').options[2].text = 'Kund';
-
-  document.getElementById('cf4').options[1].text = 'Var sen att hämta beställningen (över 15 minuter)';
-  document.getElementById('cf4').options[2].text = 'Avbeställd beställning';
-  document.getElementById('cf4').options[3].text = 'Kom inte till platsen';
-  document.getElementById('cf4').options[4].text = 'Annat';
-
 
   const compl = document.querySelectorAll('.complete');
   compl.forEach(comple => {
