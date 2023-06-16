@@ -1,3 +1,5 @@
+if(window.location.href.includes('portal.peckwaterbrands.com'))
+
 {
     const firebaseConfig = {
         apiKey: "AIzaSyB5X0NgXNQ8d3UjqVP5p_xB9Yt8cOk1ut8",
